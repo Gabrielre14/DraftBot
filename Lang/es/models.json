@@ -144,7 +144,7 @@
       "stop": "recupera la vista."
     },
     "boomerangAttack": {
-      "description": "Lanza un bumerán que inflige daño a los enemigos hasta 3 veces.",
+      "description": "Este ataque puede infligir hasta 2 retornos de daño.",
       "name_one": "Ataque bumerán",
       "name_other": "Ataques bumerán"
     },
@@ -155,7 +155,6 @@
       "success": "se monta a lomos de **{{petNickname}}** para moverse más rápido."
     },
     "boulderTossAttack": {
-      "description": "Ataque medio que puede aturdir al oponente.",
       "name_one": "Ataque con piedras",
       "name_other": "Ataques con piedras"
     },
@@ -179,17 +178,16 @@
       "name_other": "Ataques con cañón"
     },
     "chargeChargingAttack": {
-      "description": "Ataque de 2 turnos. Durante el primer asalto, la defensa del lanzador aumenta un 50%. Durante el segundo asalto, la defensa del lanzador vuelve a su nivel inicial.",
+      "description": "Ataque de 2 turnos. Durante el primer asalto, la defensa del lanzador aumenta un 50%. Durante el segundo asalto, la defensa del lanzador se reduce, infligiendo graves daños en el proceso.",
       "name_one": "Ataque cargado",
       "name_other": "Ataques cargados"
     },
     "chargeClubSmashAttack": {
-      "description": "Requiere un turno para cargar el ataque. Realiza una potente carga al turno siguiente.",
       "name_one": "Ataque a un club",
       "name_other": "Ataques a clubes"
     },
     "chargeUltimateAttack": {
-      "description": "Requiere un turno para cargar el ataque. Si el atacante tiene menos del 45% de su energía, este ataque no puede fallar. En caso contrario, la precisión de este ataque es de 70. Este ataque sólo puede usarse una vez por jugador y batalla.",
+      "description": "Requiere un turno para cargar el ataque. Si el atacante tiene menos del 45% de su energía, este ataque no puede fallar. Este ataque sólo puede usarse una vez por jugador y batalla.",
       "name_one": "Ataque definitivo",
       "name_other": "Ataques definitivos"
     },
@@ -246,12 +244,12 @@
       "stop": "sufre las consecuencias de la maldición."
     },
     "cursedAttack": {
-      "description": "Maldición para el adversario, quizás sufra las consecuencias en el futuro...",
+      "description": "Maldice al oponente, tal vez sufriendo las consecuencias en el futuro... Cura al lanzador si el oponente tiene más del 40% de su energía.",
       "name_one": "Ataque maldito",
       "name_other": "Ataques malditos"
     },
     "darkAttack": {
-      "description": "Ignora la defensa del adversario. Más eficaz contra un jugador con un ataque alto.",
+      "description": "Ignora la defensa del adversario. Más eficaz contra un jugador con un ataque alto. Ciega al oponente o restaura parte del aliento perdido por el lanzador. La alteración \"cegado\" dura al menos 1 turno y hace que el oponente no pueda atacar en algunos momentos, al tiempo que reduce su defensa y velocidad.",
       "name_one": "Ataque oscuro",
       "name_other": "Ataques oscuros"
     },
@@ -278,23 +276,21 @@
       "afraid": "es ayudado por **{{petNickname}}** que, aunque recuerda perfectamente los acontecimientos recientes, tiembla demasiado de miedo para poder devolverle el aliento perdido."
     },
     "energeticAttack": {
-      "description": "La mitad del daño de este ataque se devuelve al lanzador en forma de curación.",
+      "description": "La moitié des dégâts de cette attaque sont restitués au lanceur sous forme de soin. Ignore une partie de la défense adverse.",
       "name_one": "Ataque energético",
       "name_other": "Ataques energéticos"
     },
     "eruptionAttack": {
-      "description": "El volcán entra en erupción y escupe roca fundida contra los jugadores. Sólo los jugadores más rápidos pueden evitar el daño.",
       "customMessage": "hace que el volcán entre en erupción, y sólo los oponentes más rápidos consiguen evitar la erupción.",
       "name_one": "Erupción",
       "name_other": "Erupciones"
     },
     "familyMealAttack": {
-      "description": "Invoca a tus aliados para que devoren y envenenen a tu oponente.",
       "name_one": "Comidas familiares",
       "name_other": "Comidas familiares"
     },
     "fireAttack": {
-      "description": "Alta probabilidad de quemar a tu oponente. La alteración \"quemado\" inflige daño a tu rival con el tiempo.",
+      "description": "Quema a tu oponente. La alteración \"quemado\" inflige daño a tu oponente a lo largo del tiempo.",
       "name_one": "Ataque de fuego",
       "name_other": "Ataques con fuego"
     },
@@ -323,7 +319,6 @@
       "success": "ordena a **{{petNickname}}** que ataque. El animal estalla en cólera y empieza a golpear todo lo que se le acerca."
     },
     "grabAndThrowAttack": {
-      "description": "Lanza al oponente si utiliza un ataque físico, infligiendo un daño moderado y teniendo una probabilidad de aturdir al oponente.",
       "name_one": "Ataque con proyectiles",
       "name_other": "Ataques con proyectiles"
     },
@@ -340,18 +335,16 @@
       "success": "es tratado por **{{petNickname}}** que le devuelve la energía."
     },
     "heatDrainAttack": {
-      "description": "Recupera el calor del jugador, aumentando el ataque del lanzador y congelando al oponente.",
-      "customMessage": "drena tu calor.",
+      "customMessage": "drena el calor de su oponente.",
       "name_one": "Drenaje de calor",
       "name_other": "Drenajes térmicos"
     },
     "heatMudAttack": {
-      "description": "Calienta el barro de la arena para causar estragos entre los sucios oponentes.",
       "name_one": "Ataque de barro ardiente",
       "name_other": "Ataques de barro ardiente"
     },
     "heavyAttack": {
-      "description": "El daño de este ataque se reduce un 90% si el defensor tiene menos defensa que el atacante. La defensa del enemigo se reduce un 25%.",
+      "description": "Falla si el defensor tiene menos defensa que el atacante. La defensa del enemigo se reduce un 25%.",
       "name_one": "Ataque pesado",
       "name_other": "Ataques fuertes"
     },
@@ -366,7 +359,7 @@
       "success": "es ayudado por **{{petNickname}}** que utiliza sus poderes hipnóticos para confundir al enemigo."
     },
     "intenseAttack": {
-      "description": "Ignora parte de la defensa de tu oponente. Nunca falla contra un oponente más rápido. Funciona mejor contra un oponente rápido. Obliga al lanzador a utilizar la acción \"descansar\" en el siguiente turno. No puede matar al oponente.",
+      "description": "Defiéndete eficazmente contra este ataque. Nunca falla contra un oponente más rápido. Funciona mejor contra un oponente rápido. Obliga al lanzador a utilizar la acción \"descansar\" en el siguiente turno. No puede matar al oponente.",
       "name_one": "Ataque intenso",
       "name_other": "Ataques intensos"
     },
@@ -374,17 +367,14 @@
       "generalEffect": "pide ayuda a **{{petNickname}}** que, con notable indiferencia, mira fijamente a su oponente."
     },
     "lavaWaveAttack": {
-      "description": "Un ataque muy poderoso utilizado como último recurso y que garantiza infligir el daño \"Quemado\" al oponente.",
       "name_one": "Ataque de ola de lava",
       "name_other": "Ataque de ola de lava"
     },
     "magicMimicAttack": {
-      "description": "Te permite contraatacar tras un ataque mágico del rival.",
       "name_one": "Ataque de imitación mágica",
       "name_other": "Ataques mímicos mágicos"
     },
     "magmaBathAttack": {
-      "description": "Se aplica al lanzador. El lanzador descansa en la lava y recupera su energía. El número de puntos de batalla recuperados se divide por 4 tras 4 usos.",
       "customMessage": "se sumerge en la lava y recupera energía.",
       "name_one": "Baño de magma",
       "name_other": "Baños de magma"
@@ -393,7 +383,6 @@
       "success": "recibe ayuda de **{{petNickname}}** que petrifica a su oponente con una mirada."
     },
     "mudShotAttack": {
-      "description": "Ataque a distancia que inflige daño y ensucia al oponente.",
       "name_one": "Ataque con disparos de barro",
       "name_other": "Ataques con disparos de barro"
     },
@@ -410,7 +399,6 @@
       "stop": "deja de estar enfadado y se vuelve vertiginoso."
     },
     "outrageAttack": {
-      "description": "Falla si utilizas esta acción mientras tienes una alteración de estado. La alteración \"furioso\" duplica el ataque pero disminuye la defensa. Tras 2 turnos, el efecto desaparece y el atacante queda confuso.",
       "customMessage": "se enfada.",
       "name_one": "Ira",
       "name_other": "Ira"
@@ -443,7 +431,6 @@
       "success": "es ayudado por **{{petNickname}}** que finalmente decide cargar contra su oponente con fuerza."
     },
     "petrificationAttack": {
-      "description": "Petrifica al objetivo durante 2 turnos, pero aumenta su defensa un 200%.",
       "customMessage": "petrifica a su oponente.",
       "name_one": "Petrificación",
       "name_other": "Petrificaciones"
@@ -469,7 +456,7 @@
       "stop": "ya no está envenenado."
     },
     "poisonousAttack": {
-      "description": "Envenena a tu oponente. La alteración \"envenenada\" dura al menos tres turnos e inflige daño a tu oponente a lo largo del tiempo.",
+      "description": "Más eficaz al principio de un combate. Envenena a tu oponente. Envenenado\" dura al menos tres turnos e inflige daño a tu rival a lo largo del tiempo.",
       "name_one": "Ataque envenenado",
       "name_other": "Ataques envenenados"
     },
@@ -478,7 +465,7 @@
       "success": "recibe el apoyo de **{{petNickname}}** que decide morder a su oponente... Este último de repente no se siente muy bien."
     },
     "powerfulAttack": {
-      "description": "Este ataque tiene un 25% de posibilidades de hacer más daño, a costa de aturdir al atacante. Tras 3 usos, el daño del ataque se reduce un 70%.",
+      "description": "Este ataque tiene un 25% de posibilidades de hacer más daño, a costa de aturdir al atacante. Reduce la velocidad del adversario. Tras 3 usos, el daño del ataque se reduce un 70%.",
       "name_one": "Poderoso ataque",
       "name_other": "Poderosos ataques"
     },
@@ -526,12 +513,10 @@
       "success": "es apoyado por **{{petNickname}}** que hiere a su oponente tras su ataque."
     },
     "roarAttack": {
-      "description": "Reduce el ataque y la velocidad de tu oponente.",
       "name_one": "Rugido",
       "name_other": "Ruge"
     },
     "rockShieldAttack": {
-      "description": "Reduce a la mitad el siguiente ataque recibido.",
       "customMessage": "acumula roca para defenderse...",
       "name_one": "Escudo de roca",
       "name_other": "Escudo de roca"
@@ -548,7 +533,7 @@
       "generalEffect": "es asistido por **{{petNickname}}** que ahuyenta a los peces."
     },
     "shieldAttack": {
-      "description": "Utiliza el escudo del atacante para atacar. El daño \"debilitado\" reduce el ataque un 70% durante 2 turnos.",
+      "description": "Utiliza la defensa del atacante para atacar, debilitando al oponente y reduciendo su ataque en un 70% durante 2 turnos.",
       "name_one": "Ataque con escudo",
       "name_other": "Ataques con escudo"
     },
@@ -557,8 +542,103 @@
       "name_one": "Ataque simple",
       "name_other": "Ataques simples"
     },
+    "glacialCaveCollapseAttack": {
+      "customMessage": "¡ruge tan fuerte que estalactitas de hielo estallan del techo! Pero el enemigo está lo bastante cerca como para evitar el ataque.",
+      "name_one": "Ataque de colapso por congelación",
+      "name_other": "Escalofriantes ataques de colapso"
+    },
+    "chargeChargeRadiantBlastAttack": {
+      "customMessage": "carga su energía y se prepara para lanzar un poderoso ataque.",
+      "name_one": "Ataque de Rayo Explosivo Radiante",
+      "name_other": "Ataques explosivos de rayo radiante"
+    },
+    "chargeRadiantBlastAttack": {
+      "customMessage": "continúa cargando su energía y se prepara para lanzar un poderoso ataque.",
+      "name_one": "Ataque de Rayo Explosivo Radiante",
+      "name_other": "Ataques explosivos de rayo radiante"
+    },
+    "radiantBlastAttack": {
+      "name_one": "Ataque de Rayo Explosivo Radiante",
+      "name_other": "Ataques explosivos de rayo radiante"
+    },
+    "hammerQuakeAttack": {
+      "customMessage": "golpea el suelo con una fuerza titánica, ¡provocando un terremoto! Pero el enemigo se eleva en el aire con su compañero alado, escapando a los temblores.",
+      "name_one": "Ataque sísmico con martillo",
+      "name_other": "Ataque sísmico con martillo"
+    },
+    "startPolarEmbraceAttack": {
+      "customMessage": "no logra atrapar a su oponente, que la mantiene a una distancia respetable con sus ataques",
+      "name_one": "Abrazo polar ataque",
+      "name_other": "Ataques de abrazo polar"
+    },
+    "isStuckInPolarEmbrace": {
+      "customMessage": "no consigue sujetar a su oponente, que logra liberarse con sus ataques",
+      "name_one": "Abrazo polar ataque",
+      "name_other": "Ataques de abrazo polar"
+    },
+    "glacialBreathAttack": {
+      "name_one": "Ataque de ráfaga de hielo",
+      "name_other": "Ataques con ráfagas de hielo"
+    },
+    "blizzardRageAttack": {
+      "customMessage": "invoca la furia de la ventisca sobre su oponente, pero los vientos helados ya azotan la arena.",
+      "name_one": "Blizzard ataque de rabia",
+      "name_other": "Ataques de furia Blizzard"
+    },
+    "aerialDiveAttack": {
+      "customMessage": "salta en el aire para lanzarse sobre su adversario, pero éste consigue mantenerlo a raya con sus ataques.",
+      "name_one": "Ataque aéreo en picado",
+      "name_other": "Ataques aéreos en picado"
+    },
+    "crystallineArmorAttack": {
+      "customMessage": "hace brillar su armadura cristalina con la esperanza de herir a su adversario, pero las puntas afiladas permanecen intactas.",
+      "name_one": "Ataque con armadura cristalina",
+      "name_other": "Ataques con armadura cristalina"
+    },
+    "icySeductionAttack": {
+      "name_one": "Ataque de seducción helada",
+      "name_other": "Ataque de seducción helada"
+    },
+    "frozenKissAttack": {
+      "name_one": "Ataque de beso helado",
+      "name_other": "Ataques con besos congelados"
+    },
+    "spectralRevengeAttack": {
+      "customMessage": "no consigue vengarse de su oponente.",
+      "name_one": "Venganza espectral",
+      "name_other": "Venganza espectral"
+    },
+    "ambush": {
+      "customMessage": "se esconde para preparar una emboscada...",
+      "name_one": "Emboscada",
+      "name_other": "Emboscadas"
+    },
+    "tailWhipAttack": {
+      "name_one": "Golpe de cola",
+      "name_other": "Ataques de taco"
+    },
+    "lightRayAttack": {
+      "name_one": "Ataque de rayo de luz",
+      "name_other": "Ataques con rayos de luz"
+    },
+    "crystalShardAttack": {
+      "name_one": "Ataque con fragmentos de cristal",
+      "name_other": "Ataques con astillas de cristal"
+    },
+    "clawAttack": {
+      "name_one": "Ataque con garras",
+      "name_other": "Ataques con garras"
+    },
+    "callPack": {
+      "customMessage": "llama a su manada con un aullido estridente.",
+      "name_one": "Llamar a la manada",
+      "name_other": "Llamadas a la manada"
+    },
+    "packAttack": {
+      "name_one": "Ataque de manada",
+      "name_other": "Ataques de manada"
+    },
     "slamAttack": {
-      "description": "Ataque débil-medio que reduce la velocidad del oponente.",
       "name_one": "Ataque de impacto",
       "name_other": "Impactos"
     },
@@ -599,13 +679,11 @@
       "success": "pide ayuda a **{{petNickname}}** que se lanza valientemente hacia delante y se apodera del arma enemiga en un acto de audacia."
     },
     "stealth": {
-      "description": "Se esconde discretamente para duplicar el daño del siguiente ataque.",
       "customMessage": "se esconde discretamente para hacer los preparativos que aumentarán el daño de su próximo ataque...",
       "name_one": "Discreción",
       "name_other": "Discreciones"
     },
     "stoneSkinAttack": {
-      "description": "Cuantas más veces se realice esta acción, mayor será la bonificación de defensa.",
       "customMessage": "endurece su piel y se protege.",
       "name_one": "Piel de roca",
       "name_other": "Pieles de roca"
@@ -617,7 +695,6 @@
       "stop": "ya no se marea."
     },
     "summonAttack": {
-      "description": "Invoca aliados que te ayuden y ataca con fuerza.",
       "name_one": "Invocación de aliados",
       "name_other": "Invocación de aliados"
     },
@@ -640,7 +717,6 @@
       "success": "recurre a **{{petNickname}}** que, a pesar de su feroz determinación y de sus incesantes esfuerzos, sólo consigue infligir un impacto insignificante en el combate."
     },
     "ultimateAttack": {
-      "description": "",
       "name_one": "Ataque definitivo",
       "name_other": "Ataques definitivos"
     },
@@ -660,9 +736,23 @@
       "stop": "ya no se debilita."
     },
     "webShotAttack": {
-      "description": "Lanza un chorro de telaraña que hiere y ralentiza a tu oponente.",
       "name_one": "Ataque de lanzamiento de red",
       "name_other": "Ataques con lanza telarañas"
+    },
+    "hardBiteAttack": {
+      "name_one": "Poderoso ataque de mordedura",
+      "name_other": "Poderosos ataques de mordedura"
+    },
+    "bleeding": {
+      "name": "sangrado",
+      "new": "sangrado.",
+      "active": "sangrado.",
+      "stop": "ya no sangra."
+    },
+    "howlAttack": {
+      "customMessage": "grita al cielo.",
+      "name_one": "Aullando",
+      "name_other": "Aullando"
     }
   },
   "leagues": {
@@ -729,33 +819,38 @@
       "particle": "a la"
     },
     "1101": {
-      "description": "Como su nombre indica, esta vasta extensión de tierra helada no es lugar para descansar. Muy fría y árida, aún quedan algunos árboles resistentes.",
-      "name": "Tundra helada",
+      "description": "Una extensión de tierra helada donde el clima es despiadado. Una tormenta de nieve permanente dificulta el avance y la cartografía de la zona. Aquí pueden verse todo tipo de animales árticos.",
+      "name": "Tundra",
       "particle": "a la"
     },
     "1102": {
-      "description": "Lac du savoir, un gran lago helado, es un lugar tranquilo y relajante. Se puede oír una suave brisa que se desliza por el hielo del lago. Ideal para meditar después de explorar esta inmensa isla salvaje.",
-      "name": "El lago del conocimiento",
-      "particle": "a la"
-    },
-    "1103": {
-      "description": "Una inmensa llanura donde se han construido montones de muñecos de nieve. ¿Quién construyó el primer muñeco de nieve? Nadie lo sabe. Hace demasiado frío para que se derritan. Sin embargo, algunos viajeros se divierten creando otros nuevos.",
-      "name": "Muñeco de nieve llano",
-      "particle": "a la"
-    },
-    "1104": {
-      "description": "Una magnífica caverna de hielo. Cientos de estalactitas y estalagmitas decoran esta caverna. La luz natural ilumina estos cristales de hielo, dando la impresión de miles de estrellas. Si se olvidan los cientos de exploradores muertos que han resbalado y se han empalado en las estalagmitas, esta caverna es increíblemente bella o totalmente triste. La Cueva de Cristal es un peligroso camino para llegar a la cumbre del pico nevado.",
+      "description": "Una gran caverna en la que el más mínimo rayo de sol que entra es multiplicado por los cristales, lo que la hace muy luminosa. Afiladas estalactitas y estalagmitas, sinónimo de heridas graves o incluso mortales si te cae una encima o si das un paso en falso, forman el telón de fondo de la caverna. Si se atreve a aventurarse un poco más, tendrá que elegir entre escalar hasta la cima del pico nevado o adentrarse aún más.",
       "name": "Cueva de cristal",
       "particle": "a la"
     },
+    "1103": {
+      "description": "Dos majestuosas puertas se alzan en lo alto de una larga serie de escalones. Subirlas no será fácil. Se dice que fueron construidas por una antigua civilización en honor a una deidad.",
+      "name": "Puertas sagradas",
+      "particle": "a la"
+    },
+    "1104": {
+      "description": "Este pico de la cordillera destaca por la violencia de sus tormentas de nieve y la velocidad de sus vientos. Está tan alto que el oxígeno escasea y el riesgo de morir congelado es alto si no se ha sucumbido ya a los animales salvajes…",
+      "name": "Pico nevado",
+      "particle": "a la"
+    },
     "1105": {
-      "description": "Esta caverna, muy parecida a su hermana, la Cueva de Cristal, tiene una gran ventaja. Conduce a la cima nevada a través de las profundidades de la tierra. Es un largo camino sobre hielo y roca. Debe su nombre a las cuevas que se adentran bajo tierra, revelando bellas formaciones de hielo.",
-      "name": "Corazón de la caverna de hielo",
+      "description": "Un gran lago en el corazón de las montañas, cruzarlo no está exento de riesgos. Como la temperatura es gélida, el hecho de que no esté congelado sigue siendo un misterio. Nadie conoce su profundidad ni su fauna.",
+      "name": "Lago subterráneo",
       "particle": "a la"
     },
     "1106": {
-      "description": "Este gigantesco pico domina toda la isla. Se divisa a kilómetros de distancia. De muy difícil acceso, el pico nevado alberga viejas estructuras de madera que datan de una antigua civilización. Como los dos senderos que conducen a ella son muy peligrosos, pocas personas han podido ver estas estructuras con sus propios ojos.",
-      "name": "Pico nevado",
+      "description": "Un pueblo rico y abandonado del que sólo quedan ruinas y desolación. Se puede ver el tejado de una casa señorial doblándose bajo el peso de la campana derrumbada de la iglesia. Aquí reina un pesado silencio, ocasionalmente interrumpido por los gritos de sufrimiento de las almas perdidas.",
+      "name": "Pueblo devastado",
+      "particle": "a la"
+    },
+    "1107": {
+      "description": "Nadie se ha aventurado tan lejos todavía. A lo lejos, se ve una silueta gigantesca reflejada en una pared de hielo.",
+      "name": "Nido congelado",
       "particle": "a la"
     },
     "12": {
@@ -946,14 +1041,6 @@
       "name": "Playa de hielo",
       "prefix": "de la"
     },
-    "iceCavern": {
-      "name": "Caverna de hielo",
-      "prefix": "de la"
-    },
-    "iceLake": {
-      "name": "Lago helado",
-      "prefix": "de"
-    },
     "la": {
       "name": "Lago",
       "prefix": "de"
@@ -986,14 +1073,6 @@
       "name": "Ruinas",
       "prefix": "de"
     },
-    "snowMountain": {
-      "name": "Pájaro carpintero",
-      "prefix": "de"
-    },
-    "snowmenField": {
-      "name": "Llanura",
-      "prefix": "de la"
-    },
     "testZone": {
       "name": "",
       "prefix": "de la"
@@ -1008,6 +1087,22 @@
     },
     "volcano": {
       "name": "Volcán",
+      "prefix": "de"
+    },
+    "blessedDoors": {
+      "name": "",
+      "prefix": "de"
+    },
+    "icePeak": {
+      "name": "Pájaro carpintero",
+      "prefix": "de"
+    },
+    "undergroundLake": {
+      "name": "Lago",
+      "prefix": "de"
+    },
+    "dragonsNest": {
+      "name": "",
       "prefix": "de"
     }
   },
@@ -1120,6 +1215,34 @@
     "slimyMutant": {
       "name": "Mutante de barro",
       "description": "El Mutante Baba es un monstruo que puede copiar a otros monstruos o directamente a su oponente. Es muy versátil y puede adaptarse a cualquier situación."
+    },
+    "whiteWolf": {
+      "name": "Lobo blanco",
+      "description": "Un depredador feroz y ágil. Sus afiladas garras podrían sellar tu destino. El frío y los senderos sinuosos le dan una gran ventaja sobre los aventureros incautos."
+    },
+    "shinyElementary": {
+      "name": "Primaria brillante",
+      "description": "Un ser nacido de los cristales de la cueva. No dudará en usar sus poderes elementales para enviarte bailando el vals al otro extremo del camino."
+    },
+    "crocodile": {
+      "name": "Cocodrilo",
+      "description": "Un cocodrilo grande y aterrador en busca de un aventurero para darse un festín."
+    },
+    "yukiOnna": {
+      "name": "Yuki-Onna",
+      "description": "Un espíritu de las nieves. Es muy bella, pero también muy peligrosa. Puede congelar a sus presas de un vistazo y hacerlas desaparecer en la nieve."
+    },
+    "celestialGuardian": {
+      "name": "Guardián Celestial",
+      "description": "El guardián de las puertas sagradas. Impedir el paso a los aventureros es su deber, y utilizará su martillo divino para hacerte entender que no eres bienvenido."
+    },
+    "maleIceDragon": {
+      "name": "Señor del Hielo",
+      "description": "Un majestuoso dragón de escamas cristalinas que reina desde las cumbres heladas. Encaramado en los picos más altos, vigila su territorio. Su aliento helado puede convertir a un aventurero en una estatua de hielo en cuestión de segundos, y sus afiladas garras le permiten abalanzarse sobre su presa desde las alturas con una precisión mortal."
+    },
+    "femaleIceDragon": {
+      "name": "Reina del Hielo",
+      "description": "Una temible dragona que protege ferozmente su tesoro y su descendencia en las heladas profundidades de su guarida. Más agresiva que su compañera, no duda en desatar su furia contra cualquiera que se atreva a acercarse a su nido. Sus escamas brillan como diamantes y su cola puede atravesar el hielo más grueso de un solo golpe."
     }
   },
   "objects": {
@@ -1668,5 +1791,45 @@
     "genericGiveNoSlot": "Tienes una nueva mascota: **{{pet}}**. Sin embargo, no tienes espacio para él.",
     "genericGiveGuild": "Tienes una nueva mascota: **{{pet}}**. Colócala en la cabaña del gremio.",
     "genericGivePlayer": "Tienes una nueva mascota: **{{pet}}**. Decides llevártelo contigo."
+  },
+  "pveMapsStory": {
+    "1001": {
+      "forestTroll": "Entras en el Bosque del Crepúsculo, donde la ceniza volcánica baila en el aire como una nieve grisácea. La escasa visibilidad te obliga a caminar con cuidado entre los árboles centenarios de troncos ennegrecidos. De repente, un crujido sordo rompe el inquietante silencio. Las ramas se doblan y se rompen bajo el inmenso peso. A través del velo de ceniza, emerge una enorme figura: un colosal troll, con su áspera piel embadurnada de hollín volcánico. Sus ojos brillantes atraviesan la polvorienta oscuridad mientras lanza un rugido que sacude los árboles circundantes. Este primitivo guardián del bosque está claramente resentido por tu intrusión en sus dominios...",
+      "slimyMutant": "Cuanto más te adentras en el Bosque del Crepúsculo, más opresiva se vuelve la atmósfera. La ceniza volcánica parece absorber todo el sonido, creando un silencio casi sobrenatural. Entonces notas algo extraño: tu propia sombra parece moverse independientemente de tus movimientos. Te das la vuelta bruscamente y descubres, para tu horror, una masa gelatinosa y verdosa que ondula lentamente hacia ti. Pero lo más inquietante es que empieza a adoptar tu aspecto, copiando tus rasgos, tu ropa e incluso tus armas. El Mutante Baba te observa con tus propios ojos, una sonrisa malévola distorsiona lo que debería ser tu rostro. Este perfecto mimetismo hace que la batalla que se avecina sea aún más desestabilizadora..."
+    },
+    "1002": {
+      "skeleton": "A medida que avanzas por el sendero, las ruinas de una antigua aldea aparecen en el horizonte. A primera vista, el lugar parece tranquilo, a pesar de los tejados derruidos. Caminas con cautela entre las casas derruidas, escudriñando cada rincón con la esperanza de encontrar una señal de vida. De repente, en el recodo de un callejón, te quedas paralizado. Un fuerte crujido resuena en el empedrado. Ante ti se alza un esqueleto con la mirada perdida, armado hasta los dientes y listo para la batalla..."
+    },
+    "1003": {
+      "spider": "Llegas a la entrada de una mina abandonada, el viejo armazón de madera impide que las paredes se derrumben. Entras, limpiando las numerosas telarañas a tu paso, y exploras las galerías. Cuanto más avanzas, más arañas diminutas se agolpan a tus pies. Obligado a pisotearlas, los gritos asustados de estas diminutas criaturas resuenan por toda la caverna. Sientes vibrar el suelo cuando algo grande se acerca a gran velocidad, nada menos que una araña abominable de inmenso tamaño. Al ver los cadáveres de sus hijos a tus pies, grita de rabia y carga contra ti."
+    },
+    "1004": {
+      "rockGolem": "Mientras avanzas por el empinado sendero, decides tomarte un descanso. Sin aliento, te dejas caer sobre una roca, pensando que por fin podrás descansar después de luchar contra todos esos monstruos. Es entonces cuando oyes un ruido similar al de un desprendimiento lejano. Te pones en pie y, ante tus atónitos ojos, un enorme golem de roca emerge de la ladera de la montaña. Parece lento, pero sabiendo que nunca debes subestimar a tu oponente, desenfundas tu arma, listo para enfrentarte a esta nueva amenaza..."
+    },
+    "1005": {
+      "magmaTitan": "Haciendo acopio de tus fuerzas más íntimas, escalas valientemente el volcán. El calor del suelo te atraviesa, pero tu valor te mantiene en pie. El aire sofocante, cargado de magma ascendente, te hace girar la cabeza. Cada vez que inspiras, sientes náuseas. Tus heridas del pasado se reavivan, cada paso pesa más que el anterior, pero sigues adelante, cueste lo que cueste. Justo cuando crees que has llegado al final de tu camino, el suelo tiembla. El magma se congela, la lava fluye y juntos toman forma. Una entidad se eleva. Un coloso se alza ante ti. La sangre, ardiente como el volcán, late en tu interior. Te preparas para la batalla definitiva."
+    },
+    "1101": {
+      "whiteWolf": "En esta tundra implacable, cada paso que das se hunde profundamente en la nieve fresca. El viento helado te azota la cara, mientras la tormenta perpetua reduce tu visibilidad a unos pocos metros. Tus miembros se entumecen poco a poco a pesar de tus esfuerzos por mantener la circulación. De repente, distingues una silueta oscura que se mueve silenciosamente a través de la cortina de nieve. Te quedas helado, con todos los sentidos alerta. Un rugido sordo atraviesa el aullido del viento. Dos gélidos ojos azules emergen de la tormenta, brillando con salvaje inteligencia. Un lobo blanco, majestuoso e imponente, se alza ante ti. Su inmaculado pelaje se mimetiza perfectamente con el entorno y sus afilados colmillos brillan en la penumbra. Este depredador ártico te está juzgando, evaluando si eres una presa o una amenaza. Su mirada penetrante parece leer tu alma mientras se prepara para atacar..."
+    },
+    "1102": {
+      "shinyElementary": "Continúas tu búsqueda de aventuras en la Cueva de Cristal, un camino en la ladera de la montaña que conduce a otros paisajes. Las magníficas gemas que sobresalen de las paredes demuestran que el lugar hace honor a su nombre. Tus pasos resuenan contra las paredes a tu alrededor, su sonido vuelve a ti al igual que tu imagen se refleja contra las miles de gemas. Juegas con el eco mientras admiras el lugar, pero de repente llega a tus tímpanos un sonido que no parece provenir de ti. Los cristales parecen chocar entre sí, cada vez más fuerte. De repente, un grupo de estas piedras adopta una forma humanoide que duplica tu tamaño. La luz que atraviesa esta entidad se descompone en un magnífico arco iris, pero en vista de la agresividad de la criatura hacia ti, crees que va a ser necesario poner fin a esta hermosa iluminación."
+    },
+    "1103": {
+      "celestialGuardian": "Vous sortez de la caverne de cristal et vous vous retrouvez ébloui par le soleil qui de reflète sur la neige qui vous entoure. Après plusieurs secondes pour vous habituer à la luminosité, vous apercevez des centaines de marches qui mènent à deux gigantesques portes entourées de deux statues tout aussi grandes. Vous ne comptez pas vous arrêter en si bon chemin, donc vous commencez à gravir difficilement les marches les unes après les autres. Vous faites attention à ne pas déraper sur les pierres rendues glissantes par la glace qui s'est formée dessus. Après plusieurs minutes de marche intense, vous arrivez aux pieds de la construction. Les inscriptions sur les portes ne vous sont pas familières: en effet, elles sont rédigées dans une écriture qui vous est inconnue. En tout cas, les portes sont sur votre chemin, et il vous faut les franchir pour avancer. Vous tentez donc de poser votre paume sur la pierre froide, et soudain, un mécanisme s'active et les portes commencent à grincer. Après plusieurs secondes, les portes sont enfin totalement ouvertes, mais le mécanisme ne s'arrête pourtant pas de faire du bruit. C'est alors qu'en vous retournant sur votre droite, vous remarquez que la statue commence à bouger et attraper un marteau qui est à son échelle..."
+    },
+    "1104": {
+      "maleIceDragon": "La subida al pico nevado te ha dejado exhausto. A esta altitud vertiginosa, cada respiración es una batalla contra el aire enrarecido que quema los pulmones. Tus pasos crujen en la nieve endurecida por vientos violentos que amenazan con desequilibrarte en cualquier momento. Justo cuando crees que has alcanzado la cima, el suelo tiembla bajo tus pies. Un rugido titánico rasga el aire helado, tan potente que provoca una avalancha en la distancia. Mirando hacia las nubes bajas, ves una sombra gigantesca que se cierne sobre ti. De repente, se precipita a tierra con un estruendo ensordecedor. Un colosal dragón de hielo aterriza frente a ti, con sus escamas cristalinas brillando como mil diamantes. Su aliento transforma instantáneamente el aire en niebla helada, mientras sus ojos azul ártico te miran con inteligencia milenaria. Este señor de las cumbres ha decidido que tu intrusión en sus dominios merece una respuesta... definitiva."
+    },
+    "1105": {
+      "crocodile": "Te acercas con cautela a las orillas del lago subterráneo, intrigado por este misterio geológico. ¿Cómo pueden estas aguas permanecer líquidas a temperaturas tan bajas? La temperatura ambiente normalmente convertiría este lago en un sólido bloque de hielo. Te arrodillas para examinar el agua oscura, intentando desentrañar el secreto de su profundidad abismal. Justo entonces, una serie de burbujas suben lentamente a la superficie, perturbando el perfecto espejo del lago. Retrocedes instintivamente cuando, de repente, el agua comienza a burbujear violentamente. Unas fauces monstruosas emergen de las profundidades, armadas con colmillos prehistóricos. Un cocodrilo gigante, adaptado al frío extremo por miles de años de evolución, emerge de su guarida acuática. Su piel gruesa y escamosa lleva las marcas de innumerables batallas. Sus ojos amarillos, tan fríos como el hielo que lo rodea, te miran con la paciencia implacable de un depredador perfecto. Ha sobrevivido en estas aguas misteriosas devorando todo lo que se atreve a acercarse a su territorio..."
+    },
+    "1106": {
+      "yukiOnna": "Te adentras en las ruinas del pueblo devastado, donde el opresivo silencio sólo se rompe por el lúgubre silbido del viento a través de las estructuras derruidas. Cada pisada resuena extrañamente en esta desolación, como si las propias piedras contuvieran el recuerdo de tragedias pasadas. Exploras con cautela los escombros, intentando imaginar la prosperidad que una vez reinó aquí. De repente, una melodía cristalina flota en el aire helado, tan hermosa que te atrae irresistiblemente hacia su fuente. Al doblar la esquina de una casa derruida, vislumbras una figura etérea de asombrosa belleza. Una mujer vestida con un inmaculado kimono blanco parece deslizarse por la nieve sin dejar rastro. Su larga cabellera negra flota en una brisa invisible mientras su piel de alabastro brilla con un resplandor espectral. Pero cuando vuelve la cara hacia ti, te das cuenta con horror de que sus ojos son dos rayos de gélida nada. El Yuki-Onna, espíritu vengativo de las montañas nevadas, revela una mueca que promete una muerte tan bella como terrible."
+    },
+    "1107": {
+      "femaleIceDragon": "Te abres paso por esta región inexplorada, guiado por una curiosidad mezclada con aprensión. El muro de hielo que tienes ante ti refleja una figura tan imponente que desafía a la imaginación. Cuanto más te acercas en la penumbra helada, más te das cuenta de la magnitud de la criatura que se oculta tras esta barrera. De repente, aparecen grietas en el hielo que se extienden como telas de araña. Un rugido sordo hace vibrar las paredes rocosas. La pared estalla con un estruendo apocalíptico, arrojando enormes bloques de hielo. A través de esta cortina de cristales rotos emerge la más majestuosa de las criaturas: un dragón de hielo de proporciones faraónicas. Su presencia parece imponente, sus alas plegadas casi rozan las bóvedas de piedra. Tiene una belleza aterradora, sus escamas iridiscentes atrapan la tenue luz en arco iris helados. Sus ojos, de un azul profundo como el abismo, brillan con sabiduría ancestral y furia maternal. Detrás de ella, puedes ver un huevo gigantesco con un brillo nacarado, palpitando con un resplandor misterioso. Acabas de entrar en su guardería, y ningún intruso quedará impune en el santuario de la Reina de Hielo..."
+    }
   }
 }
+

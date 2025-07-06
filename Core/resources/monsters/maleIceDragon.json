@@ -1,0 +1,40 @@
+{
+  "baseEnergyValue": 750,
+  "attackRatio": 250,
+  "defenseRatio": 70,
+  "speedRatio": 180,
+  "breath": 10,
+  "maxBreath": 50,
+  "breathRegen": 5,
+  "rewardFactor": 1.4,
+  "attacks": [
+    {
+      "id": "clawAttack",
+      "minLevel": 0,
+      "weight": 1
+    },
+    {
+      "id": "glacialBreathAttack",
+      "minLevel": 0,
+      "weight": 3
+    },
+    {
+      "id": "blizzardRageAttack",
+      "minLevel": 0,
+      "weight": 2
+    },
+    {
+      "id": "aerialDiveAttack",
+      "minLevel": 80,
+      "weight": 2
+    },
+    {
+      "id": "crystallineArmorAttack",
+      "minLevel": 50,
+      "weight": 4
+    }
+  ],
+  "maps": [
+    1104
+  ]
+}

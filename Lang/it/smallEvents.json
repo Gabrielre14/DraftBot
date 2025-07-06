@@ -136,7 +136,7 @@
     "end": "Senza prestare ulteriore attenzione all'individuo, continuate per la vostra strada.",
     "rewardTypeText": {
       "xp": " Avete vinto **{{reward}} {emote:unitValues.xp}**.",
-      "money": " {{reward}} Hai vinto ** {emote:unitValues.money}**!",
+      "money": " Hai vinto **{{reward}} {emote:unitValues.money}**!",
       "guildXp": " La tua gilda vince **{{reward}} {emote:unitValues.xp}**.",
       "points": " Avete vinto **{{reward}} {emote:unitValues.score}**."
     }
@@ -150,7 +150,7 @@
       "I raggi del sole che si infrangono tra le nuvole vi riscaldano mentre continuate il vostro viaggio lungo questa strada deserta."
     ],
     "top1": [
-      "{{playerDisplay}} Passerete davanti a , attualmente il miglior giocatore del mondo!",
+      "Lungo il cammino incontrerai {{playerDisplay}}, il miglior giocatore del momento!",
       "Mentre si cammina, ci si imbatte in {{playerDisplay}}. Attualmente è in cima alla classifica. Con gli occhi pieni di ammirazione, decidete di non ostacolare i suoi progressi e continuate il vostro cammino.",
       "Oh, mio Dio! È incredibile! È il leggendario {{playerDisplay}}, il più grande lottatore di oggi! Gli passate accanto e chiacchierate per un momento. Ti dà qualche consiglio per la tua avventura!",
       "Fate largo a {{playerDisplay}}, il numero uno al mondo di DraftBot! Superate questa persona e continuate a camminare per raggiungere la vostra destinazione."
@@ -221,22 +221,22 @@
     ],
     "lower_rank_than_them": [
       "Vi imbattete in {{playerDisplay}}, un giocatore con una reputazione migliore della vostra... Ma non arrendetevi! Forse un giorno riuscirete a raggiungerlo.",
-      "{{playerDisplay}} Mentre cammini, inciampi e cadi, e ride di te perché è classificato più in alto di te!",
-      "{{playerDisplay}} Parlate con lui della vostra classifica. Lui è un passo avanti a voi: ha una classifica più alta!",
-      "{{playerDisplay}} Anche se potrebbero vantarsi di avere una posizione in classifica più alta della vostra, rimanete umili durante la conversazione."
+      "Mentre cammini, inciampi e cadi, e {{playerDisplay}} ride di te perché è classificato più in alto di te!",
+      "Parlate con {{playerDisplay}} della vostra classifica. Lui è un passo avanti a voi: ha una classifica più alta!",
+      "Anche se potrebbero vantarsi di avere un ranking più alto del vostro, {{playerDisplay}} rimane umile durante la conversazione."
     ],
     "better_rank_than_them": [
-      "{{playerDisplay}}Ci si imbatte in . Questo ha un rango inferiore... Ma attenzione, un giorno potrebbe raggiungervi!",
-      "{{playerDisplay}}Un giocatore viene a trovarvi a . Ti chiede un consiglio su come migliorare e poi passa oltre!",
-      "{{playerDisplay}} Parlate con lui della vostra posizione in classifica. Sei più in alto di lui!"
+      "Ci si imbatte in {{playerDisplay}}. Questo ha un rango inferiore... Ma attenzione, un giorno potrebbe raggiungervi!",
+      "Un giocatore viene a trovarvi a {{playerDisplay}}. Ti chiede un consiglio su come migliorare e poi passa oltre!",
+      "Parlate con {{playerDisplay}} della vostra posizione in classifica. Sei più in alto di lui!"
     ],
     "rich": [
-      "{{playerDisplay}} Vi coprite gli occhi per non essere abbagliati dal sole che si riflette sull'oro che indossate! Continuate il vostro cammino, con gli occhi che vi fanno male.",
+      "Ti copri gli occhi per non farti abbagliare dal sole che si riflette sull'oro che {{playerDisplay}} indossa! Continui per la tua strada, con gli occhi che ti fanno male.",
       "È Scrooge? No, è {{playerDisplay}} ! Ha così tanto oro che sei abbagliato! Continuate a camminare, strofinandovi gli occhi.",
-      "{{playerDisplay}}Le monete cadono dalle tasche, tanto sono piene. Non sembra nemmeno farci caso. Un animale le raccoglie prima che possiate raggiungerle. Continuate il vostro cammino, un po' delusi."
+      "Le monete cadono dalle tasche di {{playerDisplay}}, tanto sono piene. Non sembra nemmeno farci caso. Un animale le raccoglie prima che possiate raggiungerle. Continuate il vostro cammino, un po' delusi."
     ],
     "poor": [
-      "Looking at the clothes {{playerDisplay}} wears, they seem to be having money problems... You think they would be happy if you gave them a coin.\n\n{emote:collectors.interactPoorCoin} Give them a coin\n{emote:collectors.refuse} Don't give them a coin",
+      "Guardando i vestiti che indossa {{playerDisplay}}, sembra che abbia problemi di soldi... Pensi che sarebbe felice se gli dessi una moneta.\n\n{emote:collectors.interactPoorCoin} Dagli una moneta\n{emote:collectors.refuse} Non dargli una moneta",
       "Mentre cammini, incontri un povero vagabondo {{playerDisplay}}. Vi chiede qualche moneta:\n\n{emote:collectors.interactPoorCoin} Dategli una moneta, perché ne avete già abbastanza\n{emote:collectors.refuse} Non dategli una moneta",
       "La povertà tocca tutti un giorno, e oggi è {{playerDisplay}} che può permettersi a malapena un pasto.\n\n{emote:collectors.interactPoorCoin} Dategli una moneta\n{emote:collectors.refuse} Non dategli una moneta"
     ],
@@ -251,43 +251,43 @@
       "Lo si ignora, o almeno ci si costringe a farlo. Te ne vai e speri che la tua coscienza non ti disturbi."
     ],
     "pet": [
-      "{{playerDisplay}}{{petEmote}}{{petName}}passa accanto a voi con il suo animale domestico ** ** **. Accarezzate questo coraggioso animale e continuate il vostro cammino di buon umore!",
-      "{{playerDisplay}}{{petEmote}}{{petName}}vi passa accanto e vi mostra il suo animaletto ** ** **. Lo accarezzate e ripartite, bon voyage!",
-      "{{playerDisplay}}{{petEmote}}{{petName}}vi passa accanto con ** ** ** ** al guinzaglio. Lo guardate con stupore e vi dite che anche a voi piacerebbe avere questo animale!"
+      "{{playerDisplay}} passa accanto a voi con il suo animale domestico **{{petEmote}}** **{{petName}}**. Accarezzate questo coraggioso animale e continuate il vostro cammino di buon umore!",
+      "{{playerDisplay}} vi passa accanto e vi mostra il suo animaletto **{{petEmote}}** **{{petName}}**. Lo accarezzate e ripartite, bon voyage!",
+      "{{playerDisplay}} vi passa accanto con **{{petEmote}}** **{{petName}}** al guinzaglio. Lo guardate con stupore e vi dite che anche a voi piacerebbe avere questo animale!"
     ],
     "guild_chief": [
-      "Non fatevi prendere dal panico! {{playerDisplay}}{{guildName}}State passando, capo gilda ** **.",
+      "Non fatevi prendere dal panico! State passando davanti a {{playerDisplay}}, capo gilda **{{guildName}}**.",
       "Passate davanti a {{playerDisplay}}. È il capo della gilda **{{guildName}}** !",
-      "Riconoscete la persona che vi passa accanto... {{playerDisplay}}{{guildName}}È il capo della gilda ** ** !"
+      "Riconoscete la persona che vi passa accanto... È {{playerDisplay}}, il capo della gilda **{{guildName}}** !"
     ],
     "guild_elder": [
-      "{{playerDisplay}}{{guildName}}parla della sua gilda ** ** con voi. Si apprende che è il più anziano!",
+      "{{playerDisplay}} parla della sua gilda **{{guildName}}** con voi. Si apprende che è il più anziano!",
       "Puoi visitare {{playerDisplay}}. È un anziano della gilda **{{guildName}}** !",
-      "{{guildName}} {{playerDisplay}}Il braccio destro della Gilda ** **, , vi saluta e prosegue per la sua strada."
+      "Il braccio destro della Gilda **{{guildName}}**, {{playerDisplay}}, vi saluta e prosegue per la sua strada."
     ],
     "class": [
-      "{{playerDisplay}}Si sfiora .{{class}}Vi rendete conto che è uno dei ** s**. Parlate con lui per un po' e continuate per la vostra strada.",
-      "{{playerDisplay}}un classe **{{class}}**, passa davanti a voi, lo salutate e continuate per la vostra strada.",
-      "{{playerDisplay}}{{class}}Si urta accidentalmente il braccio dell'onorevole ** **. Entrambi vi scusate e continuate per la vostra strada."
+      "Si sfiora {{playerDisplay}}. Vi rendete conto che è uno dei **{{class}}s**. Parlate con lui per un po' e continuate per la vostra strada.",
+      "{{playerDisplay}}, di classe **{{class}}**, ti passa accanto, lo saluti e continui per la tua strada.",
+      "Si urta accidentalmente il braccio di {{playerDisplay}}, onorevole **{{class}}**. Entrambi vi scusate e continuate per la vostra strada."
     ],
     "weapon": [
-      "{{playerDisplay}}{{weapon}} Incontri chi ti mostra la sua arma \"** **\".",
-      "{{playerDisplay}}{{weapon}}Un passante viene a mostrarsi accanto a voi, è e vi mostra la sua pistola \"** **\"!",
-      "{{playerDisplay}}{{weapon}}Wow! brandisce la sua magnifica arma \" \" davanti a voi. Voi continuate a camminare stupefatti."
+      "Incontri chi {{playerDisplay}} ti mostra la sua arma \"**{{weapon}}**\".",
+      "Un passante viene a mostrarsi accanto a voi, è {{playerDisplay}} e vi mostra la sua armato \"**{{weapon}}**\"!",
+      "Wow! {{playerDisplay}} brandisce la sua magnifica arma \"**{{weapon}}**\" davanti a voi. Voi continuate a camminare stupefatti."
     ],
     "armor": [
-      "{{playerDisplay}}{{armor}} Incontrate chi vi mostra la sua magnifica \"armatura\".",
-      "{{playerDisplay}}{{armor}}Una guardia si avvicina: è venuto a mostrarvi la sua armatura \"** **\"!",
-      "{{playerDisplay}} vi sfida a testare la sua armatura protettiva \"{{armor}}\". Dopo averne testato l'efficacia, si può partire."
+      "Incontrate {{playerDisplay}}, chi vi mostra la sua magnifica armatura \"**{{armor}}**\".",
+      "Una guardia si avvicina: è {{playerDisplay}}, è venuto a mostrarvi la sua armatura \"**{{armor}}**\"!",
+      "{{playerDisplay}} vi sfida a testare la sua armatura protettiva \"**{{armor}}**\". Dopo averne testato l'efficacia, si può partire."
     ],
     "potion": [
-      "{{playerDisplay}}{{potion}} Incontrate chi vi mostra la sua magnifica pozione \"** **\".",
+      "Incontrate {{playerDisplay}} chi vi mostra la sua magnifica pozione \"**{{potion}}**\".",
       "{{playerDisplay}} viene a parlare con voi, viene a mostrarvi la sua pozione \"**{{potion}}**\"!",
-      "{{playerDisplay}}che incontrate lungo la strada, vi dice che ha messo le mani su una pozione eccezionale.{{potion}} Quindi vi mostra \"** **\"."
+      "{{playerDisplay}} che incontrate lungo la strada, vi dice che ha messo le mani su una pozione eccezionale. Quindi vi mostra \"**{{potion}}**\"."
     ],
     "object": [
-      "{{playerDisplay}}{{object}} Incontrate chi vi mostra il suo magnifico oggetto \"** **\".",
-      "{{playerDisplay}}{{object}}Parlando con , vi mostra il suo oggetto \"** **\"!",
+      "Incontrate {{playerDisplay}} chi vi mostra il suo magnifico oggetto \"**{{object}}**\".",
+      "Parlando con {{playerDisplay}}, vi mostra il suo oggetto \"**{{object}}**\"!",
       "{{playerDisplay}}Un giocatore che cammina lungo la vostra stessa strada estrae un oggetto dalla sua collezione.{{object}} Vi mostra con orgoglio \"** **\"."
     ],
     "effect": {
@@ -298,28 +298,28 @@
       ],
       "hurt": [
         "Si vede una mummia in lontananza! Oh no, è solo {{playerDisplay}}, coperto di bende...",
-        "{{playerDisplay}}Durante il tragitto, vi imbattete in . È coperto di bende: cosa gli è successo?",
-        "{{playerDisplay}} Mentre correte verso la vostra destinazione, vi chiede di stringere le bende sulla sua testa. Lo fate e vi stupite che qualcuno possa essere così ferito."
+        "Durante il tragitto, vi imbattete in {{playerDisplay}}. È coperto di bende: cosa gli è successo?",
+        "Mentre correte verso la vostra destinazione, {{playerDisplay}} vi chiede di stringere le bende sulla sua testa. Lo fate e vi stupite che qualcuno possa essere così ferito."
       ],
       "injured": [
-        "{{playerDisplay}} Inciampate in un uomo che è svenuto sul pavimento. Gli date un colpetto per svegliarlo, ma senza successo.",
+        "Inciampate in {{playerDisplay}} che è svenuto sul pavimento. Gli date un colpetto per svegliarlo, ma senza successo.",
         "Non era un topo morto sul pavimento, era solo {{playerDisplay}}. Gli chiedete se sta bene. Lui non risponde e voi continuate per la vostra strada.",
         "Una persona è priva di sensi in mezzo alla strada. È {{playerDisplay}}. Si fa di tutto per riportarlo alla coscienza, ma senza successo. Lo si mette quindi a terra sul ciglio della strada per evitare ulteriori lesioni."
       ],
       "starving": [
-        "Un ruggito sordo giunge alle vostre orecchie. {{playerDisplay}}Scoprite che si tratta del ventre di . Purtroppo avete da poco finito il cibo avanzato.",
-        "{{playerDisplay}}A quanto pare non ha mangiato abbastanza. Il suo pancino brontola! Non avendo nulla da offrirle, continuate il vostro cammino verso nuovi orizzonti.",
-        "{{playerDisplay}} Vedete, che è alla folle ricerca di cibo. Corre in giro alla ricerca di qualcosa da mangiare. Non avendo nulla da offrirgli, continuate il vostro cammino."
+        "Un ruggito sordo giunge alle vostre orecchie. Scoprite che si tratta del ventre di {{playerDisplay}}. Purtroppo avete da poco finito il cibo avanzato.",
+        "A quanto pare {{playerDisplay}} non ha mangiato abbastanza. Il suo pancino brontola! Non avendo nulla da offrirle, continuate il vostro cammino verso nuovi orizzonti.",
+        "Vedete {{playerDisplay}} che è alla folle ricerca di cibo. Corre in giro alla ricerca di qualcosa da mangiare. Non avendo nulla da offrirgli, continuate il vostro cammino."
       ],
       "sleeping": [
-        "{{playerDisplay}} Vi sorprende addormentato sul ciglio della strada. Decidete di lasciarlo dormire, perché probabilmente ne ha bisogno.",
-        "{{playerDisplay}} Evidentemente non ha dormito abbastanza stanotte: è sdraiato sul ciglio della strada.",
-        "Il ciglio della strada sembra un buon posto per riposare. {{playerDisplay}} Questo è ciò che ci si dice dopo aver visto dormire lì."
+        "Vi sorprende {{playerDisplay}} addormentato sul ciglio della strada. Decidete di lasciarlo dormire, perché probabilmente ne ha bisogno.",
+        "Evidentemente {{playerDisplay}} non ha dormito abbastanza stanotte: è sdraiato sul ciglio della strada.",
+        "Il ciglio della strada sembra un buon posto per riposare. Questo è ciò che ci si dice dopo aver visto {{playerDisplay}} dormire lì."
       ],
       "freezing": [
-        "Si sente molto freddo quando si cammina. {{playerDisplay}}È , che è vicino all'ipotermia!",
+        "Si sente molto freddo quando si cammina. È {{playerDisplay}}, che è vicino all'ipotermia!",
         "{{playerDisplay}} sembra essere freddo. Lo si riscalda un po' e poi si va via.",
-        "Un suono ridondante di ticchettio vi infastidisce. {{playerDisplay}}Scoprite che sono i denti di... Questo è congelato! Riprendete il vostro viaggio senza ulteriori indugi."
+        "Un suono ridondante di ticchettio vi infastidisce. Scoprite che sono i denti di {{playerDisplay}}... Questo è congelato! Riprendete il vostro viaggio senza ulteriori indugi."
       ],
       "feetHurt": [
         "Vi imbattete in {{playerDisplay}} che si lamenta dei suoi piedi. Spiega che cammina da troppo tempo senza fermarsi. Gli date qualche consiglio su come evitare questo problema in futuro e continuate per la vostra strada.",
@@ -327,33 +327,33 @@
         "Durante una passeggiata, vi imbattete in {{playerDisplay}} che si lamenta di un dolore al piede. Le suggerite di prendersi cura dei suoi piedi e di fare delle pause per evitare lesioni."
       ],
       "confounded": [
-        "{{playerDisplay}}È possibile contattare . Ci provate. Le sue parole sono piuttosto incoerenti, quindi continuate per la vostra strada, un po' confusi.",
+        "È possibile contattare {{playerDisplay}}. Ci provate. Le sue parole sono piuttosto incoerenti, quindi continuate per la vostra strada, un po' confusi.",
         "{{playerDisplay}} dice molte cose incoerenti. Tutto ciò vi sembra strano e ve ne andate in fretta, confusi!",
-        "{{playerDisplay}} Lo vedete completamente fuori di sé. Dopo aver cercato di riportarlo alla realtà senza successo, continuate il vostro cammino per recuperare il tempo perduto."
+        "Lo vedete {{playerDisplay}} che sembra completamente fuori di sé. Dopo aver cercato di riportarlo alla realtà senza successo, continuate il vostro cammino per recuperare il tempo perduto."
       ],
       "drunk": [
         "{{playerDisplay}} zigzagando lungo il percorso, sembra che abbia bevuto un po' (troppo). Continuate il vostro viaggio.",
-        "{{playerDisplay}}Sembra che non abbia capito che l'alcol va consumato con moderazione. Dopo questo incontro inaspettato, continuate la vostra strada.",
-        "{{playerDisplay}} Si vede che è piuttosto alticcio, per usare un eufemismo. Sembra che si stia divertendo... da solo. Fate il possibile per ignorarlo e continuate per la vostra strada."
+        "{{playerDisplay}}, sembra che non abbia capito che l'alcol va consumato con moderazione. Dopo questo incontro inaspettato continuate la vostra strada.",
+        "Si vede {{playerDisplay}} che è piuttosto alticcio, per usare un eufemismo. Sembra che si stia divertendo... da solo. Fate il possibile per ignorarlo e continuate per la vostra strada."
       ],
       "scared": [
         "Passate davanti a {{playerDisplay}} , che sembra correre verso di voi. È inseguito dai rapinatori che cercano i suoi soldi. Lo accompagnate lungo la strada per aiutarlo a ritrovare la calma. Una volta rassicurato, lo lasciate e ripartite.",
-        "{{playerDisplay}} In lontananza, si scorge una corsa a tutta velocità per sfuggire a un branco di lupi. Accorrete in suo aiuto e costringete le bestie selvatiche a ritirarsi.",
-        "{{playerDisplay}}Incontri . Sembra completamente in preda al panico. Gli chiedete perché è così sconvolto. Vi dice che è stato appena inseguito da un drago, ma che è riuscito a scappare, perdendo qualche capello."
+        "In lontananza, vedete {{playerDisplay}} che corre a tutta velocità per sfuggire a un branco di lupi. Accorrete in suo aiuto e costringete le bestie selvatiche a ritirarsi.",
+        "Incontri {{playerDisplay}}. Sembra completamente in preda al panico. Gli chiedete perché è così sconvolto. Vi dice che è stato appena inseguito da un drago, ma che è riuscito a scappare, perdendo qualche capello."
       ],
       "occupied": [
-        "{{playerDisplay}} Lo individuate e lo invitate a fare due chiacchiere, ma lui vi dice che è occupato. È solo un rinvio e ognuno di voi continua per la sua strada.",
-        "{{playerDisplay}} Mentre attraversate, vi imbattete in , che è molto occupato... Cercate di fare due chiacchiere con lui, ma senza successo, e vi chiede di aiutarlo con il suo lavoro.",
-        "{{playerDisplay}} Durante il tragitto, vi imbattete in , che sembra molto impegnato. Cercate di saperne di più, ma senza successo, prima di continuare il vostro cammino."
+        "Lo individuate {{playerDisplay}} e lo invitate a fare due chiacchiere, ma lui vi dice che è occupato. È solo un rinvio e ognuno di voi continua per la sua strada.",
+        "Mentre attraversate, vi imbattete in {{playerDisplay}}, che è molto occupato... Cercate di fare due chiacchiere con lui, ma senza successo, e vi chiede di aiutarlo con il suo lavoro.",
+        "Durante il tragitto, vi imbattete in {{playerDisplay}}, che sembra molto impegnato. Cercate di saperne di più, ma senza successo, prima di continuare il vostro cammino."
       ],
       "jailed": [
-        "{{playerDisplay}}Mentre passeggiate tranquillamente verso la vostra destinazione, vedete delle guardie che vi mettono le manette. Incuriositi, vi avvicinate e sentite che si sta dirigendo direttamente verso la prigione. Si riparte, chiedendosi cosa abbia fatto quest'uomo.",
-        "Mentre percorrete con cautela un sentiero, vi imbattete in un convoglio di prigionieri scortati da guardie armate. {{playerDisplay}}Mentre arrancano su per il pendio, intravedete i poveri malcapitati, tra cui un uomo che piange. Vi sentite un po' dispiaciuti per lui, ma dimenticate subito questa sensazione, dicendovi che probabilmente non è lì per caso."
+        "Mentre passeggiate tranquillamente verso la vostra destinazione, vedete delle guardie che vi mettono le manette a {{playerDisplay}}. Incuriositi, vi avvicinate e sentite che si sta dirigendo direttamente verso la prigione. Si riparte, chiedendosi cosa abbia fatto quest'uomo.",
+        "Mentre percorrete con cautela un sentiero, vi imbattete in un convoglio di prigionieri scortati da guardie armate. Mentre arrancano su per il pendio, intravedete i poveri malcapitati, tra cui {{playerDisplay}}, che piange. Vi sentite un po' dispiaciuti per lui, ma dimenticate subito questa sensazione, dicendovi che probabilmente non è lì per caso."
       ],
       "lost": [
-        "{{playerDisplay}}Incrociate un uomo che sembra smarrito e si affretta a chiedervi da che parte andare per raggiungere la vostra destinazione. Purtroppo non potete aiutarlo, quindi lo confortate un po' prima di proseguire per la vostra strada.",
-        "{{playerDisplay}}Passate accanto a un uomo che sembra aver perso la strada, chiaramente disorientato. Vi guarda in attesa, cercando aiuto per ritrovare la strada.",
-        "{{playerDisplay}} Notate che sta girando in tondo, avendolo incrociato più volte lungo la strada. Vi avvicinate e gli chiedete se ha bisogno di aiuto. Lui spiega di essersi perso e vi chiede di accompagnarlo a destinazione."
+        "Incrociate {{playerDisplay}}, che sembra smarrito e si affretta a chiedervi da che parte andare per raggiungere la vostra destinazione. Purtroppo non potete aiutarlo, quindi lo confortate un po' prima di proseguire per la vostra strada.",
+        "Passate accanto a {{playerDisplay}}, che sembra aver perso la strada, chiaramente disorientato. Vi guarda in attesa, cercando aiuto per ritrovare la strada.",
+        "Notate che {{playerDisplay}} sta girando in tondo, avendolo incrociato più volte lungo la strada. Vi avvicinate e gli chiedete se ha bisogno di aiuto. Lui spiega di essersi perso e vi chiede di accompagnarlo a destinazione."
       ]
     }
   },
@@ -364,31 +364,31 @@
       "un uccello si avvicina a voi e vi mette in mano un piccolo messaggio...",
       "Scoprite una vecchia capanna di legno abbandonata, decidete di esplorarla e scoprite solo un vecchio grimorio che sembra giacere da anni..."
     ],
-    "reward": "{emote:unitValues.money} Argento: **{{money}}**\n{emote:unitValues.xp} XP : **{{xp}}\n{emote:unitValues.score} Punti: **Il numero di punti dipenderà dalla classifica finale **\n{emote:rewards.item} Equipaggiamento casuale.",
-    "endMessage": "\n\n{emote:commands.report} \"All'avventuriero appartenente alle {emote:leghe.{{leagueId}}} $t(models:leagues.{{leagueId}}) che trova questo testo, **se manterrà la sua gloria fino alla fine della stagione**, potrà vincere queste ricompense:\n\n{{rewards}}\"\n\nSi riparte, impazienti di riscuotere il proprio bonus {{time}}.",
-    "notEnoughFight": "\n\n{emote:commands.report} \"All'avventuriero appartenente alle {emote:leghe.{{leagueId}}} $t(models:leagues.{{leagueId}}) che trova questo testo, **se combatte qualche battaglia usando il comando {command:fight}**, può vincere queste ricompense:\n\n{{rewards}}\"\n\nSi riparte velocemente, temendo di non riuscire a combattere abbastanza giocatori prima della fine della stagione {{time}}.",
-    "rewardToday": "\n\n{emote:commands.report} \"Ottieni la tua ricompensa prima della fine della settimana ordinando {command:leaguebonus} \".\n\nSiete di nuovo in viaggio, impazienti di riscuotere il vostro bonus."
+    "reward": "{emote:unitValues.money} Argento: **{{money}}**\n{emote:unitValues.xp} XP : **{{xp}}**\n{emote:unitValues.score} Punti: **Il numero di punti dipenderà dalla classifica finale.**\n{emote:rewards.item} Equipaggiamento casuale.",
+    "endMessage": "\n\n{emote:commands.report} \"All'avventuriero appartenente alle {emote:leagues.{{leagueId}}} $t(models:leagues.{{leagueId}}) che trova questo testo, **se manterrà la sua gloria fino alla fine della stagione**, potrà vincere queste ricompense:\n\n{{rewards}}\"\n\nSi riparte, impazienti di riscuotere il proprio bonus {{time}}.",
+    "notEnoughFight": "\n\n{emote:commands.report} \"All'avventuriero appartenente alle {emote:leagues.{{leagueId}}} $t(models:leagues.{{leagueId}}) che trova questo testo, **se combatte qualche battaglia usando il comando {command:fight}**, può vincere queste ricompense:\n\n{{rewards}}\"\n\nSi riparte velocemente, temendo di non riuscire a combattere abbastanza giocatori prima della fine della stagione {{time}}.",
+    "rewardToday": "\n\n{emote:commands.report} \"**Le ricompense della Lega sono disponibili!** Riscatta la tua ricompensa entro la fine della settimana con il comando {command:leaguebonus} !\"\n\nSiete di nuovo in viaggio, impazienti di riscuotere il vostro bonus."
   },
   "winGuildXP": {
     "stories": [
-      "{{guild}}La reputazione di ** ** sembra precedervi. Quando apprendono che siete un membro della gilda, gli avventurieri che vi hanno seguito per le ultime miglia vi tributano il loro più profondo rispetto.",
-      "{{guild}}Dopo alcuni incontri vittoriosi, applichi il marchio di gilda ** ** sui resti dei tuoi aggressori. Chiunque passi di lì lo riconoscerà.",
-      "Le vostre buone azioni nella regione hanno conquistato gran parte della popolazione.{{guild}}Quando vi chiedono come ringraziarvi, chiedete loro di ricordare il nome ** **.",
-      "Congratulazioni!{{guild}}Nel corso degli anni, la vostra gilda, ** **, si è fatta un nome in tutto il regno.",
-      "{{guild}}** ** sta diventando sempre più popolare con il passare del tempo! Ci auguriamo che continui a farlo, ed è per questo che ti offriamo questo bonus xp!",
-      "{{guild}}Entrando in una locanda, l'oste riconosce l'emblema sul vostro scudo, il simbolo della gilda ** **. Decide di offrire un giro generale di bevande in vostro onore, con grande effetto sugli altri clienti."
+      "La reputazione di **{{guild}}** sembra precedervi. Quando apprendono che siete un membro della gilda, gli avventurieri che vi hanno seguito per le ultime miglia vi tributano il loro più profondo rispetto.",
+      "Dopo alcuni incontri vittoriosi, applichi il marchio di gilda **{{guild}}** sui resti dei tuoi aggressori. Chiunque passi di lì lo riconoscerà.",
+      "Le vostre buone azioni nella regione hanno conquistato gran parte della popolazione. Quando vi chiedono come ringraziarvi, chiedete loro di ricordare il nome **{{guild}}**.",
+      "Congratulazioni! Nel corso degli anni, la vostra gilda, **{{guild}}**, si è fatta un nome in tutto il regno.",
+      "**{{guild}}** sta diventando sempre più popolare con il passare del tempo! Ci auguriamo che continui a farlo, ed è per questo che ti offriamo questo bonus xp!",
+      "Entrando in una locanda, l'oste riconosce l'emblema sul vostro scudo, il simbolo della gilda **{{guild}}**. Decide di offrire un giro generale di bevande in vostro onore, con grande effetto sugli altri clienti."
     ],
-    "end": " {{xp}} {emote:unitValues.xp}La tua gilda vince ** ** ."
+    "end": " La tua gilda vince **{{xp}}** {emote:unitValues.xp}."
   },
   "winEnergy": {
     "stories": [
       "incontrate una giovane donna che si presenta come Hilda la guaritrice. Dopo una breve chiacchierata, accettate di farle provare il suo ultimo rimedio su di voi. **Recuperate tutta la vostra energia** {emote:unitValues.energy}",
-      "vi imbattete in una giovane donna che si offre di offrirvi un trattamento. Accettate e vi viene data una bevanda deliziosa. {emote:unitValues.energy}**Recuperate tutte le vostre energie.",
-      "vi trovate faccia a faccia con una giovane donna accompagnata da una capra. Lei vi offre una cura miracolosa. Incuriositi, accettate e, contro ogni previsione, vi sentite subito meglio. {emote:unitValues.energy}**Recuperate tutte le vostre energie",
-      "incontrate una giovane donna che si offre di curarvi. Accettate e vi sentite subito meglio. {emote:unitValues.energy}**Recuperate tutte le vostre energie",
-      "incontrate una donna vestita di bianco che si offre di curarvi. Accettate il suo trattamento. {emote:unitValues.energy}**Recuperate tutta la vostra energia",
-      "incontrate una donna che si descrive come guaritrice. Dopo aver discusso un po', si scopre che è in viaggio verso i pascoli e che offre servizi di guarigione lungo la strada. Accettate un misterioso rimedio. {emote:unitValues.energy}**Recuperate tutta la vostra energia",
-      "incontrate una giovane donna che si offre di curarvi. Accettate e vi sentite subito meglio. {emote:unitValues.energy}**Recuperate tutte le vostre energie"
+      "vi imbattete in una giovane donna che si offre di offrirvi un trattamento. Accettate e vi viene data una bevanda deliziosa. **Recuperate tutte le vostre energie.**{emote:unitValues.energy}",
+      "vi trovate faccia a faccia con una giovane donna accompagnata da una capra. Lei vi offre una cura miracolosa. Incuriositi, accettate e, contro ogni previsione, vi sentite subito meglio. **Recuperate tutte le vostre energie**{emote:unitValues.energy}",
+      "incontrate una giovane donna che si offre di curarvi. Accettate e vi sentite subito meglio. **Recuperate tutte le vostre energie**{emote:unitValues.energy}",
+      "incontrate una donna vestita di bianco che si offre di curarvi. Accettate il suo trattamento. **Recuperate tutta la vostra energia**{emote:unitValues.energy}",
+      "incontrate una donna che si descrive come guaritrice. Dopo aver discusso un po', si scopre che è in viaggio verso i pascoli e che offre servizi di guarigione lungo la strada. Accettate un misterioso rimedio. **Recuperate tutta la vostra energia**{emote:unitValues.energy}",
+      "incontrate una giovane donna che si offre di curarvi. Accettate e vi sentite subito meglio. **Recuperate tutte le vostre energie**{emote:unitValues.energy}"
     ]
   },
   "doNothing": {
@@ -448,18 +448,18 @@
       "Durante il tragitto, vi imbattete in una bestia che non sembra molto amichevole. Decidete di scappare, ma vi raggiunge rapidamente. Vi voltate e gli sferrate un duro colpo. Questo è sufficiente per sbarazzarsi dell'avversario e riprendere il cammino.",
       "Con la coda dell'occhio, notate una borsa piena d'oro cadere dalla tasca di un avventuriero che cammina davanti a voi. Lo avverti immediatamente e gli restituisci la borsa. L'avventuriero vi ringrazia per la vostra gentilezza."
     ],
-    "end": " {{xp}} {emote:unitValues.xp}Hai vinto ** ** ."
+    "end": " Hai vinto **{{xp}}** {emote:unitValues.xp}."
   },
   "staffMember": {
     "context": [
-      "Mentre si cammina intorno a un burrone, si incontra un bardo.{{pseudo}}{{sentence}}Mentre camminate, vi racconta la storia di ** **, \" \".",
-      "Mentre camminate, notate un grande poster.{{pseudo}}Sembra elogiare le gesta di ** ** **...{{sentence}}\" \".",
-      "{{sentence}}Durante una delle vostre avventure, sentite una storia, \" \", ma non conoscete il protagonista.{{pseudo}}Dopo un po' di ricerche, vi rendete conto che la storia parla di ** ** ! Il nome suona familiare...",
-      "Entrando in un edificio lungo la strada, chiacchierate per un po' con il gestore del locale. Gli chiedete di parlarvi delle leggende locali.{{pseudo}}{{sentence}}Lui descrive ** **, \" \".",
-      "Lungo la strada, incontrate un uomo anziano che decidete di accompagnare.{{pseudo}}{{sentence}}Mentre camminate insieme, vi racconta la storia di ** ** : \" \".",
-      "Mentre camminate lungo la strada, notate un libro malconcio a terra.{{pseudo}}Si intitola ** **, lo si apre e si leggono le prime frasi...{{sentence}}\"",
-      "Dopo una lunga e monotona passeggiata, ci si imbatte in qualcuno che canta in onore di **{{pseudo}}**... {emote:other.singing} \"{{sentence}} {emote:other.singing}",
-      "Mentre viaggiate, una nuvola di polvere appare in lontananza.{{pseudo}}Qualche minuto dopo, un cavaliere si ferma davanti a voi, dicendo che sta cercando ** **.{{sentence}}Al vostro sguardo curioso, aggiunge: \"**\"."
+      "Mentre si cammina intorno a un burrone, si incontra un bardo. Mentre camminate, vi racconta la storia di **{{pseudo}}**, \"{{sentence}}\".",
+      "Mentre camminate, notate un grande poster. Sembra elogiare le gesta di **{{pseudo}}**... \"{{sentence}}\".",
+      "Durante una delle vostre avventure, sentite una storia, \"{{sentence}}\", ma non conoscete il protagonista. Dopo un po' di ricerche, vi rendete conto che la storia parla di **{{pseudo}}** ! Il nome suona familiare...",
+      "Entrando in un edificio lungo la strada, chiacchierate per un po' con il gestore del locale. Gli chiedete di parlarvi delle leggende locali. Lui descrive **{{pseudo}}**, \"{{sentence}}\".",
+      "Lungo la strada, incontrate un uomo anziano che decidete di accompagnare. Mentre camminate insieme, vi racconta la storia di **{{pseudo}}** : \"{{sentence}}\".",
+      "Mentre camminate lungo la strada, notate un libro malconcio a terra. Si intitola **{{pseudo}}**, lo si apre e si leggono le prime frasi... \"{{sentence}}\".",
+      "Dopo una lunga e monotona passeggiata, ci si imbatte in qualcuno che canta in onore di **{{pseudo}}**... {emote:other.singing} \"{{sentence}}\" {emote:other.singing}.",
+      "Mentre viaggiate, una nuvola di polvere appare in lontananza. Qualche minuto dopo, un cavaliere si ferma davanti a voi, dicendo che sta cercando **{{pseudo}}**. Al vostro sguardo curioso, aggiunge: \"{{sentence}}\"."
     ],
     "members": {
       "Nysvaa": "un pretendente alla mano della principessa che non intende conquistarla combattendo, ma dimostrando la sua astuzia durante le sue avventure (e la sua fortuna, un po'... molto)",
@@ -520,18 +520,18 @@
     ],
     "witchEventResults": {
       "ingredientIntros": [
-        "{{witchEvent}}Si decide di aggiungere ** alla pozione nella speranza di migliorarla...",
-        "{{witchEvent}}Si decide di prendere la pozione mentre la strega è di spalle...",
-        "{{witchEvent}}Consigliate alla strega di ** ** la sua pozione...",
-        "{{witchEvent}}Seguendo il tuo consiglio, la strega decide di aggiungere ** alla sua pozione...",
-        "{{witchEvent}}Seguite il vostro istinto e decidete di ** ** la dubbia miscela...",
-        "{{witchEvent}}Si decide di aggiungere ** alla pozione, sperando che migliori il risultato...",
-        "{{witchEvent}}Osi ** ** la pozione...",
-        "{{witchEvent}}Dopo aver studiato il contenuto della pentola, si decide di dare un'occhiata alla lista degli ingredienti..."
+        "Si decide di aggiungere **{{witchEvent}}** alla pozione nella speranza di migliorarla...",
+        "Si prende la decisione di **{{witchEvent}}** la pozione mentre la strega è girata di spalle...",
+        "Consigliate alla strega di **{{witchEvent}}** la sua pozione...",
+        "Seguendo il tuo consiglio, la strega decide di aggiungere **{{witchEvent}}** alla sua pozione...",
+        "Seguite il vostro istinto e decidete di **{{witchEvent}}** la dubbia miscela...",
+        "Si decide di aggiungere **{{witchEvent}}** alla pozione, sperando che migliori il risultato...",
+        "Osi **{{witchEvent}}** la pozione...",
+        "Dopo aver studiato il contenuto della pentola, si decide di **{{witchEvent}}** guardare la lista degli ingredienti..."
       ],
       "adviceIntros": [
-        "{{witchEvent}}Impietosito, le consigli di fare ** ** per ottenere un risultato migliore...",
-        "{{witchEvent}}Decidete di aiutare la strega consigliandole di ** **..."
+        "Impietosito, le consigli di fare **{{witchEvent}}** per ottenere un risultato migliore...",
+        "Decidete di aiutare la strega consigliandole di **{{witchEvent}}**..."
       ],
       "outcomes": {
         "1": [
@@ -542,9 +542,9 @@
         ],
         "2": {
           "time": [
-            "Quando si riprende il viaggio, ci si rende conto che la sosta è stata più lunga del previsto.{{lostTime}} :clock2:Si perde ** Min **",
-            "Mentre si riparte, ci si rende conto di quanto tempo si è perso in questa preparazione.{{lostTime}} :clock2:Avete perso ** Min **",
-            "Tornando sui propri passi, si inizia a rimpiangere il tempo sprecato in attesa di questa preparazione.{{lostTime}} :clock2:Si perde ** Min **"
+            "Quando si riprende il viaggio, ci si rende conto che la sosta è stata più lunga del previsto. Si perde **{{lostTime}} Min :clock2:**",
+            "Mentre si riparte, ci si rende conto di quanto tempo si è perso in questa preparazione. Avete perso **{{lostTime}} Min :clock2:**",
+            "Tornando sui propri passi, si inizia a rimpiangere il tempo sprecato in attesa di questa preparazione. Si perde **{{lostTime}} Min :clock2:**"
           ],
           "scared": [
             "Una volta terminata la pozione, decidete di berne un sorso. Immediatamente si viene trasportati in un'intensa allucinazione. Il vostro futuro non sembra molto promettente... {emote:effects.scared}",
@@ -564,12 +564,12 @@
           ]
         },
         "3": [
-          "Quando la pozione è finita, la strega vi porge un bicchiere. Ancora bruciacchiato, lo fai cadere maldestramente sul piede.{{lifeLoss}} {emote:unitValues.lostHealth}Si perde ** **.",
-          "Proprio mentre stavate per finire la pozione, la vecchia strega fa cadere maldestramente il calderone su di voi.{{lifeLoss}} {emote:unitValues.lostHealth}Si perde ** **.",
-          "Sebbene la pozione abbia un buon profumo, non è così salutare come si sperava.{{lifeLoss}} {emote:unitValues.lostHealth}Si perde ** **.",
-          "Il sapore della pozione è molto strano. Forse avresti dovuto ascoltare il tuo istinto e non assaggiarla...{{lifeLoss}} {emote:unitValues.lostHealth}Perdi ** **.",
-          "I fumi della pozione sono sufficienti a farvi ammalare. Te ne vai senza chiedere aiuto, ma non senza subire le conseguenze dell'inalazione dei fumi.{{lifeLoss}} {emote:unitValues.lostHealth}Si perde ** **.",
-          "Proprio mentre l'anziana signora sta per versare l'ultima goccia nel calderone, si sente un tonfo. Il calderone sembra essere esploso.{{lifeLoss}} {emote:unitValues.lostHealth}Si perde ** **."
+          "Quando la pozione è finita, la strega vi porge un bicchiere. Ancora bruciacchiato, lo fai cadere maldestramente sul piede.Si perde **{{lifeLoss}} {emote:unitValues.lostHealth}**.",
+          "Proprio mentre stavate per finire la pozione, la vecchia strega fa cadere maldestramente il calderone su di voi. Si perde **{{lifeLoss}} {emote:unitValues.lostHealth}**.",
+          "Sebbene la pozione abbia un buon profumo, non è così salutare come si sperava. Si perde **{{lifeLoss}} {emote:unitValues.lostHealth}**.",
+          "Il sapore della pozione è molto strano. Forse avresti dovuto ascoltare il tuo istinto e non assaggiarla... Perdi **{{lifeLoss}} {emote:unitValues.lostHealth}**.",
+          "I fumi della pozione sono sufficienti a farvi ammalare. Te ne vai senza chiedere aiuto, ma non senza subire le conseguenze dell'inalazione dei fumi. Si perde **{{lifeLoss}} {emote:unitValues.lostHealth}**.",
+          "Proprio mentre l'anziana signora sta per versare l'ultima goccia nel calderone, si sente un tonfo. Il calderone sembra essere esploso. Si perde **{{lifeLoss}} {emote:unitValues.lostHealth}**."
         ],
         "4": [
           "Purtroppo la pozione sembra completamente carbonizzata e imbevibile. Decidete di non rischiare di berla e ve ne andate in fretta.",
@@ -616,17 +616,17 @@
   },
   "space": {
     "before_search_format": "{{seIntro}}{{intro}}. {{searchAction}}.\n\n{emote:other.telescope} *{{search}}*.",
-    "after_search_format": "{{oldMessage}}\n\n{{actionIntro}} {{action}}{{specific}} {{outro}}** **. .",
+    "after_search_format": "{{oldMessage}}\n\n{{actionIntro}} {{action}} **{{specific}}**. {{outro}}.",
     "intro": [
-      "{{name}}si incontra un oracolo che afferma di chiamarsi ** ** ** **",
-      "Un uomo vi sembra strano, così andate a incontrarlo.{{name}}Sostiene di essere un oracolo di nome ** **.",
-      "{{name}}si incontra un oracolo chiamato ** ** **",
-      "passate accanto a un oracolo che vi chiama.{{name}}Dice che il suo nome è ** ** **",
-      "{{name}}si viene avvicinati da un uomo che dice di chiamarsi ** ** **.",
-      "{{name}}un oracolo di nome ** ** vi chiama a raccolta",
-      "{{name}}uno sconosciuto che sostiene di chiamarsi ** ** vi chiede di avvicinarvi",
-      "{{name}}un uomo appare dal nulla, corre verso di voi e si presenta come ** ** **",
-      "{{name}}uno sconosciuto sospettoso vi chiede di avvicinarvi, dopodiché vi dice che il suo nome è ** ** **."
+      "si incontra un oracolo che afferma di chiamarsi **{{name}}**",
+      "un uomo vi sembra strano, così andate a incontrarlo. Sostiene di essere un oracolo di nome **{{name}}**",
+      "si incontra un oracolo chiamato **{{name}}**",
+      "passate accanto a un oracolo che vi chiama. Dice che il suo nome è **{{name}}**",
+      "si viene avvicinati da un uomo che dice di chiamarsi **{{name}}**",
+      "un oracolo di nome **{{name}}** vi chiama a raccolta",
+      "uno sconosciuto che sostiene di chiamarsi **{{name}}** vi chiede di avvicinarvi",
+      "un uomo appare dal nulla, corre verso di voi e si presenta come **{{name}}**",
+      "uno sconosciuto sospettoso vi chiede di avvicinarvi, dopodiché vi dice che il suo nome è **{{name}}**"
     ],
     "searchAction": [
       "Vi dice che può darvi informazioni sul cielo, ma che ha bisogno di tempo per osservarlo.",
@@ -673,40 +673,40 @@
       "Partirete senza rimpiangere la vostra sosta",
       "Continuate il vostro cammino perplesso"
     ],
-    "nObjectsCrossTheSky_one": "{{count}} attraverserà",
-    "nObjectsCrossTheSky_other": "{{count}} passerà attraverso",
+    "nObjectsCrossTheSky_one": "{{count}} oggetto attraverserà",
+    "nObjectsCrossTheSky_other": "{{count}} oggetti attraverseranno",
     "days_one": "giorno",
     "days_other": "giorni",
     "specific": {
       "neoWS": [
         "{{objectWhichWillCrossTheSky}} il cielo di oggi",
-        "{{randomObjectName}} {{randomObjectDiameter}} l'oggetto denominato \" \", con un diametro di circa metri, sta passando oggi vicino al pianeta",
-        "{{randomObjectName}} {{randomObjectDistance}} l'oggetto denominato \" \" passa a una distanza di circa un milione di chilometri dal pianeta",
-        "{{randomObjectName}} {{randomObjectDistance}} l'asteroide denominato \" \" supera il nostro pianeta di qualche milione di chilometri",
-        "{{randomObjectName}}l'asteroide denominato \" \" potrebbe essere visibile oggi",
-        "{{randomObjectName}}l'asteroide denominato \" \" passerà vicino al pianeta",
-        "{{randomObjectName}} {{randomObjectDistance}} l'asteroide chiamato \" \" passerà a un milione di chilometri da noi"
+        "l'oggetto denominato \"{{randomObjectName}}\", con un diametro di circa {{randomObjectDiameter}} metri, sta passando oggi vicino al pianeta",
+        "l'oggetto denominato \"{{randomObjectName}}\" passa a una distanza di circa {{randomObjectDistance}} milioni di chilometri dal pianeta",
+        "l'asteroide denominato \"{{randomObjectName}}\" supera il nostro pianeta di qualche {{randomObjectDistance}} milione di chilometri",
+        "l'asteroide denominato \"{{randomObjectName}}\" potrebbe essere visibile oggi",
+        "l'asteroide denominato \"{{randomObjectName}}\" passerà vicino al pianeta",
+        "l'asteroide chiamato \"{{randomObjectName}}\" passerà a {{randomObjectDistance}} milioni di chilometri da noi"
       ],
       "moonPhase": [
-        "{{mainValue}} è al momento",
+        "è {{mainValue}} al momento",
         "{{mainValue}} sta attualmente illuminando il cielo",
-        "{{mainValue}}dietro le nuvole è",
-        "{{mainValue}}il cielo rado lascia intravedere"
+        "dietro le nuvole è {{mainValue}}",
+        "il cielo rado lascia intravedere {{mainValue}}"
       ],
       "nextFullMoon": [
-        "{{mainValue}} {{days}}la prossima luna piena è in",
-        "{{mainValue}} {{days}}la luna piena risplenderà su",
-        "{{mainValue}} {{days}}possiamo vedere la luna piena su",
+        "la prossima luna piena è in {{mainValue}} {{days}}",
+        "la luna piena risplenderà su {{mainValue}} {{days}}",
+        "possiamo vedere la luna piena su {{mainValue}} {{days}}",
         "su {{mainValue}} {{days}}, si può vedere la luna piena"
       ],
       "nextPartialLunarEclipse": [
-        "{{mainValue}} {{days}}la prossima eclissi lunare parziale è in",
+        "la prossima eclissi lunare parziale è in {{mainValue}} {{days}}",
         "su {{mainValue}} {{days}}, sarà visibile un'eclissi lunare parziale",
         "nel prossimo {{mainValue}} {{days}} , sarete abbastanza fortunati da assistere a un'eclissi lunare parziale",
-        "{{mainValue}} {{days}}il momento per vedere la prossima eclissi lunare parziale è"
+        "il momento per vedere la prossima eclissi lunare parziale è {{mainValue}} {{days}}"
       ],
       "nextTotalLunarEclipse": [
-        "{{mainValue}} {{days}}la prossima eclissi lunare totale è in",
+        "la prossima eclissi lunare totale è in {{mainValue}} {{days}}",
         "da {{mainValue}} {{days}}, si assisterà a un'eclissi lunare completa",
         "nel prossimo {{mainValue}} {{days}} , sarete abbastanza fortunati da assistere a un'eclissi lunare totale",
         "Se si osserva il cielo all'indirizzo {{mainValue}} {{days}}, si può vedere un'eclissi lunare totale."
@@ -736,65 +736,65 @@
   },
   "findPet": {
     "food_m": [
-      "{{pet}}trovate un ** ** che sembra essere ferito. Sfortunatamente, avete già un compagno e non c'è posto nella vostra gilda per lui, quindi decidete di finirlo in fretta per poter recuperare la sua carcassa.",
-      "{{pet}}si trova un ** **. Non potendo accoglierlo, lo consegnate a un mercante di passaggio. In cambio, vi offre della carne."
+      "trovate un **{{pet}}** che sembra essere ferito. Sfortunatamente, avete già un compagno e non c'è posto nella vostra gilda per lui, quindi decidete di finirlo in fretta per poter recuperare la sua carcassa.",
+      "si trova un **{{pet}}**. Non potendo accoglierlo, lo consegnate a un mercante di passaggio. In cambio, vi offre della carne."
     ],
     "food_f": [
-      "{{pet}}trovate una ** ** che sembra essere ferita. Purtroppo avete già un compagno e nella vostra gilda non c'è posto per lei, quindi decidete di finirla in fretta per recuperare la sua carcassa.",
-      "{{pet}}trovate una ** ** **. Non potendo accoglierla, la consegnate a un mercante di passaggio. In cambio, vi offre della carne."
+      "trovate una **{{pet}}** che sembra essere ferita. Purtroppo avete già un compagno e nella vostra gilda non c'è posto per lei, quindi decidete di finirla in fretta per recuperare la sua carcassa.",
+      "trovate una **{{pet}}**. Non potendo accoglierla, la consegnate a un mercante di passaggio. In cambio, vi offre della carne."
     ],
     "noFood_m": [
-      "{{pet}}si trova un ** **. Non potendo accoglierlo, lo date a un mercante di passaggio. Il mercante rifiuta e lo lascia andare.",
-      "{{pet}}si trova un ** **. Poiché non avete lo spazio per accoglierlo, lo date a un commerciante di passaggio. Questi è felice di prendersi cura di lui.",
-      "{{pet}}vedete un'anziana signora che cerca di far scendere un ** ** da un albero. Accettate di aiutarla e la convincete rapidamente a scendere. Pensando che sia il suo animale domestico, glielo consegnate, solo per scoprire che non le appartiene. Poiché non c'è più spazio nel vostro rifugio, non potete portarlo con voi."
+      "si trova un **{{pet}}**. Non potendo accoglierlo, lo date a un mercante di passaggio. Il mercante rifiuta e lo lascia andare.",
+      "si trova un **{{pet}}**. Poiché non avete lo spazio per accoglierlo, lo date a un commerciante di passaggio. Questi è felice di prendersi cura di lui.",
+      "vedete un'anziana signora che cerca di far scendere un **{{pet}}** da un albero. Accettate di aiutarla e la convincete rapidamente a scendere. Pensando che sia il suo animale domestico, glielo consegnate, solo per scoprire che non le appartiene. Poiché non c'è più spazio nel vostro rifugio, non potete portarlo con voi."
     ],
     "noFood_f": [
-      "{{pet}}trovate una ** ** **. Non potendo accoglierla, la consegnate a un mercante di passaggio. Lui rifiuta e la lascia andare.",
-      "{{pet}}trovate una ** ** **. Poiché non avete lo spazio per accoglierla, la date a un mercante di passaggio. Lui è felice di prendersi cura di lei.",
-      "{{pet}}vedete un'anziana signora che cerca di far scendere un ** ** da un albero. Accettate di aiutarla e la convincete rapidamente a scendere. Pensando che sia il suo animale domestico, glielo porgete, solo per scoprire che non le appartiene. Non essendoci più spazio nel vostro rifugio, non potete portarlo con voi."
+      "trovate una **{{pet}}**. Non potendo accoglierla, la consegnate a un mercante di passaggio. Lui rifiuta e la lascia andare.",
+      "trovate una **{{pet}}**. Poiché non avete lo spazio per accoglierla, la date a un mercante di passaggio. Lui è felice di prendersi cura di lei.",
+      "vedete un'anziana signora che cerca di far scendere un **{{pet}}** da un albero. Accettate di aiutarla e la convincete rapidamente a scendere. Pensando che sia il suo animale domestico, glielo porgete, solo per scoprire che non le appartiene. Non essendoci più spazio nel vostro rifugio, non potete portarlo con voi."
     ],
     "givePetPlayer_m": [
-      "{{pet}}si individua un ** ** smarrito. Avendo sempre desiderato un compagno, si cade nel suo incantesimo e si decide di prendersene cura.",
-      "{{pet}}vedete un'anziana signora che cerca di far scendere un ** ** da un albero. Accettate di aiutarla e la convincete rapidamente a scendere. Pensando che sia il suo animale domestico, glielo porgete ma scoprite che non le appartiene. Si decide di portarlo con sé.",
-      "Sentite un rumore provenire da un cespuglio e, incuriositi, decidete di andare a dare un'occhiata.{{pet}}Scoprite un ** ** che vi fissa negli occhi e poi inizia a seguirvi, così decidete di adottarlo.",
-      "{{pet}}decidete di fare un riposino, quando qualcosa vi sveglia: un ** ** stava rovistando nella vostra borsa! Ma non sembra volerti attaccare e anzi sembra che tu gli piaccia, quindi decidi di tenerlo."
+      "si individua un **{{pet}}** smarrito. Avendo sempre desiderato un compagno, si cade nel suo incantesimo e si decide di prendersene cura.",
+      "vedete un'anziana signora che cerca di far scendere un **{{pet}}** da un albero. Accettate di aiutarla e la convincete rapidamente a scendere. Pensando che sia il suo animale domestico, glielo porgete ma scoprite che non le appartiene. Si decide di portarlo con sé.",
+      "sentite un rumore provenire da un cespuglio e, incuriositi, decidete di andare a dare un'occhiata. Scoprite un **{{pet}}** che vi fissa negli occhi e poi inizia a seguirvi, così decidete di adottarlo.",
+      "decidete di fare un riposino, quando qualcosa vi sveglia: un **{{pet}}** stava rovistando nella vostra borsa! Ma non sembra volerti attaccare e anzi sembra che tu gli piaccia, quindi decidi di tenerlo."
     ],
     "givePetPlayer_f": [
-      "{{pet}}si individua un ** ** smarrito. Avendo sempre desiderato un compagno, si cade nel suo incantesimo e si decide di prendersene cura.",
-      "{{pet}}vedete un'anziana signora che cerca di far scendere un ** ** da un albero. Accettate di aiutarla e la convincete rapidamente a scendere. Pensando che sia il suo animale domestico, glielo porgete ma scoprite che non le appartiene. Si decide di portarlo con sé.",
-      "Sentite un rumore provenire da un cespuglio e, incuriositi, decidete di andare a dare un'occhiata.{{pet}}Scoprite un ** ** che vi fissa negli occhi e poi inizia a seguirvi, così decidete di adottarlo.",
-      "{{pet}}decidete di fare un riposino, quando qualcosa vi sveglia: un ** ** stava rovistando nella vostra borsa! Ma non sembra volerti attaccare e anzi sembra che tu gli piaccia, quindi decidi di tenerlo."
+      "si individua un **{{pet}}** smarrito. Avendo sempre desiderato un compagno, si cade nel suo incantesimo e si decide di prendersene cura.",
+      "vedete un'anziana signora che cerca di far scendere un **{{pet}}** da un albero. Accettate di aiutarla e la convincete rapidamente a scendere. Pensando che sia il suo animale domestico, glielo porgete ma scoprite che non le appartiene. Si decide di portarlo con sé.",
+      "sentite un rumore provenire da un cespuglio e, incuriositi, decidete di andare a dare un'occhiata. Scoprite un **.{{pet}}** che vi fissa negli occhi e poi inizia a seguirvi, così decidete di adottarlo.",
+      "decidete di fare un riposino, quando qualcosa vi sveglia: un **{{pet}}** stava rovistando nella vostra borsa! Ma non sembra volerti attaccare e anzi sembra che tu gli piaccia, quindi decidi di tenerlo."
     ],
     "givePetGuild_m": [
-      "{{pet}}si individua un ** ** smarrito. Anche se avete già un compagno, decidete di riportarlo alla vostra gilda in modo che qualcuno possa prendersi cura di lui.",
-      "{{pet}}si nota un ** ** errante che sembra affamato. Gli dai i resti del tuo ultimo pasto. Lo apprezza e sembra intenzionato a seguirvi nel vostro viaggio. Avendo un compagno, lo lasci alle cure della tua gilda.",
-      "vedete un gruppo di bambini in cerchio.{{pet}}Ci si avvicina e si scopre che stanno maltrattando un povero piccolo ** **. Li convincete ad andarsene, ma lui è troppo in difficoltà. Riuscite a rimetterlo in piedi e a farlo riposare nel vostro rifugio."
+      "si individua un **{{pet}}** smarrito. Anche se avete già un compagno, decidete di riportarlo alla vostra gilda in modo che qualcuno possa prendersi cura di lui.",
+      "si nota un **{{pet}}** errante che sembra affamato. Gli dai i resti del tuo ultimo pasto. Lo apprezza e sembra intenzionato a seguirvi nel vostro viaggio. Avendo un compagno, lo lasci alle cure della tua gilda.",
+      "vedete un gruppo di bambini in cerchio. Ci si avvicina e si scopre che stanno maltrattando un povero piccolo **{{pet}}**. Li convincete ad andarsene, ma lui è troppo in difficoltà. Riuscite a rimetterlo in piedi e a farlo riposare nel vostro rifugio."
     ],
     "givePetGuild_f": [
-      "{{pet}}si individua un ** ** smarrito. Anche se avete già un compagno, decidete di riportarlo alla vostra gilda in modo che qualcuno possa prendersene cura.",
-      "{{pet}}si individua una randagia ** ** che sembra affamata. Così le date i resti del vostro ultimo pasto. Lei lo apprezza e sembra intenzionata a seguirvi nel vostro viaggio. Avendo una compagna, la lasciate alle cure della vostra gilda.",
-      "si vede un gruppo di bambini in cerchio.{{pet}}Ci si avvicina e si scopre che stanno maltrattando una povera bambina ** **. Li convincete ad andarsene, ma lei è troppo in difficoltà. Riuscite a rimetterla in piedi e a farla riposare nel vostro rifugio."
+      "si individua un **{{pet}}** smarrito. Anche se avete già un compagno, decidete di riportarlo alla vostra gilda in modo che qualcuno possa prendersene cura.",
+      "si individua una randagia **{{pet}}** che sembra affamata. Così le date i resti del vostro ultimo pasto. Lei lo apprezza e sembra intenzionata a seguirvi nel vostro viaggio. Avendo una compagna, la lasciate alle cure della vostra gilda.",
+      "si vede un gruppo di bambini in cerchio. Ci si avvicina e si scopre che stanno maltrattando una povera bambina **{{pet}}**. Li convincete ad andarsene, ma lei è troppo in difficoltà. Riuscite a rimetterla in piedi e a farla riposare nel vostro rifugio."
     ]
   },
   "botFacts": {
     "stories": [
-      "ricevete una lettera dal re. Vi scrive a proposito del concorso per la mano della principessa a cui state partecipando. {{botFact}} Quando leggete la lettera, scoprite che siete di nuovo in viaggio.",
-      "passate accanto a un contadino su un carro che sembra essere di buon umore. Incuriositi dal suo atteggiamento, gli chiedete ragione del suo buon umore. {{botFact}} Lui vi spiega che state arrivando.",
-      "si nota un accampamento di avventurieri sul ciglio di un sentiero. {{botFact}} Vi fermate un attimo per chiedergli un consiglio su quale strada prendere e lui vi indica la direzione giusta, aggiungendo che quella è la strada da seguire.",
-      "vedrete un pannello informativo. Su di esso sono affissi diversi manifesti su festival e altri eventi della zona. {{botFact}} Uno di questi parla del recente discorso del Re, in cui ha detto che dovreste continuare il vostro cammino.",
-      "{{botFact}} passate davanti a una folla di persone e nel rumore della folla sentite un oratore che annuncia che continuerete per la vostra strada senza ascoltare ciò che ha da dire.",
-      "{{botFact}} Vedete in lontananza un mendicante appoggiato al tronco di un albero e, mentre vi avvicinate per dargli una moneta, sentite le sue strane parole: ripete più volte che dovete allontanarvi il più possibile da questo individuo sospetto."
+      "ricevete una lettera dal re. Vi scrive a proposito del concorso per la mano della principessa a cui state partecipando. Quando leggete la lettera, scoprite che {{botFact}} siete di nuovo in viaggio.",
+      "passate accanto a un contadino su un carro che sembra essere di buon umore. Incuriositi dal suo atteggiamento, gli chiedete ragione del suo buon umore. Lui vi spiega che {{botFact}} state arrivando.",
+      "si nota un accampamento di avventurieri sul ciglio di un sentiero. Vi fermate un attimo per chiedergli un consiglio su quale strada prendere e lui vi indica la direzione giusta, aggiungendo che {{botFact}} quella è la strada da seguire.",
+      "vedrete un pannello informativo. Su di esso sono affissi diversi manifesti su festival e altri eventi della zona. Uno di questi parla del recente discorso del Re, in cui ha detto che {{botFact}} dovreste continuare il vostro cammino.",
+      "passate davanti a una folla di persone e nel rumore della folla sentite un oratore che annuncia che {{botFact}} continuerete per la vostra strada senza ascoltare ciò che ha da dire.",
+      "vedete in lontananza un mendicante appoggiato al tronco di un albero e, mentre vi avvicinate per dargli una moneta, sentite le sue strane parole: ripete più volte che {{botFact}} dovete allontanarvi il più possibile da questo individuo sospetto."
     ],
     "possibleInfo": {
       "nbMeanPoints": "Secondo un recente conteggio dei punti effettuato dagli organizzatori, i candidati hanno ottenuto un punteggio medio di **{{infoNumber}} {emote:unitValues.score}**. Incoraggiati da questa notizia,",
       "meanWeeklyScore": "Secondo un recente conteggio dei punti effettuato dagli organizzatori, i candidati hanno raccolto una media di **{{infoNumber}} {emote:unitValues.score} questa settimana**. Siamo rattristati da questa notizia,",
-      "levelMean": "{{infoNumber}}L'ultimo censimento ha rilevato che gli avventurieri hanno raggiunto in media il **livello **. Senza sapere cosa fare di questa informazione,",
+      "levelMean": "l'ultimo censimento ha rilevato che gli avventurieri hanno raggiunto in media il **livello {{infoNumber}}**. Senza sapere cosa fare di questa informazione,",
       "nbMeanMoney": "la banca del Paese ha contato una media di **{{infoNumber}} {emote:unitValues.money}** nei portafogli dei suoi clienti. Divertito da questa notizia,",
       "sumAllMoney": "la banca del Paese ha **{{infoNumber}} {emote:unitValues.money}** in circolazione in questo momento. Sono sorpreso da questa notizia,",
       "richestPlayer": "la banca del Paese ha stimato che il più ricco avventuriero ha attualmente **{{infoNumber}} {emote:unitValues.money}** sul suo conto. Stupito da questa notizia,",
-      "feistyPets": "La SPAC, Société Protectrice des Animaux de la Contrée, si batte per aiutare gli **animaux fielleux** ad avere una vita migliore.{{infoNumber}}Hanno contato ** **. Questa notizia mi ha deluso e confortato allo stesso tempo,",
-      "percentMalePets": "{{infoNumber}}La SPAC, Société Protectrice des Animaux de la Contrée, ha scoperto che il ** %** degli animali della zona sono maschi. Sono lieto di apprendere questa notizia,",
-      "percentFemalePets": "{{infoNumber}}La SPAC, Société Protectrice des Animaux de la Contrée, ha scoperto che il ** %** degli animali presenti nell'area sono femmine. Sono lieto di apprendere questa notizia,",
+      "feistyPets": "la SPAC, ovvero la Società per la Protezione degli Animali del Paese, si batte per aiutare gli **animali amareggiati** a ottenere una vita migliore. Hanno identificato **{{infoNumber}}**. Delusi e confortati da questa notizia,",
+      "percentMalePets": "la SPAC, o Società per la Protezione degli Animali nella Regione, ha scoperto che il **{{infoNumber}}%** degli animali nella regione sono maschi. Felici di questa notizia,",
+      "percentFemalePets": "la SPAC, o Società per la Protezione degli Animali nella Regione, ha scoperto che il **{{infoNumber}}%** degli animali nella regione sono femmine. Felici di questa notizia,",
       "guildLevelMean": "{{infoNumber}}l'AGC, o Agenzia per le Gilde del Contry, ha notato che le gilde attuali hanno raggiunto in media il **livello **. Incuriosito da questa informazione,",
       "nbPlayersHaventStartedTheAdventure_zero": "Il SAFAC, o Service Anti-Fraude des Aventuriers de la Contrée, ha scoperto che **nessun avventuriero** è svanito nel nulla subito dopo aver ottenuto la licenza di avventuriero. Sono in soggezione per tutti questi coraggiosi avventurieri,",
       "nbPlayersHaventStartedTheAdventure_one": "Il SAFAC, o Servizio Anti-Frode degli Avventurieri della Contrée, ha scoperto che **un avventuriero** è scomparso nel nulla subito dopo aver ottenuto la licenza di avventuriero. Siamo indignati dalle azioni di questa persona,",
@@ -1725,6 +1725,95 @@
       "Notando che viaggiate senza un compagno a quattro zampe, Talvar vi sorride con paterna indulgenza. Evoca i profondi misteri della comunicazione tra le specie e le lezioni di vita impartite dai nostri amici animali. Le sue parole risuonano con verità antiche sull'interconnessione di tutti gli esseri viventi. Continuate il vostro cammino, con l'anima nutrita da questa saggezza millenaria.",
       "Di fronte alla vostra solitudine, Talvar non può fare a meno di condividere la sua filosofia di vita, incentrata sull'amore per le creature. Racconta le cure miracolose che la presenza degli animali esercita sul corpo e sullo spirito. Le sue descrizioni appassionate rivelano un uomo trasformato da una vita dedicata a questi esseri straordinari. Vi lascerà toccati da questa rivelazione e forse destinati a seguire un percorso simile.",
       "Senza un familiare al suo fianco, gli occhi di Talvar brillano per una missione da compiere. Vi introduce ai segreti dell'addomesticamento degli animali e ai rituali sacri che suggellano l'amicizia tra uomo e bestia. I suoi insegnamenti risuonano di tradizioni ancestrali e conoscenze dimenticate. Continuate il vostro viaggio, depositari di questa preziosa conoscenza e forse chiamati a metterla in pratica in un prossimo futuro."
+    ],
+    "badge": [
+      "Lo sguardo di Talvar si fa serio, poi si illumina di un barlume di orgoglio. Ogni gesto, ogni espressione tradisce una sincera ammirazione. Riconosce pienamente il valore delle tue azioni, lodando il tuo coraggio, il tuo discernimento e il rispetto che hai dimostrato verso le creature. In segno di apprezzamento, vi regala il distintivo {emote:badges.animal_lover}, un dono dal grande significato. Questo segno di stima suggella il vostro legame. Vi lasciate in un silenzio carico di rispetto, uniti da una tacita comprensione condivisa solo da coloro che hanno lavorato per una causa più grande di loro."
+    ]
+  },
+  "infoFight": {
+    "intro": [
+      "Sentite dei passi misurati dietro di voi. Voltandovi, vedete un uomo di mezza età con i capelli brizzolati, vestito con un'armatura logora ma tenuta in modo impeccabile. I suoi occhi penetranti vi valutano con uno sguardo professionale.\n\nL'uomo sottolinea che vi sta osservando da tempo. Si presenta come Sir Rowan, un ex capitano della Guardia Reale, e spiega che ha passato la vita ad addestrare soldati. Vi dice che vede in voi un potenziale che merita di essere affinato e si offre di condividere con voi una conoscenza marziale che potrebbe essere preziosa nei vostri futuri scontri.\n\n",
+      "Una voce calda risuona vicino a voi, esclamando che c'è ancora un uomo coraggioso che cammina in queste terre. Un cavaliere dal volto invecchiato si avvicina, con un sorriso paterno sulle labbra. Nonostante l'età, cammina ancora come un guerriero esperto.\n\nIl cavaliere si presenta come Sir Rowan e racconta che un tempo proteggeva un regno, ma ora preferisce proteggere il futuro trasmettendo le sue conoscenze. Spiega che i tempi sono duri per gli avventurieri e che una buona conoscenza delle tecniche di combattimento può fare la differenza tra la vita e la morte. Si offre quindi di spiegare una manovra che è essenziale conoscere.\n\n",
+      "Una voce ferma ma non ostile vi ordina di aspettare. Dal vostro campo visivo emerge un uomo con un'armatura appannata, i cui movimenti tradiscono decenni di addestramento militare.\n\nL'uomo si presenta come Sir Rowan e vi dice che ha comandato la Guardia Reale per quindici anni prima di ritirarsi. Vi dice che in questa professione ha imparato che la conoscenza tattica ha sempre la precedenza sulla forza bruta. Osserva che sembrate determinati, ma si offre di insegnarvi una tecnica di combattimento che è fondamentale riconoscere sul campo di battaglia.\n\n",
+      "Seduto su una roccia, mentre lucida meticolosamente la sua spada, un vecchio cavaliere vi guarda. I suoi lineamenti sfregiati raccontano di mille battaglie, ma i suoi occhi brillano ancora di malizia.\n\nIl cavaliere esclama di avere compagnia e si presenta come Sir Rowan. Vi chiede se sapete cosa gli piace di questa vita da vagabondo e vi spiega che ogni incontro è un'opportunità per imparare o insegnare. Dice che prima addestrava le reclute nella caserma reale, ma ora tutto il mondo è la sua aula di addestramento. Vi dice che vi spiegherà una tecnica marziale che ha osservato durante i suoi viaggi.\n\n",
+      "Un comando schiocca nell'aria e vi intima di fermarvi. Un uomo dall'aspetto marziale avanza verso di voi, con uno sguardo critico. Ogni dettaglio del suo equipaggiamento trasuda disciplina militare.\n\nL'uomo si presenta come Sir Rowan, ex capitano della Guardia Reale, e spiega di aver dedicato la sua carriera allo studio di tutte le forme di combattimento. Sottolinea che la conoscenza tattica è ciò che separa i guerrieri saggi dalle vittime e si offre di spiegare una tecnica di combattimento che è importante conoscere, sia per usarla che per difendersi.\n\n",
+      "Un uomo dai capelli d'argento si avvicina a voi con passo sicuro. La sua armatura porta le cicatrici di molte battaglie, ma il suo sguardo rimane benevolo.\n\nL'uomo si presenta come Sir Rowan e vi dice che per anni ha servito la corona, affrontando ogni tipo di avversario. Vi dice che ha capito che la sua vera vocazione è aiutare coloro che imbracciano le armi per proteggere gli innocenti. Vorrebbe condividere con voi la conoscenza di una tecnica di combattimento che ha incontrato nelle sue numerose battaglie.\n\n",
+      "Una voce allegra vi chiama; vi girate rapidamente e scoprite una figura singolare. Si tratta di un cavaliere anziano ma dagli occhi vivaci che vi raggiunge a passo svelto.\n\nIl cavaliere si presenta come Sir Rowan e spiega che, dopo vent'anni di fedele servizio, si è reso conto che le vere avventure si trovano qui, sulle strade, affrontando le sfide più disparate. Confida che ogni giorno porta con sé una lezione sulle diverse forme di combattimento che può osservare. Vi dice che vi spiegherà una particolare manovra che ha avuto modo di studiare.\n\n",
+      "Il tintinnio metallico di un fodero fa girare la testa. Si avvicina un uomo esperto, i cui movimenti tradiscono una perfetta padronanza dell'equipaggiamento.\n\nL'uomo si presenta come Sir Rowan, maestro d'armi ed ex capitano della Guardia Reale. Spiega che la sua passione lo ha portato a studiare tutte le tecniche di combattimento esistenti, sia umane che mostruose. Osserva che potreste beneficiare di ulteriori conoscenze tattiche e si offre di spiegarvi una tecnica che è essenziale per ogni combattente che si rispetti.\n\n",
+      "Una voce calma vi chiama: \"Giovane viaggiatore! Vi voltate e notate un uomo dalle tempie grigie che vi osserva con simpatia, con le mani appoggiate con naturalezza sul pomo della spada.\n\nL'uomo si presenta come Sir Rowan e confida che gli anni gli hanno insegnato che la vera forza sta nel comprendere le tecniche di combattimento in tutte le loro forme. Dice di aver studiato le tattiche di guerrieri, creature e avversari di ogni tipo. Vuole condividere con voi la conoscenza di una manovra che è importante conoscere nell'arte del combattimento.\n\n",
+      "Una voce esclama che è curioso incontrare qualcuno da queste parti. Accompagnato da una risata cordiale, emerge un cavaliere esperto, dall'aspetto rilassato nonostante l'equipaggiamento da guerra.\n\nIl cavaliere si presenta come Sir Rowan e dice che la sua nuova vita da avventuriero gli ha fatto conoscere una moltitudine di tecniche di combattimento che non aveva mai incontrato nella sua veste reale. Spiega che ogni incontro gli insegna qualcosa di nuovo sull'arte marziale. Annuncia che condividerà con voi la sua conoscenza di una particolare tecnica che ha osservato durante i suoi viaggi.\n\n"
+    ],
+    "fightActions": [
+      "{emote:fightActions.benediction} Ah, la benedizione! Una tecnica magica che ho visto molte volte sul campo di battaglia. Fa parte di quelle che noi veterani chiamiamo \"azioni degli dei\". Vi avverto: se una singola azione divina è già stata usata nella stessa battaglia, è destinata a fallire. Cosa fa? Potenzia tutte le vostre abilità - attacco, difesa, velocità - ed ecco un segreto che ho imparato negli anni: più aspettate prima di usarla, più spettacolare sarà l'aumento delle vostre statistiche.",
+      "{emote:fightActions.boomerangAttack} L'attacco boomerang, una tecnica che ho avuto modo di osservare nei miei anni di servizio! Questo attacco a lungo raggio può infliggere fino a due raffiche di danni all'avversario, come se tornasse indietro sulla sua traiettoria. Immaginate la vostra arma che torna a colpire una seconda volta dopo il primo impatto: è esattamente ciò che accade con questa manovra.",
+      "{emote:fightActions.boulderTossAttack} L'attacco con le rocce è una tecnica a distanza brutale ma efficace! Infligge danni medi a causa delle piccole dimensioni delle rocce, ma attenzione giovane avventuriero: se colpisce il bersaglio, può stordire completamente l'avversario. Ho visto battaglie decise da questo colpo di fortuna.",
+      "{emote:fightActions.breathTakingAttack} Il furto del respiro è una manovra subdola che ho imparato osservando alcuni dei miei avversari più astuti! Questo attacco a distanza infligge una piccola quantità di danni, ma può rubare il fiato all'avversario o addirittura rallentarlo nei movimenti. Non sottovalutate mai l'impatto di privare un nemico del suo respiro.",
+      "{emote:fightActions.canonAttack} L'attacco con il cannone, ah! È una tecnica complessa che ho avuto modo di studiare a lungo. La sua precisione diminuisce notevolmente con gli avversari veloci, ma riceve un bonus di danno contro gli avversari molto lenti. Questo attacco a lungo raggio può persino rallentare il nemico e, cosa interessante, diventa più potente se lo si usa più volte di seguito.",
+      "{emote:fightActions.chargingAttack} L'attacco caricato, uno dei miei preferiti durante gli anni di servizio! Si svolge in due fasi precise: il primo colpo infligge danni rafforzando la vostra difesa, poi il secondo colpo la riduce nuovamente, scatenandosi sull'avversario in corpo a corpo. Bisogna saper gestire questo flusso e riflusso di protezione.",
+      "{emote:fightActions.clubSmashAttack} Il colpo di mazza richiede pazienza, giovane combattente! Questa tecnica fisica richiede esattamente un round di preparazione, poi colpisce l'avversario con un colpo di notevole potenza. Ho imparato che l'anticipo fa la differenza nell'efficacia di questo attacco.",
+      "{emote:fightActions.concentration} La concentrazione è una tecnica mentale che ogni veterano deve padroneggiare! Attenzione, però: fallisce se la si usa mentre si è affetti da un'alterazione di stato. Se riesce, l'alterazione \"concentrazione\" aumenta notevolmente i danni che si possono infliggere al prossimo turno.",
+      "{emote:fightActions.counterAttack} L'attaque riposte, l'essence même du combat tactique ! Cette technique réplique avec la même action que celle que vient de jouer votre adversaire. Mais attention : elle ne fonctionne pas sur la magie ou les actions des dieux, ni si l'adversaire n'a pas attaqué, cela va de soi. J'ai toujours dit que l'observation était la clé du combat.",
+      "{emote:fightActions.cursedAttack} L'attacco maledetto, una tecnica che ho visto usare da avversari particolarmente subdoli, un incantesimo nato dall'accumulo di tutto il rancore di questo mondo. Maledice l'avversario affinché ne subisca le conseguenze in futuro. È sorprendente il fatto che guarisca se l'avversario ha ancora molta energia al momento dell'attacco.",
+      "{emote:fightActions.darkAttack} L'attacco oscuro, temibile e imprevedibile! Questo incantesimo è nato dall'accumulo delle forze più oscure di questo mondo e solo un combattente che ha immerso gli occhi nell'abisso della magia può sperare di usarlo. Utilizza il potere dell'avversario per rafforzarsi, ignorando la sua difesa. Può ripristinare parte del fiato perso o accecare il nemico. L'accecamento a volte rende l'avversario incapace di attaccare, riducendone la difesa e la velocità.",
+      "{emote:fightActions.defenseBuff} Rinforzo della difesa, una tecnica di accumulo che ho insegnato spesso alle mie reclute! Più questa azione viene eseguita in successione, più aumenta il bonus di difesa. Quando si tratta di protezione, la perseveranza paga sempre.",
+      "{emote:fightActions.divineAttack} L'attacco divino, potente ma impegnativo! Solo i combattenti che hanno messo alla prova la loro pazienza e perseveranza con gli dei potranno assaporare appieno il suo potere magico. La sua precisione aumenta con la durata del combattimento. Appartiene al gruppo delle \"azioni degli dei\" e fallisce se durante il combattimento sono già state eseguite due azioni divine.",
+      "{emote:fightActions.energeticAttack} L'attacco energetico è una tecnica di combattimento ravvicinato che mi piace particolarmente! Guarisce l'attaccante di metà del danno inflitto e ignora anche parte della difesa. È quella che io chiamo una manovra che nutre il combattente, ma attenzione: la sua precisione diminuisce con l'uso, e ho osservato che il suo potere curativo si esaurisce dopo tre utilizzi e che è meno efficace contro i mostri.",
+      "{emote:fightActions.eruptionAttack} L'eruzione, una dimostrazione a distanza di un impressionante potere elementale! Provoca l'eruzione del vulcano, che sprigiona roccia fusa. Secondo la mia esperienza, solo i più veloci riescono a evitare i danni causati da questa catastrofe controllata.",
+      "{emote:fightActions.familyMealAttack} Il pasto di famiglia, una tecnica fisica a dir poco originale! Invita gli alleati ad attaccare e avvelenare l'avversario. L'incantatore si sazia, sostituendo ogni stato di alterazione che può aver subito. Ho visto molte cose strane in combattimento, ma questa è memorabile!",
+      "{emote:fightActions.fireAttack} L'attacco di fuoco è una delle abilità più temibili che abbia mai incontrato. Questo puro concentrato infernale di potere e calore si riversa sull'avversario, bruciandolo per uno o più turni extra grazie all'alterazione \"bruciato\". Attenzione ai combattenti che hanno imparato questo incantesimo! Se l'hai imparato, usa questo attacco se sei congelato per riscaldarti!",
+      "{emote:fightActions.grabAndThrowAttack} L'attacco in proiezione, una tecnica corpo a corpo che ho visto spesso in azione! Se il difensore ha avuto l'ardire di usare un attacco fisico, l'attaccante può afferrarlo e sbatterlo contro la roccia più vicina, che può stordirlo e infliggere danni. Il tempismo è fondamentale per questa manovra.",
+      "{emote:fightActions.guildAttack} L'attacco della gilda, l'illustrazione perfetta della forza del gruppo! I membri della gilda si uniscono per eseguire un attacco di gruppo straordinariamente potente, precipitandosi sull'avversario. Mi ricorda le formazioni della mia guardia reale.",
+      "{emote:fightActions.hardBiteAttack} Il morso potente, fisico, brutale e diretto! Infligge danni e fa sanguinare l'avversario. Ho imparato a diffidare di qualsiasi creatura capace di una tale primitiva ferocia. Se mai dovessi iniziare a sanguinare, un po' di riposo ti curerà.",
+      "{emote:fightActions.heavyAttack} L'attacco pesante è sottile e brutale al tempo stesso. Richiede un contatto fisico e si abbatte con forza sulle difese dell'avversario, frantumandole sotto i suoi potenti colpi e togliendo un quarto della protezione dell'avversario. Tuttavia, ho notato che fallisce sempre quando l'attaccante ha più difese dell'avversario.",
+      "{emote:fightActions.intenseAttack} L'attacco intenso, estenuante, fisico ma potenzialmente devastante! Non fallisce mai su un avversario più veloce e funziona meglio su un avversario più veloce. Attenzione però: costringe l'incantatore a riposare nel turno successivo e non può uccidere l'avversario. Ho anche notato che è molto meno efficace contro una difesa alta.",
+      "{emote:fightActions.heatDrainAttack} Il drenaggio di calore, una tecnica che ho visto usare su alcuni avversari mostruosi! Recupera il calore del giocatore, aumentando l'attacco dell'incantatore e congelando l'avversario. È affascinante vedere come la temperatura possa diventare un'arma. Se si è congelati, si viene rallentati e si subiscono danni.",
+      "{emote:fightActions.heatMudAttack} L'attacco di fango ardente, un ingegnoso uso magico dell'ambiente! Riscalda il fango dell'arena per infliggere danni e funziona meglio sugli avversari sporchi. Sono sempre stato affascinato dai mostri che si sono adattati al loro ambiente.",
+      "{emote:fightActions.lavaWaveAttack} L'onda lavica, un attacco fisico terribilmente potente e di ultima istanza! Utilizzato da alcuni mostri quando si sentono minacciati, questo puro concentrato infernale di potenza e calore si riversa sull'avversario, bruciandolo per uno o più turni grazie all'alterazione \"bruciato\".",
+      "{emote:fightActions.magicMimicAttack} L'attacco magico mimico, una brillante dimostrazione di adattamento! Si usa per contrattaccare dopo un attacco dell'avversario. La risposta sarà molto migliore se l'avversario ha appena usato un attacco magico. L'arte di usare la forza del nemico contro se stessi.",
+      "{emote:fightActions.magmaBathAttack} Il bagno di magma, una tecnica di recupero a dir poco estrema! L'incantatore si riposa nella lava e recupera la sua energia. Ma attenzione: il suo potere curativo si riduce notevolmente dopo quattro utilizzi.",
+      "{emote:fightActions.mudShotAttack} Il colpo di fango, un attacco a distanza semplice ma efficace! Infligge danni sporcando l'avversario. È una tecnica che ho visto usare spesso dai mostri delle paludi. La sporcizia può essere un vantaggio in combattimento, perché aumenta leggermente i danni e protegge da altre alterazioni di stato, ma rende anche più vulnerabili a certi attacchi.",
+      "{emote:fightActions.outrageAttack} La rabbia, una tecnica emotiva potente ma rischiosa! Fallisce se la si usa mentre si ha un'alterazione di stato. L'alterazione \"arrabbiata\" raddoppia l'attacco ma abbassa la difesa. Dopo due turni, l'effetto scompare e l'attaccante si confonde. Ho visto molti combattimenti persi a causa di una rabbia mal controllata.",
+      "{emote:fightActions.petrificationAttack} La pietrificazione è una formidabile tecnica di controllo a lungo raggio, poiché pietrifica il bersaglio per due turni e raddoppia la sua difesa. Un avversario immobilizzato ma rafforzato: bisogna essere in grado di approfittarne in modo intelligente.",
+      "{emote:fightActions.piercingAttack} L'attaque perçante, la spécialité des fins stratèges ! Grâce à leur sens de l'observartion, cette technique de coprs à corps ignore presque complètement la défense de l'adversaire. L'attaquant a une probabilité de réduire légèrement la défense de son adversaire. Chaque coup compte dans cette technique.",
+      "{emote:fightActions.poisonousAttack} L'attacco velenoso è stato sviluppato dagli alchimisti più dotati del regno. Ho potuto apprendere dagli archivi di corte che il suo veleno deriva dal veleno di molti animali, ma la sua esatta composizione rimane un mistero. Dopo uno scontro diretto con un avversario, lo avvelena con un'alterazione che dura almeno tre turni e infligge danni nel tempo. Ho anche notato che questo attacco è molto più efficace all'inizio di un combattimento!",
+      "{emote:fightActions.powerfulAttack} Un attacco potente, rischioso ma potenzialmente devastante! Questo attacco fisico riduce la velocità dell'avversario e può provocare più danni, al costo di stordirlo. Attenzione: dopo tre utilizzi, il danno dell'attacco si riduce. Bisogna quindi imparare a usarlo al momento giusto per massimizzarne l'efficacia.",
+      "{emote:fightActions.protection} Protezione, una tecnica difensiva che ho insegnato a tutti i miei fanti! Fallisce se la si usa mentre si ha un'alterazione di stato. L'alterazione \"protetta\" dura tre turni e impedisce di cadere vittima di un'altra alterazione, fornendo al contempo un aumento della difesa.",
+      "{emote:fightActions.quickAttack} L'attacco veloce, perfetto contro gli avversari lenti! Ho avuto spesso a che fare con vili assassini che volevano uccidermi e ho dovuto regolarmente affrontare questa tecnica di corpo a corpo. Non fallisce mai contro un avversario lento e più lento è l'avversario, più danni farà questo attacco. La velocità è sempre stata una risorsa importante in combattimento.",
+      "{emote:fightActions.rageExplosion} L'esplosione della rabbia, uno sfogo brutale della rabbia accumulata! Lascia che la rabbia accumulata lungo il percorso esploda, proiettata direttamente sul nemico. Ho visto guerrieri trasformare la loro frustrazione in un'arma formidabile.",
+      "{emote:fightActions.ramAttack} L'attacco dell'ariete, una tecnica di carica fisica brutale con effetti alquanto imprevedibili! Se l'attaccante non viene stordito dall'attacco, riceve una parte dei danni inflitti. L'attacco può anche stordire l'avversario. Per provocare dolore bisogna essere disposti a soffrire.",
+      "{emote:fightActions.resting} Riposo, una tecnica di recupero fondamentale! Si applica sotto forma di trattamento all'incantatore e funziona meglio se non si hanno più molte energie. Riposare blocca anche le emorragie. Attenzione, però: il suo potere curativo diminuisce notevolmente dopo quattro utilizzi. Anche il riposo ha i suoi limiti.",
+      "{emote:fightActions.roarAttack} Il ruggito, una dimostrazione di pura intimidazione! Riduce l'attacco e la velocità dell'avversario. Ho imparato che a volte la paura è più efficace dell'acciaio.",
+      "{emote:fightActions.rockShieldAttack} Lo scudo di roccia, una protezione temporanea ma efficace, sulla quale mi sono spesso rotto i denti. Riduce il danno dell'attacco successivo della metà. È una tecnica difensiva che ho visto salvare molti mostri e che spesso mi ha sorpreso per la sua sorprendente efficacia.",
+      "{emote:fightActions.sabotageAttack} L'attacco di sabotaggio, una tecnica di combattimento ravvicinato subdola ma efficace! Ignora completamente la difesa dell'avversario e funziona meglio su un avversario con pochi attacchi. Richiede poco fiato, ma può paralizzare il lanciatore: in tal caso, i danni aumentano.",
+      "{emote:fightActions.shieldAttack} L'attacco con lo scudo, una tecnica fisica che ho perfezionato durante i miei anni di servizio! Sfrutta la difesa dell'attaccante per combattere, indebolendo l'avversario e dividendo il suo attacco per tre per due turni. La miglior difesa è un buon attacco!",
+      "{emote:fightActions.simpleAttack} Un semplice attacco... Un semplice attacco fisico, nient'altro. A volte, giovane avventuriero, le basi sono le più affidabili.",
+      "{emote:fightActions.slamAttack} L'attacco d'impatto, un'efficace tecnica di rallentamento! Si tratta di un attacco a distanza a bassa potenza che riduce la velocità dell'avversario. Spesso rallentare il nemico può essere più utile che infliggere danni ingenti.",
+      "{emote:fightActions.stealth} Furtività, un'arte dell'ombra che ho imparato a rispettare! Puoi nasconderti discretamente per raddoppiare i danni del tuo prossimo attacco. L'effetto sorpresa non va mai sottovalutato, perché può ribaltare le battaglie più impari.",
+      "{emote:fightActions.stoneSkinAttack} La pelle di roccia, una tecnica di rafforzamento difensivo! Più questa azione viene eseguita in successione, maggiore è il bonus di difesa. La perseveranza trasforma letteralmente la carne in pietra.",
+      "{emote:fightActions.summonAttack} Evocare alleati è una tecnica fisica che ho visto usare da potenti leader! Evoca alleati per attaccare l'avversario, a meno che non sia già vittima di un'alterazione di stato. Può essere usata solo una volta per combattimento: bisogna scegliere il momento giusto.",
+      "{emote:fightActions.tailWhipAttack} Il colpo di coda, un attacco primitivo ma efficace! Questa potente coda colpisce l'avversario in combattimento ravvicinato, infliggendo danni moderati con una possibilità di stordimento. Ho imparato a diffidare di qualsiasi creatura dotata di una simile appendice, perché posso assicurarvi che un colpo di questa portata allo stomaco dopo uno dei banchetti del re è tutt'altro che piacevole!",
+      "{emote:fightActions.ultimateAttack} L'attacco definitivo, la tecnica fisica più potente che un combattente possa padroneggiare! Richiede un round di preparazione e può essere usata solo una volta per combattimento. Quando la si usa, bisogna assicurarsi di farlo al momento giusto, perché funzionerà solo se si è allo stremo delle forze e non si ha più molta energia.",
+      "{emote:fightActions.webShotAttack} Il web jet è una tecnica di controllo a distanza! Invia un getto di fettucce che ferisce e rallenta l'avversario. Ho visto questa tecnica trasformare avversari veloci in facili prede.",
+      "{emote:fightActions.howlAttack} L'ululato, una tecnica di auto-miglioramento imprevedibile! Il mostro emette un ululato che aumenta casualmente il suo attacco, la sua difesa o la sua velocità. A volte, lasciare che siano gli istinti primitivi a parlare può dare i suoi frutti.",
+      "{emote:fightActions.icySeductionAttack} La seduzione gelida è una tecnica molto... speciale! Utilizza un fascino ammaliante e freddo che può congelare o confondere l'avversario, oltre a infliggere danni. Ho imparato a diffidare di tutti i tipi di fascino in combattimento.",
+      "{emote:fightActions.frozenKissAttack} Il bacio ghiacciato, un attacco tanto sorprendente quanto efficace! Mi ricorda un'avventura con una delle cortigiane del palazzo... ma sto divagando! Questo attacco, intriso di magia, consiste nel far cadere un bacio ghiacciato sull'avversario, infliggendogli danni. Se l'avversario è già congelato, il danno è notevolmente ridotto. Ci sono sicuramente tutti i tipi di tecniche di combattimento... e questa è una delle più temibili!",
+      "{emote:fightActions.spectralRevengeAttack} Vendetta spettrale, una risposta mistica che ho visto usare da alcuni avversari soprannaturali! Se l'ultimo attacco subito non era magico, si contrattacca infliggendo danni all'aggressore. L'aldilà ha le sue regole di combattimento.",
+      "{emote:fightActions.ambush} L'imboscata, la tecnica di preparazione tattica perfetta! Prepara un'imboscata che riduce a zero i danni dell'avversario nel turno successivo e aumenta notevolmente i danni dell'incantatore per il suo prossimo attacco. L'arte della guerra è anche saper aspettare il momento giusto.",
+      "{emote:fightActions.lightRayAttack} Il fascio di luce, un incantesimo abbagliante! Un potente fascio di luce viene proiettato intorno al mostro, infliggendo danni all'avversario e con la possibilità di bruciarlo o accecarlo - l'accecamento è il più comune. La luce può essere un'arma formidabile.",
+      "{emote:fightActions.crystalShardAttack} L'attacco del frammento di cristallo è un attacco a distanza preciso! Questa tecnica infligge più danni agli avversari più lenti. Ho imparato che la precisione conta più della forza bruta con questo tipo di attacco.",
+      "{emote:fightActions.clawAttack} L'attacco con gli artigli, una tecnica primitiva ma diretta! Si basa su un violento colpo di artiglio. Semplice, efficace, brutale: a volte le tecniche più elementari sono le più affidabili.",
+      "{emote:fightActions.callPack} Chiamare il branco, una tecnica di coordinamento che ho visto usare da alcune creature! Chiamano il branco attaccando debolmente all'inizio, mentre preparano uno o più attacchi di branco per il turno successivo. Anche tra le bestie la forza sta nel numero.",
+      "{emote:fightActions.packAttack} L'attacco del branco, una dimostrazione di forza collettiva nel combattimento ravvicinato! Più mostri ci sono, più potente è l'attacco. Può essere ripetuto più volte. Ho sempre detto che il numero può compensare molte debolezze individuali.",
+      "{emote:fightActions.glacialCaveCollapseAttack} Crollo di ghiaccio, una tecnica ambientale a lungo raggio davvero impressionante! Fa crollare stalattiti di ghiaccio dal soffitto della caverna, ma è possibile schivare l'attacco avvicinandosi all'incantatore in anticipo con un attacco fisico. Usare l'ambiente come arma: questa sì che è strategia!",
+      "{emote:fightActions.radiantBlastAttack} Il Raggio Esplosivo Radiante, una tecnica magica di notevole potenza! Fa parte del gruppo \"azioni degli dei\". È un attacco radiante a più turni: l'incantatore concentra la sua energia per due turni per scatenare un potente attacco di luce che può bruciare o accecare l'avversario.",
+      "{emote:fightActions.hammerQuakeAttack} Il martello sismico, una tecnica di distruzione di massa a distanza! Fa parte del gruppo \"azioni degli dei\". L'incantatore colpisce il terreno con una forza titanica, infliggendo ingenti danni a tutti gli avversari. Fortunatamente, è possibile schivare i terremoti con l'aiuto di un animale domestico volante.",
+      "{emote:fightActions.startPolarEmbraceAttack} L'abbraccio polare, una temibile tecnica di controllo del ghiaccio! Questo attacco fisico circonda il bersaglio con artigli ghiacciati, può congelare l'avversario e crea un abbraccio prolungato se l'avversario non si difende con un attacco a distanza. Una mossa da evitare!",
+      "{emote:fightActions.isStuckInPolarEmbrace} L'abbraccio polare mantenuto, una continuazione spietata della presa precedente! Infligge danni all'avversario stretto nell'abbraccio, con la possibilità di congelarlo. Fallisce se l'avversario ha appena usato un attacco fisico.",
+      "{emote:fightActions.glacialBreathAttack} L'esplosione di ghiaccio, una tecnica elementale potente e a lungo raggio! Sprigiona un vento gelido che infligge danni all'avversario e ha la possibilità di congelarlo se l'attacco va a segno. Ho imparato a temere il respiro delle creature di ghiaccio.",
+      "{emote:fightActions.blizzardRageAttack} Blizzard rage, la furia elementale definitiva! Scatena gli elementi gelidi a distanza, congelando, rallentando e indebolendo le difese dell'avversario. Può essere usata solo una volta per battaglia: quando la natura è già scatenata, non può più essere scatenata!",
+      "{emote:fightActions.aerialDiveAttack} La picchiata aerea, un attacco dal cielo per attaccare a distanza! Consiste nel lanciarsi in picchiata sull'avversario dall'alto, ma fallisce se il bersaglio ha appena attaccato a distanza. Ho sempre detto che bisogna guardarsi le spalle... e anche il cielo!",
+      "{emote:fightActions.crystallineArmorAttack} Armatura cristallina, una tecnica difensiva offensiva! Questa tecnica utilizza l'armatura del combattente per infliggere danni nel combattimento ravvicinato, ma funziona solo se l'avversario ha appena effettuato un attacco fisico. Trasformare la propria protezione in un'arma di rappresaglia è un'opera di ingegno tattico!"
     ]
   }
 }
+

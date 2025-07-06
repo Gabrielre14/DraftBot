@@ -1,8 +1,8 @@
 import { ICommand } from "../ICommand";
 import {
 	makePacket, PacketContext
-} from "../../../../Lib/src/packets/DraftBotPacket";
-import { DraftbotInteraction } from "../../messages/DraftbotInteraction";
+} from "../../../../Lib/src/packets/CrowniclesPacket";
+import { CrowniclesInteraction } from "../../messages/CrowniclesInteraction";
 import { SlashCommandBuilderGenerator } from "../SlashCommandBuilderGenerator";
 import {
 	CommandReportBigEventResultRes,
@@ -21,7 +21,7 @@ import {
 	ActionRowBuilder, ButtonBuilder, ButtonInteraction, ButtonStyle, parseEmoji
 } from "discord.js";
 import { DiscordCache } from "../../bot/DiscordCache";
-import { DraftBotIcons } from "../../../../Lib/src/DraftBotIcons";
+import { CrowniclesIcons } from "../../../../Lib/src/CrowniclesIcons";
 import {
 	effectsErrorTextValue, sendInteractionNotForYou
 } from "../../utils/ErrorUtils";
@@ -33,21 +33,22 @@ import {
 	minutesDisplay,
 	printTimeBeforeDate
 } from "../../../../Lib/src/utils/TimeUtils";
-import { DraftBotEmbed } from "../../messages/DraftBotEmbed";
+import { CrowniclesEmbed } from "../../messages/CrowniclesEmbed";
 import { ReactionCollectorChooseDestinationReaction } from "../../../../Lib/src/packets/interaction/ReactionCollectorChooseDestination";
-import { DiscordCollectorUtils } from "../../utils/DiscordCollectorUtils";
+import {
+	DiscordCollectorUtils,
+	disableRows
+} from "../../utils/DiscordCollectorUtils";
 import { EmoteUtils } from "../../utils/EmoteUtils";
 import { ReportConstants } from "../../../../Lib/src/constants/ReportConstants";
 import { ReactionCollectorReturnTypeOrNull } from "../../packetHandlers/handlers/ReactionCollectorHandlers";
 import { DiscordConstants } from "../../DiscordConstants";
 import { ReactionCollectorPveFightData } from "../../../../Lib/src/packets/interaction/ReactionCollectorPveFight";
-import {
-	escapeUsername, StringUtils
-} from "../../utils/StringUtils";
+import { escapeUsername } from "../../utils/StringUtils";
 import { Language } from "../../../../Lib/src/Language";
 import { DisplayUtils } from "../../utils/DisplayUtils";
 
-async function getPacket(interaction: DraftbotInteraction): Promise<CommandReportPacketReq> {
+async function getPacket(interaction: CrowniclesInteraction): Promise<CommandReportPacketReq> {
 	await interaction.deferReply();
 	return makePacket(CommandReportPacketReq, {});
 }
@@ -69,7 +70,7 @@ export async function createBigEventCollector(context: PacketContext, packet: Re
 	})}\n\n`;
 	for (const possibility of reactions) {
 		if (possibility.name !== ReportConstants.END_POSSIBILITY_ID) {
-			const emoji = EmoteUtils.translateEmojiToDiscord(DraftBotIcons.events[data.eventId.toString()][possibility.name] as string);
+			const emoji = EmoteUtils.translateEmojiToDiscord(CrowniclesIcons.events[data.eventId.toString()][possibility.name] as string);
 
 			const button = new ButtonBuilder()
 				.setEmoji(parseEmoji(emoji)!)
@@ -111,7 +112,7 @@ export async function createBigEventCollector(context: PacketContext, packet: Re
 
 	const endCollector = msg.createReactionCollector({
 		time: packet.endTime - Date.now(),
-		filter: (reaction, user) => reaction.emoji.name === DraftBotIcons.messages.notReplied && user.id === interaction.user.id
+		filter: (reaction, user) => reaction.emoji.name === CrowniclesIcons.messages.notReplied && user.id === interaction.user.id
 	});
 
 	buttonCollector.on("collect", async (buttonInteraction: ButtonInteraction) => {
@@ -129,8 +130,11 @@ export async function createBigEventCollector(context: PacketContext, packet: Re
 	});
 
 	buttonCollector.on("end", async () => {
+		// Disable buttons instead of removing them
+		disableRows(rows);
+
 		await msg.edit({
-			components: []
+			components: rows
 		});
 	});
 
@@ -214,9 +218,9 @@ export async function reportResult(packet: CommandReportBigEventResultRes, conte
 		result,
 		event: i18n.t(`events:${packet.eventId}.possibilities.${packet.possibilityId}.outcomes.${packet.outcomeId}`, { lng }),
 		emoji: EmoteUtils.translateEmojiToDiscord(packet.possibilityId === ReportConstants.END_POSSIBILITY_ID
-			? DraftBotIcons.events[packet.eventId].end[packet.outcomeId]
-			: DraftBotIcons.events[packet.eventId][packet.possibilityId] as string),
-		alte: EmoteUtils.translateEmojiToDiscord(packet.effect && packet.effect.name !== Effect.OCCUPIED.id ? DraftBotIcons.effects[packet.effect.name] : "")
+			? CrowniclesIcons.events[packet.eventId].end[packet.outcomeId]
+			: CrowniclesIcons.events[packet.eventId][packet.possibilityId] as string),
+		alte: EmoteUtils.translateEmojiToDiscord(packet.effect && packet.effect.name !== Effect.OCCUPIED.id ? CrowniclesIcons.effects[packet.effect.name] : "")
 	});
 
 	const buttonInteraction = context.discord?.buttonInteraction ? DiscordCache.getButtonInteraction(context.discord?.buttonInteraction) : null;
@@ -238,7 +242,7 @@ export async function chooseDestinationCollector(context: PacketContext, packet:
 	const interaction = DiscordCache.getInteraction(context.discord!.interaction)!;
 	const lng = interaction.userLanguage;
 
-	const embed = new DraftBotEmbed();
+	const embed = new CrowniclesEmbed();
 	embed.formatAuthor(i18n.t("commands:report.destinationTitle", {
 		lng,
 		pseudo: await DisplayUtils.getEscapedUsername(context.keycloakId!, lng)
@@ -259,7 +263,7 @@ export async function chooseDestinationCollector(context: PacketContext, packet:
 				: minutesDisplay(120, lng)
 					.replace("2", "?");
 			return `${
-				EmoteUtils.translateEmojiToDiscord(DraftBotIcons.mapTypes[destinationReaction.mapTypeId])
+				EmoteUtils.translateEmojiToDiscord(CrowniclesIcons.mapTypes[destinationReaction.mapTypeId])
 			} ${
 				i18n.t(`models:map_locations.${destinationReaction.mapId}.name`, { lng })} (${duration})`;
 		})
@@ -316,7 +320,7 @@ function generateTravelPathString(packet: CommandReportTravelSummaryRes, now: nu
 
 	index = Math.floor(index);
 
-	let str = `${EmoteUtils.translateEmojiToDiscord(DraftBotIcons.mapTypes[packet.startMap.type])} `;
+	let str = `${EmoteUtils.translateEmojiToDiscord(CrowniclesIcons.mapTypes[packet.startMap.type])} `;
 
 	for (let j = 0; j < Constants.REPORT.PATH_SQUARE_COUNT; ++j) {
 		if (j === index) {
@@ -324,7 +328,7 @@ function generateTravelPathString(packet: CommandReportTravelSummaryRes, now: nu
 				str += packet.isOnBoat ? "🚢" : "🧍";
 			}
 			else {
-				str += EmoteUtils.translateEmojiToDiscord(DraftBotIcons.effects[packet.effect!]);
+				str += EmoteUtils.translateEmojiToDiscord(CrowniclesIcons.effects[packet.effect!]);
 			}
 		}
 		else {
@@ -335,7 +339,7 @@ function generateTravelPathString(packet: CommandReportTravelSummaryRes, now: nu
 		}
 	}
 
-	return `${str} ${EmoteUtils.translateEmojiToDiscord(DraftBotIcons.mapTypes[packet.endMap.type])}`;
+	return `${str} ${EmoteUtils.translateEmojiToDiscord(CrowniclesIcons.mapTypes[packet.endMap.type])}`;
 }
 
 /**
@@ -351,11 +355,11 @@ export async function handleStartPveFight(context: PacketContext, packet: Reacti
 	const msg = i18n.t("commands:report.pveEvent", {
 		lng,
 		pseudo: escapeUsername(interaction.user.displayName),
-		event: StringUtils.getRandomTranslation("commands:report.encounterMonster", lng),
+		event: i18n.t(`models:pveMapsStory.${data.mapId}.${data.monster.id}`, { lng }),
 		monsterDisplay: i18n.t("commands:report.encounterMonsterStats", {
 			lng,
 			monsterName: i18n.t(`models:monsters.${data.monster.id}.name`, { lng }),
-			emoji: DraftBotIcons.monsters[data.monster.id],
+			emoji: CrowniclesIcons.monsters[data.monster.id],
 			description: i18n.t(`models:monsters.${data.monster.id}.description`, { lng }),
 			level: data.monster.level,
 			energy: data.monster.energy,
@@ -367,8 +371,8 @@ export async function handleStartPveFight(context: PacketContext, packet: Reacti
 
 	return await DiscordCollectorUtils.createAcceptRefuseCollector(interaction, msg, packet, context, {
 		emojis: {
-			accept: DraftBotIcons.pveFights.startFight,
-			refuse: DraftBotIcons.pveFights.waitABit
+			accept: CrowniclesIcons.pveFights.startFight,
+			refuse: CrowniclesIcons.pveFights.waitABit
 		}
 	});
 }
@@ -440,7 +444,7 @@ export async function displayMonsterReward(
 		);
 	}
 
-	const embed = new DraftBotEmbed()
+	const embed = new CrowniclesEmbed()
 		.formatAuthor(
 			i18n.t("commands:report.rewardEmbedTitle", {
 				lng,
@@ -482,7 +486,7 @@ function manageMainSummaryText({
 		value: packet.lastSmallEventId
 			? i18n.t("commands:report.travellingDescription", {
 				lng,
-				smallEventEmoji: EmoteUtils.translateEmojiToDiscord(DraftBotIcons.smallEvents[packet.lastSmallEventId]),
+				smallEventEmoji: EmoteUtils.translateEmojiToDiscord(CrowniclesIcons.smallEvents[packet.lastSmallEventId]),
 				time: timeBeforeSmallEvent
 			})
 			: i18n.t("commands:report.travellingDescriptionWithoutSmallEvent", {
@@ -495,7 +499,7 @@ function manageMainSummaryText({
 type FieldsArguments = {
 	packet: CommandReportTravelSummaryRes;
 	lng: Language;
-	travelEmbed: DraftBotEmbed;
+	travelEmbed: CrowniclesEmbed;
 };
 
 function manageEndPathDescriptions({
@@ -505,12 +509,12 @@ function manageEndPathDescriptions({
 }: FieldsArguments): void {
 	travelEmbed.addFields({
 		name: i18n.t("commands:report.startPoint", { lng }),
-		value: `${EmoteUtils.translateEmojiToDiscord(DraftBotIcons.mapTypes[packet.startMap.type])} ${i18n.t(`models:map_locations.${packet.startMap.id}.name`, { lng })}`,
+		value: `${EmoteUtils.translateEmojiToDiscord(CrowniclesIcons.mapTypes[packet.startMap.type])} ${i18n.t(`models:map_locations.${packet.startMap.id}.name`, { lng })}`,
 		inline: true
 	});
 	travelEmbed.addFields({
 		name: i18n.t("commands:report.endPoint", { lng }),
-		value: `${EmoteUtils.translateEmojiToDiscord(DraftBotIcons.mapTypes[packet.endMap.type])} ${i18n.t(`models:map_locations.${packet.endMap.id}.name`, { lng })}`,
+		value: `${EmoteUtils.translateEmojiToDiscord(CrowniclesIcons.mapTypes[packet.endMap.type])} ${i18n.t(`models:map_locations.${packet.endMap.id}.name`, { lng })}`,
 		inline: true
 	});
 }
@@ -527,7 +531,7 @@ export async function reportTravelSummary(packet: CommandReportTravelSummaryRes,
 	}
 	const lng = interaction.userLanguage;
 	const now = Date.now();
-	const travelEmbed = new DraftBotEmbed();
+	const travelEmbed = new CrowniclesEmbed();
 	travelEmbed.formatAuthor(i18n.t("commands:report.travelPathTitle", { lng }), interaction.user);
 	travelEmbed.setDescription(generateTravelPathString(packet, now));
 	const fieldsArguments = {
@@ -540,14 +544,14 @@ export async function reportTravelSummary(packet: CommandReportTravelSummaryRes,
 	if (packet.energy.show) {
 		travelEmbed.addFields({
 			name: i18n.t("commands:report.remainingEnergyTitle", { lng }),
-			value: `${DraftBotIcons.unitValues.energy} ${packet.energy.current} / ${packet.energy.max}`,
+			value: `${CrowniclesIcons.unitValues.energy} ${packet.energy.current} / ${packet.energy.max}`,
 			inline: true
 		});
 	}
 	if (packet.points.show) {
 		travelEmbed.addFields({
 			name: i18n.t("commands:report.collectedPointsTitle", { lng }),
-			value: `${DraftBotIcons.unitValues.score} ${packet.points.cumulated}`,
+			value: `${CrowniclesIcons.unitValues.score} ${packet.points.cumulated}`,
 			inline: true
 		});
 	}

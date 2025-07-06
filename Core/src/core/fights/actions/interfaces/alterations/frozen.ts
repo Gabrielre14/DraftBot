@@ -10,10 +10,16 @@ import {
 } from "../../../FightController";
 import { Fighter } from "../../../fighter/Fighter";
 import { RandomUtils } from "../../../../../../../Lib/src/utils/RandomUtils";
+import { FightConstants } from "../../../../../../../Lib/src/constants/FightConstants";
 
 const use: FightAlterationFunc = (affected, fightAlteration, opponent) => {
+	// Automatically heal being frozen if the player used fire attack
+	if (affected.getLastFightActionUsed()?.id === FightConstants.FIGHT_ACTIONS.PLAYER.FIRE_ATTACK) {
+		return defaultHealFightAlterationResult(affected);
+	}
+
 	// 50% chance to be healed from the frozen (except for the first two turns)
-	if (RandomUtils.draftbotRandom.bool() && affected.alterationTurn > 2) {
+	if (RandomUtils.crowniclesRandom.bool() && affected.alterationTurn > 2) {
 		affected.removeSpeedModifiers(fightAlteration);
 		return defaultHealFightAlterationResult(affected);
 	}

@@ -4,12 +4,12 @@ import { CommandPingPacketReq } from "../../../Lib/src/packets/commands/CommandP
 import { ReactionCollectorReactPacket } from "../../../Lib/src/packets/interaction/ReactionCollectorPacket";
 
 export abstract class CoreConstants {
-	static BYPASS_MAINTENANCE_PACKETS = [
+	static BYPASS_MAINTENANCE_AND_RESETS_PACKETS = [
 		ReactionCollectorReactPacket.name,
 		ChangeBlockingReasonPacket.name,
 		ReactionCollectorResetTimerPacketReq.name,
 		CommandPingPacketReq.name
 	];
 
-	static OPENING_LINE = "DraftBot Core";
+	static OPENING_LINE = "Crownicles Core";
 }

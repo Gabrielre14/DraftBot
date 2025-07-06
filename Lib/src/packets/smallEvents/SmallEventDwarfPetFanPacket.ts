@@ -1,27 +1,21 @@
 import {
 	PacketDirection,
 	sendablePacket
-} from "../DraftBotPacket";
+} from "../CrowniclesPacket";
 import { SmallEventPacket } from "./SmallEventPacket";
 import { SexTypeShort } from "../../constants/StringConstants";
 
 @sendablePacket(PacketDirection.BACK_TO_FRONT)
-export class SmallEventDwarfPetFan extends SmallEventPacket {
+export class SmallEventDwarfPetFanPacket extends SmallEventPacket {
 	petNickname?: string | undefined;
 
 	petSex?: SexTypeShort;
 
 	petTypeId?: number;
 
-	playerHavePet?: boolean;
-
 	amount?: number;
 
-	newPetSeen?: boolean;
+	interactionName!: string;
 
-	arePetsAllSeen?: {
-		isGemReward: boolean;
-	};
-
-	isPetFeisty?: boolean;
+	isGemReward?: boolean;
 }

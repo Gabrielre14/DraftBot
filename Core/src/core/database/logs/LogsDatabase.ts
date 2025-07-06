@@ -96,7 +96,7 @@ import { FightController } from "../../fights/FightController";
 import { PlayerFighter } from "../../fights/fighter/PlayerFighter";
 import { MonsterFighter } from "../../fights/fighter/MonsterFighter";
 import { Effect } from "../../../../../Lib/src/types/Effect";
-import { getDatabaseConfiguration } from "../../bot/DraftBotConfig";
+import { getDatabaseConfiguration } from "../../bot/CrowniclesConfig";
 import { botConfig } from "../../../index";
 import { GuildLikeType } from "../../types/GuildLikeType";
 import { LogsCommandOrigins } from "./models/LogsCommandOrigins";
@@ -883,15 +883,15 @@ export class LogsDatabase extends Database {
 	 * @param guildPetsEntities
 	 */
 	public async logGuildDestroy(guild: Guild, members: Player[], guildPetsEntities: PetEntity[]): Promise<void> {
-		const guildInfos: GuildLikeType = {
+		const guildInfo: GuildLikeType = {
 			id: guild.id,
 			name: guild.name,
 			creationDate: guild.creationDate,
 			chiefId: guild.chiefId
 		};
-		const logGuild = await LogsDatabase.findOrCreateGuild(guildInfos);
+		const logGuild = await LogsDatabase.findOrCreateGuild(guildInfo);
 		for (const member of members) {
-			if (member.id !== guildInfos.chiefId) {
+			if (member.id !== guildInfo.chiefId) {
 				await LogsDatabase.logGuildLeave(guild, member.keycloakId);
 			}
 		}
