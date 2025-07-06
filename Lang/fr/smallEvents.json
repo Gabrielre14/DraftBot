@@ -1233,7 +1233,7 @@
         }
       },
       {
-        "intro": "Vous avancez tranquillement dans votre aventure (avec vos compagnons de guilde), lorsque votre instinct vous signale un danger. Petit à petit, une brume blanchâtre presque opaque s'élève du sol accidenté et tombe du ciel pour vous encercler. Vous ne voyez rapidement plus rien autour de vous.",
+        "intro": "Vous avancez tranquillement dans votre aventure, lorsque votre instinct vous signale un danger. Petit à petit, une brume blanchâtre presque opaque s'élève du sol accidenté et tombe du ciel pour vous encercler. Vous ne voyez rapidement plus rien autour de vous.",
         "success": {
           "withGuild": "Plusieurs paires d'yeux valent mieux qu'une ! Grâce à la coopération de vos visions, vos compagnons et vous parvenez à avancer entre les rochers et les crevasses sans qu'un seul ne soit blessé ou perdu. Votre guilde reçoit **{{amount}} {emote:unitValues.{{emoteKey}}}**.",
           "soloWithGuild": "Dans cette situation urgente, vous gardez votre sang-froid et utilisez les techniques de pistage apprises grâce à votre guilde afin de vous sortir de ce pétrin sans encombre. Votre guilde reçoit **{{amount}} {emote:unitValues.{{emoteKey}}}**.",
@@ -1249,7 +1249,7 @@
         }
       },
       {
-        "intro": "Vous avancez tranquillement pour de nouvelles aventures lorsqu'un petit caillou sournois, insolent et pointu décida de faire de vous sa victime et vous entaille cruellement la cheville.",
+        "intro": "Vous avancez tranquillement pour de nouvelles aventures lorsqu'un petit caillou sournois, insolent et pointu décide de faire de vous sa victime et vous entaille cruellement la cheville.",
         "success": {
           "withGuild": "Heureusement pour vous, vos compagnons de guilde pansent votre blessure et vous remettent rapidement sur pied. Votre guilde reçoit **{{amount}} {emote:unitValues.{{emoteKey}}}**.",
           "soloWithGuild": "Malgré la douleur, vous parvenez à vous souvenir des enseignements de votre guilde et parvenez grâce à ces connaissances à vous soigner rapidement. Votre guilde reçoit **{{amount}} {emote:unitValues.{{emoteKey}}}**.",
