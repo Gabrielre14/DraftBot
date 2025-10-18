@@ -9,8 +9,9 @@ export const commandInfo: ITestCommand = {
 	typeWaited: {
 		weeklyscore: TypeKey.INTEGER
 	},
-	description: "Mets le score de la semaine de votre joueur à la valeur donnée"
+	description: "Définit le score hebdomadaire du joueur testeur. (le nombre de points gagnés depuis le début de la semaine) indépendant du score du joueur /!"
 };
+
 
 /**
  * Set the weeklyscore of the player

@@ -8,16 +8,16 @@
     "petField": "**Tipo:** {{emote}} {{typeName}}\n**Nome:** {{nickname}}\n**Raridade:** {{rarity}}\n**Género:** {{sex}}\n**Mentalidade:** {{loveLevel}}",
     "noNickname": "Sem alcunha",
     "loveLevels": {
-      "1_male": ":smirk_cat: Fiável",
-      "1_female": ":smirk_cat: Fielleuse",
-      "2_male": ":pouting_cat: Sauvage",
-      "2_female": ":pouting_cat: Sauvage",
-      "3_male": ":scream_cat: Medo",
-      "3_female": ":scream_cat: Medo",
-      "4_male": ":smiley_cat: Domesticado",
-      "4_female": ":smiley_cat: Domesticado",
-      "5_male": ":heart_eyes_cat: Vestido",
-      "5_female": ":heart_eyes_cat: Vestido"
+      "1_male": "{emote:loveLevels.0} Fiável",
+      "1_female": "{emote:loveLevels.0} Fielleuse",
+      "2_male": "{emote:loveLevels.1} Sauvage",
+      "2_female": "{emote:loveLevels.1} Sauvage",
+      "3_male": "{emote:loveLevels.2} Medo",
+      "3_female": "{emote:loveLevels.2} Medo",
+      "4_male": "{emote:loveLevels.3} Domesticado",
+      "4_female": "{emote:loveLevels.3} Domesticado",
+      "5_male": "{emote:loveLevels.4} Vestido",
+      "5_female": "{emote:loveLevels.4} Vestido"
     },
     "hungry": "🤤 com fome",
     "diet": {
@@ -169,7 +169,7 @@
       },
       "FIGHT": {
         "description": "Utiliza este comando para desafiar outros jogadores no mesmo servidor que tu.\nAs batalhas têm lugar numa base de turno a turno. Em cada turno, podes escolher uma ação para executar.\n\nPara mais informações, consulta a página do guia: https://guide.draftbot.com/notions-principale/combats",
-        "image": "https://draftbot.com/public/ressources/fighthelp/en/5.0.2.png"
+        "image": "https://draftbot.com/public/ressources/fighthelp/en/5.1.7.png"
       },
       "GLORY_TOP": {
         "description": "Apresenta a classificação gloriosa do jogo para cada 15 jogadores. A liga dos jogadores também é apresentada. Os jogadores no mesmo servidor que tu estão marcados com um ponto azul."
@@ -241,7 +241,7 @@
         "description": "Apresenta a loja da missão."
       },
       "NOTIFICATIONS": {
-        "description": "Permite-te definir como queres receber as notificações do bot. Podes escolher se queres receber notificações (e onde as mostrar) para relatórios e/ou recompensas de guildas."
+        "description": "Permite configurar a receção de notificações do bot. Pode optar por receber notificações (e determinar onde as exibir) para a chegada a um local designado, recompensas de guilda, a libertação da prisão, ataques de outros jogadores, expulsões de guilda, alterações de estatuto na guilda, a regeneração total de energia e a disponibilidade do seu bónus diário."
       },
       "PET": {
         "description": "Apresenta informações sobre o seu animal de estimação."
@@ -335,8 +335,10 @@
     "weapons_one": "{{count}}{{max}}Arma ( / ):",
     "weapons_other": "{{count}}{{max}}Armas ( / ) :",
     "randomItemTitle": "{{pseudo}}encontraste alguma coisa!",
-    "randomItemFooter": "Já possui um equipamento e gostaria de o vender?",
-    "randomItemFooterPotion": "Gostaria de destruir a sua poção atual?",
+    "randomItemAcceptTitle": "Já possui um equipamento e gostaria de o vender?",
+    "randomItemAcceptTitlePotion": "Já tens uma poção, o que gostarias de fazer?",
+    "randomItemFooterPotion": "Usa {emote:collectors.accept} para guardar a poção encontrada e substituir a tua poção atual, {emote:items.drinkPotion} para consumir a poção encontrada, {emote:collectors.refuse} para descartar a poção encontrada.",
+    "randomItemFooterPotionChoice": "Usa um número para substituir uma poção pela poção encontrada, {emote:items.drinkPotion} para consumir a poção encontrada, {emote:collectors.refuse} para descartar a poção encontrada.",
     "acceptedTitle": "{{pseudo}}Foste equipado!",
     "chooseItemToReplaceTitle": "Escolher um objeto para substituir"
   },
@@ -383,7 +385,7 @@
       "contest": "Distintivo que pode ser ganho ocasionalmente em concursos no servidor bot",
       "christmas": "Distintivo a ganhar todos os Natais num concurso",
       "top_week": ":reminder_ribbon: Pessoa que dominou uma classificação da semana`.",
-      "random": ":slot_machine: Crachá distribuído de forma completamente aleatória",
+      "random": "Um distintivo misterioso, ninguém sabe como o obter",
       "top_10_v1": ":medal: Os 10 melhores jogadores na reposição 1.0",
       "top_v1_player": ":trophy: Melhor jogador na altura da reposição 1.0",
       "major_bug_reporter": ":lady_beetle: Pessoas que comunicaram erros graves",
@@ -460,8 +462,8 @@
   "report": {
     "adviceTitle": "Conselhos :",
     "chooseDestinationIndications": "Escolha um destino para a sua viagem:",
-    "choseMapMinutes_one": "{{mapPrefix}} {{mapType}} {{mapEmote}}{{mapName}}Decidiu dirigir-se para ** **.{{time}} Esta viagem demorará aproximadamente ** minuto**.",
-    "choseMapMinutes_other": "{{mapPrefix}} {{mapType}} {{mapEmote}}{{mapName}}Decidiu dirigir-se para ** **.{{time}} Esta viagem demorará aproximadamente ** minutos**.",
+    "choseMapMinutes_one": "Decidiu ir para {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}**. Esta viagem demorará aproximadamente **{{timeDisplay}}**.",
+    "choseMapMinutes_other": "Decidiu ir para {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}**. Esta viagem demorará aproximadamente **{{timeDisplay}}**.",
     "choseMap_one": "{{mapPrefix}} {{mapType}} {{mapEmote}}{{mapName}}Decidiu dirigir-se para ** **.{{time}} Esta viagem demorará aproximadamente ** hora**.",
     "choseMap_other": "{{mapPrefix}} {{mapType}} {{mapEmote}}{{mapName}}Decidiu dirigir-se para ** **.{{time}} A viagem demorará aproximadamente ** horas**.",
     "collectedPointsTitle": "Pontos recolhidos :",
@@ -678,6 +680,11 @@
             "Foi construído para ser veloz! Em combate, pode levar-te às costas, aumentando dez vezes a tua agilidade no campo de batalha.",
             "Os seus reflexos são excepcionais. Ele partilhará a sua incrível velocidade contigo em combate, tornando-te muito mais rápido.",
             "Este animal de estimação tem glândulas especiais que segregam uma hormona de aceleração. Ao seu lado, vai mover-se como um relâmpago!"
+          ],
+          "breakArmor": [
+            "Assim que o combate começa, ele avança sobre o adversário e tenta arrancar-lhe a armadura ou o escudo, conseguindo-o muitas vezes, deixando-o indefeso.",
+            "Este animal poderoso ataca de frente desde o início; se atingir o seu alvo, o elmo, a couraça ou o escudo são deslocados e levados para fora do campo de batalha.",
+            "O teu animal de estimação faz uma investida impressionante para despir o inimigo: na maior parte das vezes, a armadura ou o escudo acabam por ficar presos entre os seus chifres, tornando-se o seu espólio."
           ],
           "claws": [
             "As garras do teu animal de estimação são mais afiadas do que muitas lâminas! Ele usá-las-á para cortar os teus inimigos com uma eficiência aterradora.",
@@ -978,7 +985,9 @@
       "playerFreedFromJail": "Libertação da prisão",
       "fightChallenge": "Atacado por outro jogador",
       "guildKick": "Exclusão do grémio",
-      "guildStatusChange": "Mudança de estatuto no seio da guilda"
+      "guildStatusChange": "Mudança de estatuto no seio da guilda",
+      "energy": "Energia regenerada",
+      "dailyBonus": "Bónus diário"
     },
     "enableDisable": "Ativar/Desativar",
     "sendLocationField": "Endereço de entrega :",
@@ -1039,19 +1048,24 @@
   },
   "daily": {
     "errors": {
-      "objectDoNothingError": "Tenta usar o poder do objeto que transporta... Mas não tem qualquer efeito!",
-      "objectIsActiveDuringFights": "O poder do objeto que transporta é ativado automaticamente durante o combate!",
-      "noActiveObject": "Infelizmente, não tem nenhum item ativo no seu inventário!",
-      "cooldown": "{{cooldownTime}} Só pode utilizar o seu item diário a cada hora. {{time}}Regressar a ."
+      "noAvailableObject": "Infelizmente, não tens nenhum item no teu inventário que possa ser usado diariamente! Os objectos de batalha não podem ser utilizados através deste comando.",
+      "cooldown": "{{cooldownTime}} Só pode utilizar o seu item diário a cada hora. {{time}}Regressar a .",
+      "cancel": "Cancelou a utilização do seu objeto de uso diário."
     },
     "title": "{{pseudo}}Recebeu a sua recompensa diária!",
-    "description": "{emote:unitValues.{{nature}}} $t(commands:daily.natureText.{{nature}}){{value}}** **!",
+    "description": "{emote:unitValues.{{nature}}} $t(commands:daily.natureText.{{nature}}) **{{value}}** !",
     "natureText": {
       "health": "Vida ganha :",
       "energy": "Poupança de energia :",
       "money": "Dinheiro ganho :",
       "time": "Avançou por"
-    }
+    },
+    "collectorTitleOneObject": "{{pseudo}}Confirmação da sua recompensa diária!",
+    "collectorDescOneObject": "Quer utilizar o seu objeto do dia a dia?\n\n{{object}}",
+    "collectorTitle": "{{pseudo}}Escolha a sua recompensa diária!",
+    "collectorDesc": "Escolhe um objeto a utilizar da lista abaixo:",
+    "collectorRefuseOption": "Cancelar",
+    "menuPlaceholder": "Selecionar um objeto"
   },
   "unlock": {
     "himself": "Se não se conseguir libertar sozinho, peça a um amigo que o faça por si.",
@@ -1289,18 +1303,24 @@
     "switchSelectionDescription": "Escolhe um item para equipar da lista abaixo:"
   },
   "drink": {
-    "cancelledTitle": "{{pseudo}}anulou a ação",
-    "cancelled": "Não bebeste a tua poção!",
-    "noActiveObject": "Infelizmente, não tens nada para beber no teu inventário!",
-    "objectIsActiveDuringFights": "Esta bebida não pode ser bebida agora. Será usada automaticamente na próxima vez que lutares!",
-    "healthBonus": "{emote:unitValues.health} Vida ganha: {{value}} !",
-    "energyBonus": "{emote:unitValues.energy} Energia poupada: {{value}} .",
-    "timeBonus": "{emote:unitValues.time} Seguiste em frente {{value}} !",
-    "noBonus": "{emote:messages.refuse} Consome a bebida que trazia consigo... Isso não me parece muito eficaz!",
-    "drinkSuccessTitle": "{{pseudo}}bebe a bebida que estava a transportar!",
-    "confirmationTitle": "{{pseudo}}confirmação :",
-    "confirmation": "Tens a certeza que queres beber o teu {{potion}} ?",
-    "confirmationFooter": "É possível evitar este passo utilizando o parâmetro force!"
+    "errors": {
+      "noAvailablePotions": "Infelizmente, não tens nenhuma poção consumível no teu inventário! As poções de combate não podem ser consumidas com este comando.",
+      "cancel": "Não se bebe poções."
+    },
+    "title": "{{pseudo}}bebeste uma poção!",
+    "descriptionNoBonus": "{emote:unitValues.{{nature}}} Consome uma poção... Não parece muito eficaz",
+    "description": "{emote:unitValues.{{nature}}} $t(commands:drink.natureText.{{nature}}) **{{value}}** !",
+    "natureText": {
+      "health": "Vida ganha :",
+      "energy": "Poupança de energia :",
+      "time": "Avançou por"
+    },
+    "collectorTitleOneObject": "{{pseudo}}confirmação :",
+    "collectorDescOneObject": "Queres beber a tua poção?\n\n{{object}}",
+    "collectorTitle": "{{pseudo}}Escolhe a tua poção!",
+    "collectorDesc": "Escolhe uma poção para beber da lista abaixo:",
+    "collectorRefuseOption": "Cancelar",
+    "menuPlaceholder": "Selecionar uma poção"
   },
   "petSell": {
     "noPet": "Não tem nenhum animal de estimação para vender!",

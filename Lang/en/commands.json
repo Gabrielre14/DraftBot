@@ -8,16 +8,16 @@
     "petField": "**Type:** {{emote}} {{typeName}}\n**Nickname:** {{nickname}}\n\n**Rarity:** {{rarity}}\n**Gender:** {{sex}}\n**Moral:** {{loveLevel}}",
     "noNickname": "No nickname",
     "loveLevels": {
-      "1_male": "{emote:loveLevels.1} Spiteful",
-      "1_female": "{emote:loveLevels.1} Spiteful",
-      "2_male": "{emote:loveLevels.2} Wild",
-      "2_female": "{emote:loveLevels.2} Wild",
-      "3_male": "{emote:loveLevels.3} Fearful",
-      "3_female": "{emote:loveLevels.3} Fearful",
-      "4_male": "{emote:loveLevels.4} Tamed",
-      "4_female": "{emote:loveLevels.4} Tamed",
-      "5_male": "{emote:loveLevels.5} Trained",
-      "5_female": "{emote:loveLevels.5} Trained"
+      "1_male": "{emote:loveLevels.0} Spiteful",
+      "1_female": "{emote:loveLevels.0} Spiteful",
+      "2_male": "{emote:loveLevels.1} Wild",
+      "2_female": "{emote:loveLevels.1} Wild",
+      "3_male": "{emote:loveLevels.2} Fearful",
+      "3_female": "{emote:loveLevels.2} Fearful",
+      "4_male": "{emote:loveLevels.3} Tamed",
+      "4_female": "{emote:loveLevels.3} Tamed",
+      "5_male": "{emote:loveLevels.4} Trained",
+      "5_female": "{emote:loveLevels.4} Trained"
     },
     "hungry": "{emote:effects.starving} hungry",
     "diet": {
@@ -169,7 +169,7 @@
       },
       "FIGHT": {
         "description": "Use this command to challenge other players on the same server as you.\nBattles take place on a turn-by-turn basis. Each turn, you can choose an action to perform.\n\nFor more information, please visit the guide page: https://guide.draftbot.com/v/en/notions-principale/combats",
-        "image": "https://draftbot.com/public/ressources/fighthelp/en/5.1.1.png"
+        "image": "https://draftbot.com/public/ressources/fighthelp/en/5.1.7.png"
       },
       "GLORY_TOP": {
         "description": "Displays the ranking of the fights in 15 player intervals. Player's league is also displayed. Players in the same server as you are shown by a blue dot."
@@ -241,7 +241,7 @@
         "description": "Display the mission's shop."
       },
       "NOTIFICATIONS": {
-        "description": "Allows you to set up the reception of bot notifications. You can choose to receive notifications (and determine where to display them) for reports and/or guild rewards."
+        "description": "Allows you to set up the reception of bot notifications. You can choose to receive notifications (and determine where to display them) for arrival at a specific location, guild rewards, prison release, attacks from other players, guild expulsions, changes in guild status, full energy regeneration, and the availability of your daily bonus."
       },
       "PET": {
         "description": "Show information about your pet."
@@ -335,8 +335,10 @@
     "weapons_one": "Weapon ({{count}}/{{max}}):",
     "weapons_other": "Weapons ({{count}}/{{max}}):",
     "randomItemTitle": "{{pseudo}}, you found something!",
-    "randomItemFooter": "You already have an equipment, would you like to sell it?",
-    "randomItemFooterPotion": "Would you like to destroy your current potion?",
+    "randomItemAcceptTitle": "You already have an equipment, would you like to sell it?",
+    "randomItemAcceptTitlePotion": "You already have a potion, what would you like to do?",
+    "randomItemFooterPotion": "Use {emote:collectors.accept} to keep the found potion and replace your current one, {emote:items.drinkPotion} to consume the found potion, {emote:collectors.refuse} to discard the found potion.",
+    "randomItemFooterPotionChoice": "Use a number to replace a potion with the found potion, {emote:items.drinkPotion} to consume the found potion, {emote:collectors.refuse} to discard the found potion.",
     "acceptedTitle": "{{pseudo}}, you have received an item!",
     "chooseItemToReplaceTitle": "Choose an item to replace"
   },
@@ -383,7 +385,7 @@
       "contest": "Badge that can be earned from time to time in contests on the bot server",
       "christmas": "Badge winnable each Christmas in a contest",
       "top_week": "Person who dominated a weekly ranking",
-      "random": "Badge given in a completely random way",
+      "random": "A mysterious badge, no one knows how to get it",
       "top_10_v1": "Player in top 10 before the 1.0 reset",
       "top_v1_player": "Best player by rank at the 1.0 reset",
       "major_bug_reporter": "Person who reported major bugs",
@@ -460,8 +462,8 @@
   "report": {
     "adviceTitle": "Advice:",
     "chooseDestinationIndications": "Choose the destination of your travel:",
-    "choseMapMinutes_one": "You chose to go in the direction {{mapPrefix}} {{mapEmote}} **{{mapName}}** {{mapType}}. You'll travel for about **{{time}} minute**.",
-    "choseMapMinutes_other": "You chose to go in the direction {{mapPrefix}} {{mapEmote}} **{{mapName}}** {{mapType}}. You'll travel for about **{{time}} minutes**.",
+    "choseMapMinutes_one": "You have decided to head for {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}**. This journey will take approximately **{{timeDisplay}}**.",
+    "choseMapMinutes_other": "You have decided to head for {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}**. This journey will take approximately **{{timeDisplay}}**.",
     "choseMap_one": "You chose to go in the direction {{mapPrefix}} {{mapEmote}} **{{mapName}}** {{mapType}}. You'll travel for about **{{time}} hour**.",
     "choseMap_other": "You chose to go in the direction {{mapPrefix}} {{mapEmote}} **{{mapName}}** {{mapType}}. You'll travel for about **{{time}} hours**.",
     "collectedPointsTitle": "Collected points:",
@@ -678,6 +680,11 @@
             "It's built for speed! In combat, it can carry you on its back, increasing your agility on the battlefield tenfold.",
             "Its reflexes are exceptional. It'll share his incredible alertness with you in battle, making you that much faster.",
             "This pet has special glands that secrete an acceleration hormone. By your side, you'll be moving like lightning!"
+          ],
+          "breakArmor": [
+            "As soon as the fight kicks off, he rushes at his opponent and tries to tear off his armor or shield, often succeeding, leaving the enemy helpless.",
+            "This powerful animal charges head-on from the outset; if it hits its target, helmet, breastplate or shield are dislodged and carried away from the battlefield.",
+            "Your pet makes an impressive charge to strip the enemy bare: most of the time, the armor or shield ends up wedged between its horns, becoming its booty."
           ],
           "claws": [
             "Your pet's claws are sharper than many blades! It'll use them to slash your enemies with terrifying efficiency.",
@@ -978,7 +985,9 @@
       "playerFreedFromJail": "Release from prison",
       "fightChallenge": "Attacked by another player",
       "guildKick": "Guild exclusion",
-      "guildStatusChange": "Change of guild status"
+      "guildStatusChange": "Change of guild status",
+      "energy": "Regenerated energy",
+      "dailyBonus": "Daily bonus"
     },
     "enableDisable": "Enable/Disable",
     "sendLocationField": "Sending place:",
@@ -1039,19 +1048,24 @@
   },
   "daily": {
     "errors": {
-      "objectDoNothingError": "You are trying to use the power of the item you are carrying... but it has no effect!",
-      "objectIsActiveDuringFights": "The power of the item you transport is automatically active during battles!",
-      "noActiveObject": "Unfortunately, you don't have any active items in your inventory!",
-      "cooldown": "You can only use your daily item every {{cooldownTime}} hours. Check back {{time}}."
+      "noAvailableObject": "Unfortunately, you have no daily-use items in your inventory! Battle items cannot be used via this command.",
+      "cooldown": "You can only use your daily item every {{cooldownTime}} hours. Check back {{time}}.",
+      "cancel": "You've cancelled the use of your daily object."
     },
     "title": "{{pseudo}}, you received your daily reward!",
-    "description": "{emote:unitValues.{{nature}}} $t(commands:daily.natureText.{{nature}}) **{{value}}**!",
+    "description": "{emote:unitValues.{{nature}}} $t(commands:daily.natureText.{{nature}}) **{{value}}** !",
     "natureText": {
       "health": "Health gained:",
       "energy": "Energy earned:",
       "money": "Money won:",
       "time": "You have moved forward"
-    }
+    },
+    "collectorTitleOneObject": "{{pseudo}}confirmation of your daily reward!",
+    "collectorDescOneObject": "Would you like to use your everyday object?\n\n{{object}}",
+    "collectorTitle": "{{pseudo}}Choose your daily reward!",
+    "collectorDesc": "Choose an object to use from the list below:",
+    "collectorRefuseOption": "Cancel",
+    "menuPlaceholder": "Select an object"
   },
   "unlock": {
     "himself": "You cannot set yourself free, ask a friend to do so.",
@@ -1289,18 +1303,24 @@
     "switchSelectionDescription": "Choose an item from the list below:"
   },
   "drink": {
-    "cancelledTitle": "{{pseudo}}, action cancelled",
-    "cancelled": "You didn't drink your potion!",
-    "noActiveObject": "Unfortunately, you don't have anything to drink in your inventory!",
-    "objectIsActiveDuringFights": "This beverage can't be drunk right now. It'll be automatically consumed during your next fight!",
-    "healthBonus": "{emote:unitValues.health} Health gained: {{value}}!",
-    "energyBonus": "{emote:unitValues.energy} Energy gained: {{value}}!",
-    "timeBonus": "{emote:unitValues.time} You moved forward by {{value}}!",
-    "noBonus": "{emote:messages.refuse} You consume the beverage you were carrying... It wasn't very effective!",
-    "drinkSuccessTitle": "{{pseudo}}, you drink the beverage you were carrying!",
-    "confirmationTitle": "{{pseudo}}, confirmation:",
-    "confirmation": "Are you sure you want to drink your {{potion}}?",
-    "confirmationFooter": "You can skip this prompt by using the `force` option!"
+    "errors": {
+      "noAvailablePotions": "Unfortunately, you have no consumable potions in your inventory! Combat potions cannot be consumed via this command.",
+      "cancel": "You don't drink potions."
+    },
+    "title": "{{pseudo}}you drank a potion!",
+    "descriptionNoBonus": "{emote:unitValues.{{nature}}} You consume a potion... It doesn't seem very effective",
+    "description": "{emote:unitValues.{{nature}}} $t(commands:drink.natureText.{{nature}}) **{{value}}** !",
+    "natureText": {
+      "health": "Health gained:",
+      "energy": "Energy earned:",
+      "time": "You have moved forward"
+    },
+    "collectorTitleOneObject": "{{pseudo}}, confirmation:",
+    "collectorDescOneObject": "Would you like to drink your potion?\n\n{{object}}",
+    "collectorTitle": "{{pseudo}}Choose your potion!",
+    "collectorDesc": "Choose a potion to drink from the list below:",
+    "collectorRefuseOption": "Cancel",
+    "menuPlaceholder": "Select a potion"
   },
   "petSell": {
     "noPet": "You don't have any pet to sell!",

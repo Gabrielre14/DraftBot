@@ -6,11 +6,10 @@ import {
 } from "../../../Lib/src/packets/commands/CommandInventoryPacket";
 import { EmbedField } from "discord.js";
 import {
-	itemCategoryToString, ItemNature
+	FightItemNatures, itemCategoryToString, ItemNature
 } from "../../../Lib/src/constants/ItemConstants";
 import { minutesDisplay } from "../../../Lib/src/utils/TimeUtils";
 import { StatValues } from "../../../Lib/src/types/StatValues";
-import { EmoteUtils } from "./EmoteUtils";
 import { DisplayUtils } from "./DisplayUtils";
 
 
@@ -142,25 +141,34 @@ export class DiscordItemUtils {
 			DisplayUtils.getItemIcon({
 				id: displayPacket.id, category: displayPacket.itemCategory
 			}),
-			i18n.t(`items:objectsNatures.${displayPacket.nature}`, {
-				lng,
-				power: displayPacket.nature === ItemNature.TIME_SPEEDUP
-					? minutesDisplay(displayPacket.power, lng)
-					: [
-						ItemNature.SPEED,
-						ItemNature.DEFENSE,
-						ItemNature.ATTACK
-					].includes(displayPacket.nature) && displayPacket.maxPower < displayPacket.power
-						? i18n.t("items:nerfDisplay", {
-							lng,
-							old: displayPacket.power,
-							max: displayPacket.maxPower
-						})
-						: displayPacket.power
-			}),
+			DiscordItemUtils.getObjectNatureDisplay(displayPacket.nature, displayPacket.power, displayPacket.maxPower, lng),
 			displayPacket,
 			lng
 		);
+	}
+
+	static getObjectNatureDisplay(nature: ItemNature, power: number, maxPower: number, lng: Language): string {
+		return i18n.t(`items:objectsNatures.${nature}`, {
+			lng,
+			power: nature === ItemNature.TIME_SPEEDUP
+				? minutesDisplay(power, lng)
+				: FightItemNatures.includes(nature) && maxPower < power
+					? i18n.t("items:nerfDisplay", {
+						lng,
+						old: power,
+						max: maxPower
+					})
+					: power
+		});
+	}
+
+	static getPotionNatureDisplay(nature: ItemNature, power: number, lng: Language): string {
+		return i18n.t(`items:potionsNatures.${nature}`, {
+			lng,
+			power: nature === ItemNature.TIME_SPEEDUP
+				? minutesDisplay(power, lng)
+				: power
+		});
 	}
 
 	static getShortDisplay(item: MainItemDisplayPacket | SupportItemDisplayPacket, lng: Language): string {
@@ -183,7 +191,7 @@ export class DiscordItemUtils {
 			name: i18n.t(`models:${model}.${displayPacket.id}`, {
 				lng
 			}),
-			emote: EmoteUtils.translateEmojiToDiscord(emote),
+			emote,
 			rarity: i18n.t(`items:rarities.${displayPacket.rarity}`, { lng }),
 			values
 		});

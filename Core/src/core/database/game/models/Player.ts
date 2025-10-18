@@ -561,27 +561,38 @@ export class Player extends Model {
 	/**
 	 * Drink a potion
 	 */
-	public async drinkPotion(): Promise<void> {
+	public async drinkPotion(itemSlot: number): Promise<void> {
 		InventorySlot.findOne({
 			where: {
 				playerId: this.id,
-				slot: 0,
+				slot: itemSlot,
 				itemCategory: ItemCategory.POTION
 			}
 		})
 			.then(async item => await crowniclesInstance.logsDatabase.logItemSell(this.keycloakId, await item.getItem()));
-		await InventorySlot.update(
-			{
-				itemId: InventoryConstants.POTION_DEFAULT_ID
-			},
-			{
-				where: {
-					slot: 0,
-					itemCategory: ItemCategory.POTION,
-					playerId: this.id
+		if (itemSlot === 0) {
+			await InventorySlot.update(
+				{
+					itemId: InventoryConstants.POTION_DEFAULT_ID
+				},
+				{
+					where: {
+						slot: 0,
+						itemCategory: ItemCategory.POTION,
+						playerId: this.id
+					}
 				}
+			);
+			return;
+		}
+
+		await InventorySlot.destroy({
+			where: {
+				playerId: this.id,
+				slot: itemSlot,
+				itemCategory: ItemCategory.POTION
 			}
-		);
+		});
 	}
 
 	public getMaxStatsValue(): StatValues {
@@ -1622,12 +1633,13 @@ export function initModel(sequelize: Sequelize): void {
 		}
 
 		const handleNotifications = async (): Promise<void> => {
+			// Report Notification
 			const now = new Date();
 			const travelEndDate = new Date(TravelTime.getTravelDataSimplified(instance, now).travelEndTime);
 			const destinationId = instance.getDestinationId();
-			const pendingNotification = await ScheduledReportNotifications.getPendingNotification(instance.id);
-			if (pendingNotification) {
-				await ScheduledReportNotifications.bulkDelete([pendingNotification]);
+			const pendingReportNotification = await ScheduledReportNotifications.getPendingNotification(instance.id);
+			if (pendingReportNotification) {
+				await ScheduledReportNotifications.bulkDelete([pendingReportNotification]);
 			}
 
 			if (travelEndDate > now) {
@@ -1635,12 +1647,12 @@ export function initModel(sequelize: Sequelize): void {
 				return;
 			}
 
-			if (pendingNotification && destinationId === pendingNotification.mapId) {
+			if (pendingReportNotification && destinationId === pendingReportNotification.mapId) {
 				PacketUtils.sendNotifications([
 					makePacket(ReachDestinationNotificationPacket, {
-						keycloakId: pendingNotification.keycloakId,
-						mapType: MapLocationDataController.instance.getById(pendingNotification.mapId).type,
-						mapId: pendingNotification.mapId
+						keycloakId: pendingReportNotification.keycloakId,
+						mapType: MapLocationDataController.instance.getById(pendingReportNotification.mapId).type,
+						mapId: pendingReportNotification.mapId
 					})
 				]);
 			}

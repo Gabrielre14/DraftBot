@@ -10,7 +10,7 @@ export const commandInfo: ITestCommand = {
 	typeWaited: {
 		score: TypeKey.INTEGER
 	},
-	description: "Mets le score de votre joueur à la valeur donnée"
+	description: "Définit le score total du joueur testeur."
 };
 
 /**

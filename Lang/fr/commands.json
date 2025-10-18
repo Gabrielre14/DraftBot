@@ -8,16 +8,16 @@
     "petField": "**Type :** {{emote}} {{typeName}}\n**Surnom :** {{nickname}}\n**Rareté :** {{rarity}}\n**Sexe :** {{sex}}\n**Mentalité :** {{loveLevel}}",
     "noNickname": "Aucun surnom",
     "loveLevels": {
-      "1_male": "{emote:loveLevels.1} Fielleux",
-      "1_female": "{emote:loveLevels.1} Fielleuse",
-      "2_male": "{emote:loveLevels.2} Sauvage",
-      "2_female": "{emote:loveLevels.2} Sauvage",
-      "3_male": "{emote:loveLevels.3} Craintif",
-      "3_female": "{emote:loveLevels.3} Craintive",
-      "4_male": "{emote:loveLevels.4} Apprivoisé",
-      "4_female": "{emote:loveLevels.4} Apprivoisée",
-      "5_male": "{emote:loveLevels.5} Dressé",
-      "5_female": "{emote:loveLevels.5} Dressée"
+      "1_male": "{emote:loveLevels.0} Fielleux",
+      "1_female": "{emote:loveLevels.0} Fielleuse",
+      "2_male": "{emote:loveLevels.1} Sauvage",
+      "2_female": "{emote:loveLevels.1} Sauvage",
+      "3_male": "{emote:loveLevels.2} Craintif",
+      "3_female": "{emote:loveLevels.2} Craintive",
+      "4_male": "{emote:loveLevels.3} Apprivoisé",
+      "4_female": "{emote:loveLevels.3} Apprivoisée",
+      "5_male": "{emote:loveLevels.4} Dressé",
+      "5_female": "{emote:loveLevels.4} Dressée"
     },
     "hungry": "{emote:effects.starving} affamé",
     "diet": {
@@ -169,7 +169,7 @@
       },
       "FIGHT": {
         "description": "Utilisez cette commande pour défier les autres joueurs qui se trouvent sur le même serveur que vous.\nLes combats se déroulent tour par tour. À chaque tour, vous pouvez choisir une action à effectuer.\n\nPour plus d'informations vous pouvez aller voir la page du guide : https://guide.crownicles.com/notions-principale/combats",
-        "image": "https://crownicles.com/public/ressources/fighthelp/fr/5.1.1.png"
+        "image": "https://crownicles.com/public/ressources/fighthelp/fr/5.1.7.png"
       },
       "GLORY_TOP": {
         "description": "Affiche le classement glorieux du jeu par tranche de 15 joueurs. La ligue des joueurs est également affichée. Les joueurs dans le même serveur que vous sont marqués par une pastille bleue."
@@ -241,7 +241,7 @@
         "description": "Affiche le magasin des missions."
       },
       "NOTIFICATIONS": {
-        "description": "Permet de paramétrer la réception des notifications du bot. Vous pouvez choisir de recevoir des notifications (et déterminer où les afficher) pour les rapports et/ou les récompenses de guilde."
+        "description": "Permet de paramétrer la réception des notifications du bot. Vous pouvez choisir de recevoir des notifications (et déterminer où les afficher) pour l'arrivée à un lieu dit, les récompenses de guilde, la libération de prison, les attaques d'autres joueurs, les exclusions de guilde, les changements de statut au sein de la guilde, la régénération totale de l'énergie et la disponibilité de votre bonus journalier."
       },
       "PET": {
         "description": "Affiche les informations relatives à votre familier."
@@ -335,8 +335,10 @@
     "weapons_one": "Arme ({{count}}/{{max}}) :",
     "weapons_other": "Armes ({{count}}/{{max}}) :",
     "randomItemTitle": "{{pseudo}}, vous avez trouvé quelque chose !",
-    "randomItemFooter": "Vous avez déjà un équipement, souhaitez-vous le vendre ?",
-    "randomItemFooterPotion": "Souhaitez-vous détruire votre potion actuelle ?",
+    "randomItemAcceptTitle": "Vous avez déjà un équipement, souhaitez-vous le vendre ?",
+    "randomItemAcceptTitlePotion": "Vous avez déjà une potion, que souhaitez-vous faire ?",
+    "randomItemFooterPotion": "Utilisez {emote:collectors.accept} pour garder la potion trouvée et remplacer votre potion actuelle, {emote:items.drinkPotion} pour consommer la potion trouvée, {emote:collectors.refuse} pour jeter la potion trouvée.",
+    "randomItemFooterPotionChoice": "Utilisez un numéro pour remplacer une potion par la potion trouvée, {emote:items.drinkPotion} pour consommer la potion trouvée, {emote:collectors.refuse} pour jeter la potion trouvée.",
     "acceptedTitle": "{{pseudo}}, vous avez reçu un équipement !",
     "chooseItemToReplaceTitle": "Choisissez un objet à remplacer"
   },
@@ -383,7 +385,7 @@
       "contest": "Badge pouvant être gagné de temps en temps dans des concours sur le serveur du bot",
       "christmas": "Badge pouvant être gagné chaque Noël lors d'un concours",
       "top_week": "Personne ayant dominé un classement de la semaine",
-      "random": "Badge donné de manière totalement random",
+      "random": "Un badge mystérieux, nul ne sait comment l'obtenir",
       "top_10_v1": "Joueur dans le top 10 au reset de la 1.0",
       "top_v1_player": "Meilleur joueur au moment du reset de la 1.0",
       "major_bug_reporter": "Personne ayant signalé des bugs majeurs",
@@ -460,8 +462,8 @@
   "report": {
     "adviceTitle": "Conseil :",
     "chooseDestinationIndications": "Choisissez une destination pour votre voyage:",
-    "choseMapMinutes_one": "Vous avez décidé de partir en direction {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}**. Ce trajet durera environ **{{time}} minute**.",
-    "choseMapMinutes_other": "Vous avez décidé de partir en direction {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}**. Ce trajet durera environ **{{time}} minutes**.",
+  "choseMapMinutes_one": "Vous avez décidé de partir en direction {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}**. Ce trajet durera environ **{{timeDisplay}}**.",
+  "choseMapMinutes_other": "Vous avez décidé de partir en direction {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}**. Ce trajet durera environ **{{timeDisplay}}**.",
     "choseMap_one": "Vous avez décidé de partir en direction {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}**. Ce trajet durera environ **{{time}} heure**.",
     "choseMap_other": "Vous avez décidé de partir en direction {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}**. Ce trajet durera environ **{{time}} heures**.",
     "collectedPointsTitle": "Points récoltés :",
@@ -678,6 +680,11 @@
             "Sa morphologie est faite pour la vitesse ! En combat, il pourra vous porter sur son dos, décuplant votre agilité sur le champ de bataille.",
             "Ses réflexes sont exceptionnels. Il partagera son incroyable vivacité avec vous lors des combats, vous rendant bien plus rapide.",
             "Ce familier possède des glandes spéciales qui sécrètent une hormone d'accélération. À vos côtés, vous vous déplacerez comme l'éclair !"
+          ],
+          "breakArmor": [
+            "Dès le coup d'envoi du combat, il fonce en trombe sur l'adversaire et tente d'arracher son armure ou son bouclier, cela réussit très souvent, laissant l'ennemi démuni.",
+            "Ce puissant animal charge frontalement dès le début ; s'il atteint sa cible, casque, plastron ou bouclier sont délogés et emportés loin du champ de bataille.",
+            "Votre familier effectue une charge impressionnante visant à dépouiller l'ennemi : la plupart du temps, l'armure ou le bouclier finit coincé entre ses cornes, et devient son butin."
           ],
           "claws": [
             "Les griffes de votre animal sont plus tranchantes que bien des lames ! Il les utilisera pour lacérer vos ennemis avec une efficacité terrifiante.",
@@ -978,7 +985,9 @@
       "playerFreedFromJail": "Libération de prison",
       "fightChallenge": "Attaqué par un autre joueur",
       "guildKick": "Exclusion de guilde",
-      "guildStatusChange": "Changement de statut au sein de la guilde"
+      "guildStatusChange": "Changement de statut au sein de la guilde",
+      "energy": "Énergie régénérée",
+      "dailyBonus": "Bonus journalier"
     },
     "enableDisable": "Activer/Désactiver",
     "sendLocationField": "Endroit d'envoi :",
@@ -1039,19 +1048,24 @@
   },
   "daily": {
     "errors": {
-      "objectDoNothingError": "Vous tentez d'utiliser le pouvoir de l'objet que vous transportez... Mais cela n'a aucun effet !",
-      "objectIsActiveDuringFights": "Le pouvoir de l'objet que vous transportez est actif automatiquement durant les combats !",
-      "noActiveObject": "Vous n'avez malheureusement aucun objet actif dans votre inventaire !",
-      "cooldown": "Vous ne pouvez utiliser votre objet quotidien que toutes les {{cooldownTime}} heures. Revenez {{time}}."
+      "noAvailableObject": "Vous n'avez malheureusement aucun objet utilisable quotidiennement dans votre inventaire ! Les objects de combats ne peuvent pas être utilisés via cette commande.",
+      "cooldown": "Vous ne pouvez utiliser votre objet quotidien que toutes les {{cooldownTime}} heures. Revenez {{time}}.",
+      "cancel": "Vous avez annulé l'utilisation de votre objet quotidien."
     },
     "title": "{{pseudo}}, vous avez reçu votre récompense journalière !",
-    "description": "{emote:unitValues.{{nature}}} $t(commands:daily.natureText.{{nature}}) **{{value}}**!",
+    "description": "{emote:unitValues.{{nature}}} $t(commands:daily.natureText.{{nature}}) **{{value}}** !",
     "natureText": {
       "health": "Vie gagnée :",
       "energy": "Énergie gagnée :",
       "money": "Argent gagné :",
       "time": "Vous avez avancé de"
-    }
+    },
+    "collectorTitleOneObject": "{{pseudo}}, confirmation de votre récompense journalière !",
+    "collectorDescOneObject": "Voulez-vous utiliser votre objet quotidien ?\n\n{{object}}",
+    "collectorTitle": "{{pseudo}}, choix de votre récompense journalière !",
+    "collectorDesc": "Choisissez un objet à utiliser dans la liste ci-dessous :",
+    "collectorRefuseOption": "Annuler",
+    "menuPlaceholder": "Sélectionnez un objet"
   },
   "unlock": {
     "himself": "Vous ne pouvez pas vous libérer vous-même, demandez à un ami de le faire.",
@@ -1289,18 +1303,24 @@
     "switchSelectionDescription": "Choisissez un objet à équiper dans la liste ci-dessous :"
   },
   "drink": {
-    "cancelledTitle": "{{pseudo}}, vous avez annulé l'action",
-    "cancelled": "Vous n'avez pas bu votre potion !",
-    "noActiveObject": "Vous n'avez malheureusement rien à boire dans votre inventaire !",
-    "objectIsActiveDuringFights": "Ce breuvage ne peut pas être bu maintenant. Il sera utilisé automatiquement lors de votre prochain combat !",
-    "healthBonus": "{emote:unitValues.health} Vie gagnée : {{value}} !",
-    "energyBonus": "{emote:unitValues.energy} Énergie gagnée : {{value}} !",
-    "timeBonus": "{emote:unitValues.time} Vous avez avancé de {{value}} !",
-    "noBonus": "{emote:messages.refuse} Vous consommez le breuvage que vous transportiez... Ça ne semble pas très efficace !",
-    "drinkSuccessTitle": "{{pseudo}}, vous buvez le breuvage que vous transportiez !",
-    "confirmationTitle": "{{pseudo}}, confirmation :",
-    "confirmation": "Êtes-vous sûr de vouloir boire votre {{potion}} ?",
-    "confirmationFooter": "Il est possible d'éviter cette étape en utilisant le paramètre forcer !"
+    "errors": {
+      "noAvailablePotions": "Vous n'avez malheureusement aucune potion consommable dans votre inventaire ! Les potions de combats ne peuvent pas être consommées via cette commande.",
+      "cancel": "Vous ne buvez pas de potion."
+    },
+    "title": "{{pseudo}}, vous avez bu une potion !",
+    "descriptionNoBonus": "{emote:unitValues.{{nature}}} Vous consommez une potion... Ça ne semble pas très efficace",
+    "description": "{emote:unitValues.{{nature}}} $t(commands:drink.natureText.{{nature}}) **{{value}}** !",
+    "natureText": {
+      "health": "Vie gagnée :",
+      "energy": "Énergie gagnée :",
+      "time": "Vous avez avancé de"
+    },
+    "collectorTitleOneObject": "{{pseudo}}, confirmation :",
+    "collectorDescOneObject": "Voulez-vous boire votre potion ?\n\n{{object}}",
+    "collectorTitle": "{{pseudo}}, choix de votre potion !",
+    "collectorDesc": "Choisissez une potion à boire dans la liste ci-dessous :",
+    "collectorRefuseOption": "Annuler",
+    "menuPlaceholder": "Sélectionnez une potion"
   },
   "petSell": {
     "noPet": "Vous n'avez aucun familier à vendre !",

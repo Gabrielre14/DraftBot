@@ -84,8 +84,8 @@ export class CrowniclesInteraction extends CrowniclesInteractionWithoutSendComma
 
 		const interaction = discordInteraction as unknown as CrowniclesInteraction;
 		interaction._channel = CrowniclesChannel.cast(discordInteraction.channel as GuildTextBasedChannel);
-		if (Object.prototype.hasOwnProperty.call(discordInteraction, "options")) {
-			interaction.options = this.properCastOptions((discordInteraction as CommandInteraction).options as CommandInteractionOptionResolver);
+		if (discordInteraction.isCommand() && "options" in discordInteraction) {
+			interaction.options = this.properCastOptions(discordInteraction.options as CommandInteractionOptionResolver);
 		}
 		return interaction;
 	}
@@ -198,10 +198,14 @@ export class CrowniclesInteraction extends CrowniclesInteractionWithoutSendComma
 		return options;
 	}
 
-	public async reply(options: InteractionReplyOptions & { withResponse: true }, fallback?: () => void | Promise<void>): Promise<InteractionCallbackResponse | null>;
+	public async reply(options: InteractionReplyOptions & {
+		withResponse: true;
+	}, fallback?: () => void | Promise<void>): Promise<InteractionCallbackResponse | null>;
 
 	// Yes, we need to omit createMessageComponentCollector because the response is not a message and so the collectors are created on the interaction and not the message, and it mixes everything up
-	public async reply(options: string | MessagePayload | InteractionReplyOptions & { withResponse?: false }, fallback?: () => void | Promise<void>): Promise<Omit<InteractionResponse, "createMessageComponentCollector"> | null>;
+	public async reply(options: string | MessagePayload | InteractionReplyOptions & {
+		withResponse?: false;
+	}, fallback?: () => void | Promise<void>): Promise<Omit<InteractionResponse, "createMessageComponentCollector"> | null>;
 
 	/**
 	 * Send a reply to the user

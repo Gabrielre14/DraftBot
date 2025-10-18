@@ -3,7 +3,19 @@
     "0": "Sin escudo ni armadura",
     "1": "Escudo deflector Engi",
     "10": "Escudo pesado",
+    "100": "Plot armor",
+    "101": "Escudo térmico",
+    "102": "armadura de mythril",
+    "103": "Placa frontal",
+    "104": "Protección de la placa frontal 4",
+    "105": "Coraza",
+    "106": "Escudo 3 en 1",
+    "107": "Blindaje Mk IX",
+    "108": "Escudo",
+    "109": "Armadura",
     "11": "Escudo para principiantes",
+    "110": "Blindaje clorofítico",
+    "111": "Fuerte Roque",
     "12": "Escudo Maestro",
     "13": "Escudo definitivo",
     "14": "Escudo potente",
@@ -62,9 +74,44 @@
     "62": "Escudo de escarcha",
     "63": "Escudo contra el viento",
     "64": "Escudo gigantesco",
+    "65": "Armadura de plátano",
+    "66": "Escudo del guardián",
+    "67": "Protector bucal",
+    "68": "Protego",
+    "69": "Rhinoshield",
     "7": "Kimono reforzado",
+    "70": "Cortafuegos",
+    "71": "Sombrero",
+    "72": "Máscara antigás",
+    "73": "Roque",
+    "74": "Gran Roque",
+    "75": "Vacuna",
+    "76": "Escudo maldito",
+    "77": "Escudo espinoso",
+    "78": "Gorra",
+    "79": "Armadura ligera",
     "8": "Escudo único",
-    "9": "Escudo resistente"
+    "80": "Escudo mágico",
+    "81": "Ejército de robots defensivos",
+    "82": "Escudo redondo",
+    "83": "Escudo común",
+    "84": "Targe",
+    "85": "Pavise",
+    "86": "Escudo normando",
+    "87": "Escudo hoplita",
+    "88": "Escudo zulú",
+    "89": "Escudo abollado",
+    "9": "Escudo resistente",
+    "90": "Parma",
+    "91": "Adarga",
+    "92": "Castillo de Himeji",
+    "93": "Caravana",
+    "94": "Armadura electrificada",
+    "95": "Exoesqueleto",
+    "96": "El traje del Archimago",
+    "97": "Armadura de diamantes",
+    "98": "Escudo Beskar",
+    "99": "Armadura Beskar"
   },
   "classes": {
     "0": "Reclutar",
@@ -93,7 +140,35 @@
     "8": "Lanzapiedras",
     "9": "Recortadora"
   },
+  "classes_plural": {
+    "0": "Reclutas",
+    "1": "Luchadores",
+    "10": "Arqueros",
+    "11": "Artilleros",
+    "12": "Escuderos",
+    "13": "Riders",
+    "14": "Piqueros",
+    "15": "Caballeros",
+    "16": "Paladines",
+    "17": "Veteranos",
+    "18": "Poderosos soldados de infantería",
+    "19": "Tanques impenetrables",
+    "2": "Privados",
+    "20": "Artilleros formidables",
+    "21": "Caballeros valientes",
+    "22": "Paladines brillantes",
+    "23": "Veteranos curtidos",
+    "24": "Magos místicos",
+    "3": "Soldados de Infantería",
+    "4": "Guantes",
+    "5": "Cascos",
+    "6": "Malla",
+    "7": "Depósitos",
+    "8": "Lanzapiedras",
+    "9": "Recortadoras"
+  },
   "classFormat": "{emote:classes.{{id}} $t(models:classes.{{id}})}",
+  "classPluralFormat": "{emote:classes.{{id}}} $t(models:classes_plural.{{id}})",
   "classWithStatsFormat": "{emote:classes.{{id}}} $t(models:classes.{{id}}) :\n{emote:unitValues.energy} {{energy}} | {emote:unitValues.attack} {{attack}} | {emote:unitValues.defense} {{defense}} | {emote:unitValues.speed} {{speed}} | {emote:unitValues.breath} {{initialBreath}} / {{maxBreath}} | {emote:unitValues.health} {{health}}",
   "class_descriptions": {
     "0": "Una clase sencilla. Bastante equilibrada.",
@@ -153,6 +228,10 @@
     },
     "boostSpeed": {
       "success": "se monta a lomos de **{{petNickname}}** para moverse más rápido."
+    },
+    "breakArmor": {
+      "failure": "llama a **{{petNickname}}** que carga contra su oponente. Desgraciadamente, falla por completo.",
+      "success": "pide ayuda a su familiar, que carga contra su adversario. ¡Éste se protege del ataque, pero su equipo es arrastrado por **{{petNickname}}** !"
     },
     "boulderTossAttack": {
       "name_one": "Ataque con piedras",
@@ -229,7 +308,7 @@
     },
     "createBomb": {
       "generalEffect": "es apoyado en su lucha por **{{petNickname}}** que pretende acosar ferozmente a su adversario con precisos y dolorosos picotazos.",
-      "failure": "no recibió ayuda de **{{petNickname}}** que, por precaución, se abstuvo de actuar, consciente de que su intervención tenía más probabilidades de herir a su amo que a su oponente. ¡Deberíamos haber sido más rápidos!",
+      "failure": "no recibió ayuda de **{{petNickname}}** que, por precaución, se abstuvo de actuar, ¡consciente de que su intervención tenía más probabilidades de herir a su amo que al adversario! Tal vez habría sido menos escrupuloso si hubiera intuido que estabas en peligro...",
       "success": "aprovecha el talento de **{{petNickname}}** que ha preparado discretamente una potente bomba. Tras activar el detonador, ¡sal a correr con todas tus fuerzas!"
     },
     "crush": {
@@ -344,7 +423,7 @@
       "name_other": "Ataques de barro ardiente"
     },
     "heavyAttack": {
-      "description": "Falla si el defensor tiene menos defensa que el atacante. La defensa del enemigo se reduce un 25%.",
+      "description": "Funciona mejor cuando el lanzador está descansado. La defensa enemiga se reduce durante los primeros usos.",
       "name_one": "Ataque pesado",
       "name_other": "Ataques fuertes"
     },
@@ -765,7 +844,8 @@
     "6": "Liga de Diamante",
     "7": "Liga Elite",
     "8": "Liga Infinita",
-    "9": "Liga de Leyendas"
+    "9": "Liga de Leyendas",
+    "10": "Liga Real"
   },
   "map_locations": {
     "1": {
@@ -1337,7 +1417,10 @@
     "89": "Peces muertos",
     "9": "Llave oxidada",
     "90": "Talismán de rana",
-    "91": "Sputnik"
+    "91": "Sputnik",
+    "92": "Llamada del cuervo",
+    "93": "Tarjeta Kiwi",
+    "94": "911"
   },
   "pets": {
     "0_female": "No se admiten animales",
@@ -1530,6 +1613,12 @@
     "94_male": "Mirlo",
     "95_female": "Cuervo",
     "95_male": "Cuervo",
+    "96_female": "Burro",
+    "96_male": "Burro",
+    "97_female": "Ganso",
+    "97_male": "Ganso",
+    "98_female": "Impulso",
+    "98_male": "Impulso",
     "9_female": "Siembre",
     "9_male": "Carne de cerdo"
   },
@@ -1729,7 +1818,8 @@
     "95": "Hoja de aura plateada",
     "96": "Electektron",
     "97": "Cuchilla Fénix",
-    "98": "Espada de escarcha"
+    "98": "Espada de escarcha",
+    "99": "Serre d'Aigle"
   },
   "foods": {
     "herbivorousFood_one": "ensalada",
@@ -1832,4 +1922,3 @@
     }
   }
 }
-

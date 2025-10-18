@@ -72,11 +72,11 @@ import { SmallEventFindItemPacket } from "../../../../Lib/src/packets/smallEvent
 import { SmallEventPetPacket } from "../../../../Lib/src/packets/smallEvents/SmallEventPetPacket";
 import { SmallEventClassPacket } from "../../../../Lib/src/packets/smallEvents/SmallEventClassPacket";
 import { SmallEventUltimateFoodMerchantPacket } from "../../../../Lib/src/packets/smallEvents/SmallEventUltimateFoodMerchantPacket";
-import { EmoteUtils } from "../../utils/EmoteUtils";
 import { SmallEventCartPacket } from "../../../../Lib/src/packets/smallEvents/SmallEventCartPacket";
 import { cartResult } from "../../smallEvents/cart";
 import { SmallEventFindMissionPacket } from "../../../../Lib/src/packets/smallEvents/SmallEventFindMissionPacket";
 import { MissionUtils } from "../../utils/MissionUtils";
+import { SmallEventLimogesPacket } from "../../../../Lib/src/packets/smallEvents/SmallEventLimogesPacket";
 import { CrowniclesEmbed } from "../../messages/CrowniclesEmbed";
 import { baseFunctionHandler } from "../../smallEvents/shop";
 import { epicItemShopHandler } from "../../smallEvents/epicItemShop";
@@ -90,11 +90,18 @@ import { CrowniclesInteraction } from "../../messages/CrowniclesInteraction";
 import { SmallEventDwarfPetFanPacket } from "../../../../Lib/src/packets/smallEvents/SmallEventDwarfPetFanPacket";
 import { SmallEventInfoFightPacket } from "../../../../Lib/src/packets/smallEvents/SmallEventInfoFightPacket";
 import { infoFightResult } from "../../smallEvents/infoFight";
-
+import { limogesResult } from "../../smallEvents/limoges";
 
 export function getRandomSmallEventIntro(language: Language): string {
 	return StringUtils.getRandomTranslation("smallEvents:intro", language);
 }
+
+const PET_TIME_INTERACTIONS = new Set([
+	"gainTime_m",
+	"gainTime_f",
+	"loseTime_m",
+	"loseTime_f"
+]);
 
 export default class SmallEventsHandler {
 	@packetHandler(SmallEventAdvanceTimePacket)
@@ -104,8 +111,12 @@ export default class SmallEventsHandler {
 			return;
 		}
 		const lng = interaction.userLanguage;
+		const timeDisplay = minutesDisplay(packet.amount, lng);
 		const description = getRandomSmallEventIntro(lng)
-			+ StringUtils.getRandomTranslation("smallEvents:advanceTime.stories", lng, { time: packet.amount });
+			+ StringUtils.getRandomTranslation("smallEvents:advanceTime.stories", lng, {
+				time: packet.amount,
+				timeDisplay
+			});
 		await interaction.editReply({ embeds: [new CrowniclesSmallEventEmbed("advanceTime", description, interaction.user, lng)] });
 	}
 
@@ -215,7 +226,7 @@ export default class SmallEventsHandler {
 			return;
 		}
 		const lng = interaction.userLanguage;
-		await interaction.editReply({
+		await interaction.followUp({
 			embeds: [new CrowniclesSmallEventEmbed("lottery", i18n.t("smallEvents:lottery.end", { lng }), interaction.user, lng)]
 		});
 	}
@@ -240,6 +251,7 @@ export default class SmallEventsHandler {
 	async smallEventLotteryLose(context: PacketContext, packet: SmallEventLotteryLosePacket): Promise<void> {
 		const interaction = DiscordCache.getButtonInteraction(context.discord!.buttonInteraction!);
 		const lng = context.discord!.language;
+		const lostTimeDisplay = minutesDisplay(packet.lostTime, lng);
 		await interaction?.editReply({
 			embeds: [
 				new CrowniclesSmallEventEmbed(
@@ -247,6 +259,7 @@ export default class SmallEventsHandler {
 					i18n.t(`smallEvents:lottery.${packet.level}.${packet.moneyLost > 0 ? "failWithMalus" : "fail"}`, {
 						lng,
 						lostTime: packet.lostTime,
+						lostTimeDisplay,
 						money: packet.moneyLost
 					}),
 					interaction.user,
@@ -260,13 +273,15 @@ export default class SmallEventsHandler {
 	async smallEventLotteryWin(context: PacketContext, packet: SmallEventLotteryWinPacket): Promise<void> {
 		const interaction = DiscordCache.getButtonInteraction(context.discord!.buttonInteraction!);
 		const lng = context.discord!.language;
+		const lostTimeDisplay = minutesDisplay(packet.lostTime, lng);
 		await interaction?.editReply({
 			embeds: [
 				new CrowniclesSmallEventEmbed(
 					"lottery",
 					i18n.t(`smallEvents:lottery.${packet.level}.success`, {
 						lng,
-						lostTime: packet.lostTime
+						lostTime: packet.lostTime,
+						lostTimeDisplay
 					}) + i18n.t(`smallEvents:lottery.rewardTypeText.${packet.winReward}`, {
 						lng,
 						reward: packet.winAmount
@@ -335,7 +350,8 @@ export default class SmallEventsHandler {
 						{
 							playerDisplay,
 							level: packet.data!.level,
-							class: `${CrowniclesIcons.classes[packet.data!.classId]} ${i18n.t(`models:classes.${packet.data!.classId}`, { lng })}`,
+							class: DisplayUtils.getClassDisplay(packet.data!.classId, lng),
+							classPlural: DisplayUtils.getClassDisplay(packet.data!.classId, lng, true),
 							advice: StringUtils.getRandomTranslation("advices:advices", lng),
 							petEmote: hasPetInfo ? DisplayUtils.getPetIcon(packet.data!.petId!, packet.data!.petSex!) : "",
 							petName: hasPetInfo ? DisplayUtils.getPetNicknameOrTypeName(packet.data!.petName ?? null, packet.data!.petId!, packet.data!.petSex!, lng) : "",
@@ -775,6 +791,9 @@ export default class SmallEventsHandler {
 	async smallEventPet(context: PacketContext, packet: SmallEventPetPacket): Promise<void> {
 		const interaction = DiscordCache.getInteraction(context.discord!.interaction);
 		const lng = interaction!.userLanguage;
+		const amountDisplay = typeof packet.amount === "number" && PET_TIME_INTERACTIONS.has(packet.interactionName)
+			? minutesDisplay(packet.amount, lng)
+			: packet.amount;
 		await interaction?.editReply({
 			embeds: [
 				new CrowniclesSmallEventEmbed(
@@ -786,6 +805,7 @@ export default class SmallEventsHandler {
 							context: packet.petSex,
 							pet: PetUtils.petToShortString(lng, packet.petNickname, packet.petTypeId, packet.petSex),
 							amount: packet.amount,
+							amountDisplay,
 							food: packet.food ? DisplayUtils.getFoodDisplay(packet.food, 1, lng, false) : null,
 							badge: CrowniclesIcons.badges[Badge.LEGENDARY_PET],
 							randomAnimal: i18n.t("smallEvents:pet.randomAnimal", {
@@ -833,7 +853,7 @@ export default class SmallEventsHandler {
 					+ StringUtils.getRandomTranslation("smallEvents:ultimateFoodMerchant.stories", lng)
 					+ StringUtils.getRandomTranslation(`smallEvents:ultimateFoodMerchant.rewards.${packet.interactionName}`, lng, {
 						count: packet.amount,
-						moneyEmote: EmoteUtils.translateEmojiToDiscord(CrowniclesIcons.unitValues.money)
+						moneyEmote: CrowniclesIcons.unitValues.money
 					}),
 					interaction.user,
 					lng
@@ -845,6 +865,11 @@ export default class SmallEventsHandler {
 	@packetHandler(SmallEventCartPacket)
 	async smallEventCart(context: PacketContext, packet: SmallEventCartPacket): Promise<void> {
 		await cartResult(packet, context);
+	}
+
+	@packetHandler(SmallEventLimogesPacket)
+	async smallEventLimoges(context: PacketContext, packet: SmallEventLimogesPacket): Promise<void> {
+		await limogesResult(packet, context);
 	}
 
 	@packetHandler(SmallEventBonusGuildPVEIslandPacket)
@@ -871,8 +896,11 @@ export default class SmallEventsHandler {
 	@packetHandler(SmallEventFightPetPacket)
 	async smallEventFightPet(context: PacketContext, packet: SmallEventFightPetPacket): Promise<void> {
 		const interaction = DiscordCache.getInteraction(context.discord!.interaction);
-		const lng = interaction!.userLanguage;
-		await interaction?.channel.send({
+		if (!interaction) {
+			return;
+		}
+		const lng = interaction.userLanguage;
+		await interaction.followUp({
 			embeds: [
 				new CrowniclesSmallEventEmbed(
 					"fightPet",
@@ -897,7 +925,7 @@ export default class SmallEventsHandler {
 			return;
 		}
 		const lng = interaction.userLanguage;
-		await interaction.channel.send({
+		await interaction.followUp({
 			embeds: [
 				new CrowniclesEmbed()
 					.formatAuthor(
@@ -996,7 +1024,7 @@ export default class SmallEventsHandler {
 	}
 
 	@packetHandler(SmallEventInfoFightPacket)
-	async smallEventInfoFight(context: PacketContext, _packet: SmallEventInfoFightPacket): Promise<void> {
-		await infoFightResult(context);
+	async smallEventInfoFight(context: PacketContext, packet: SmallEventInfoFightPacket): Promise<void> {
+		await infoFightResult(context, packet);
 	}
 }

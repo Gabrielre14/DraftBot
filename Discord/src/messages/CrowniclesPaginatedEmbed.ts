@@ -104,10 +104,12 @@ export class CrowniclesPaginatedEmbed extends CrowniclesEmbed {
 		collector.on("end", async () => {
 			previousButton.setDisabled(true);
 			nextButton.setDisabled(true);
-			const disabledComponents = CrowniclesPaginatedEmbed.getPageComponents(currentPage, this.options.pages.length, previousButton, nextButton);
 
 			await msg.edit({
-				components: disabledComponents
+				components: [
+					new ActionRowBuilder<ButtonBuilder>()
+						.addComponents([previousButton, nextButton])
+				]
 			});
 		});
 	}
@@ -126,22 +128,14 @@ export class CrowniclesPaginatedEmbed extends CrowniclesEmbed {
 
 		const components = [];
 
-		// Check if the button is already disabled before applying page-based logic
-		if (previousButton.data.disabled) {
-			components.push(previousButton);
-		}
-		else if (currentPage > 0) {
+		if (currentPage > 0) {
 			components.push(previousButton.setDisabled(false));
 		}
 		else {
 			components.push(previousButton.setDisabled(true));
 		}
 
-		// Check if the button is already disabled before applying page-based logic
-		if (nextButton.data.disabled) {
-			components.push(nextButton);
-		}
-		else if (currentPage < pagesCount - 1) {
+		if (currentPage < pagesCount - 1) {
 			components.push(nextButton.setDisabled(false));
 		}
 		else {

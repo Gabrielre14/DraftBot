@@ -48,6 +48,9 @@ export const CrowniclesIcons: {
 		accept: string;
 		refuse: string;
 	};
+	infoFightSmallEvent: {
+		showHandednessInfo: string;
+	};
 	fightCommand: {
 		accept: string;
 		aiThinking: string;
@@ -216,6 +219,9 @@ export const CrowniclesIcons: {
 		won: string;
 		lost: string;
 		draw: string;
+	};
+	items: {
+		drinkPotion: string;
 	};
 } = {
 	effects: {
@@ -473,8 +479,8 @@ export const CrowniclesIcons: {
 		34: {
 			end: {
 				0: "🚶",
-				1: "🚶‍",
-				2: "🚶‍"
+				1: "🚶",
+				2: "🚶"
 			},
 			food: "🥗",
 			health: "😇",
@@ -491,7 +497,7 @@ export const CrowniclesIcons: {
 		},
 		36: {
 			end: {
-				0: "🚶‍",
+				0: "🚶",
 				1: "🚶"
 			},
 			goAway: "🚶",
@@ -646,8 +652,8 @@ export const CrowniclesIcons: {
 		50: {
 			ask: "🗣️",
 			end: {
-				0: "Vous",
-				1: "L'un"
+				0: "☀️",
+				1: "🥥"
 			},
 			leave: "🚶",
 			nap: "😴"
@@ -720,9 +726,9 @@ export const CrowniclesIcons: {
 		57: {
 			continue: "🌊",
 			end: {
-				0: "Vous",
-				1: "Vous",
-				2: "Vous"
+				0: "🦀",
+				1: "🤤",
+				2: "🌊"
 			},
 			findMeal: "🦀",
 			settle: "🌞"
@@ -730,8 +736,8 @@ export const CrowniclesIcons: {
 		58: {
 			continue: "🚶",
 			end: {
-				0: "Vous",
-				1: "Épuisé,"
+				0: "🤔",
+				1: "⛺"
 			},
 			goAlchemist: "🍵",
 			shortcut: "🏃"
@@ -746,13 +752,13 @@ export const CrowniclesIcons: {
 		},
 		60: {
 			end: {
-				0: "Vous"
+				0: "📜"
 			},
 			start: "📖"
 		},
 		61: {
 			end: {
-				0: "Vous"
+				0: "ℹ️"
 			},
 			follow: "🚶",
 			observe: "👀"
@@ -826,9 +832,9 @@ export const CrowniclesIcons: {
 		68: {
 			checkDate: "🗓️",
 			end: {
-				0: "🚶‍",
+				0: "🚶",
 				1: "👀",
-				2: "📓‍"
+				2: "📓"
 			},
 			read: "📖",
 			steal: "📔"
@@ -1004,6 +1010,7 @@ export const CrowniclesIcons: {
 		interactOtherPlayers: "💬",
 		leagueReward: "✨",
 		lottery: "🎰",
+		limoges: "🏺",
 		pet: "🐕‍🦺",
 		shop: "🛒",
 		smallBad: "😖",
@@ -1164,7 +1171,7 @@ export const CrowniclesIcons: {
 			emoteMale: "🐿️"
 		},
 		41: {
-			emoteFemale: "🦔️",
+			emoteFemale: "🦔",
 			emoteMale: "🦔"
 		},
 		42: {
@@ -1260,16 +1267,16 @@ export const CrowniclesIcons: {
 			emoteMale: "🕊️"
 		},
 		63: {
-			emoteFemale: "🦄️",
-			emoteMale: "🦄️"
+			emoteFemale: "🦄",
+			emoteMale: "🦄"
 		},
 		64: {
-			emoteFemale: "🐉️",
-			emoteMale: "🐉️"
+			emoteFemale: "🐉",
+			emoteMale: "🐉"
 		},
 		65: {
-			emoteFemale: "🦖️",
-			emoteMale: "🦖️"
+			emoteFemale: "🦖",
+			emoteMale: "🦖"
 		},
 		66: {
 			emoteFemale: "🟣",
@@ -1402,6 +1409,18 @@ export const CrowniclesIcons: {
 		95: {
 			emoteFemale: "🐦‍⬛",
 			emoteMale: "🐦‍⬛"
+		},
+		96: {
+			emoteFemale: "🫏",
+			emoteMale: "🫏"
+		},
+		97: {
+			emoteFemale: "🪿",
+			emoteMale: "🪿"
+		},
+		98: {
+			emoteFemale: "🦌",
+			emoteMale: "🦌"
 		}
 	},
 	monsters: {
@@ -1423,7 +1442,19 @@ export const CrowniclesIcons: {
 		0: "⬛",
 		1: "👁️",
 		10: "🛡️",
+		100: "🎭",
+		101: "♨️",
+		102: "💠",
+		103: "🛡️",
+		104: "🛡️",
+		105: "🛡️",
+		106: "🧰",
+		107: "🛰️",
+		108: "👻",
+		109: "🫐",
 		11: "🛡️",
+		110: "🌿",
+		111: "🧀",
 		12: "🛡️",
 		13: "🛡️",
 		14: "🛡️",
@@ -1482,9 +1513,44 @@ export const CrowniclesIcons: {
 		62: "🛡️",
 		63: "🍃",
 		64: "🛡️",
+		65: "🍌",
+		66: "🛡️",
+		67: "🦷",
+		68: "✨",
+		69: "🦏",
 		7: "👘",
+		70: "♨️",
+		71: "🎩",
+		72: "😷",
+		73: "🏰",
+		74: "🏰",
+		75: "💉",
+		76: "💀",
+		77: "🌵",
+		78: "🧢",
+		79: "🦅",
 		8: "🛡️",
-		9: "🛡️"
+		80: "🔮",
+		81: "🤖",
+		82: "⚪",
+		83: "🏛️",
+		84: "🛡️",
+		85: "🛡️",
+		86: "🛡️",
+		87: "🛡️",
+		88: "🦓",
+		89: "🛡️",
+		9: "🛡️",
+		90: "🛡️",
+		91: "🛡️",
+		92: "🏯",
+		93: "🚐",
+		94: "⚡",
+		95: "🤖",
+		96: "🧙",
+		97: "💎",
+		98: "🔩",
+		99: "🔩"
 	},
 	objects: {
 		0: "⬛",
@@ -1578,7 +1644,10 @@ export const CrowniclesIcons: {
 		89: "🐟",
 		9: "🗝️",
 		90: "🐸",
-		91: "🛰️"
+		91: "🛰️",
+		92: "🪈",
+		93: "🥝",
+		94: "🧯"
 	},
 	potions: {
 		0: "⬛",
@@ -1623,7 +1692,7 @@ export const CrowniclesIcons: {
 		44: "🐺",
 		45: "🌱",
 		46: "🌶",
-		47: "☠",
+		47: "☠️",
 		48: "🔋",
 		49: "🥜",
 		5: "🍷",
@@ -1642,7 +1711,7 @@ export const CrowniclesIcons: {
 		61: "🚱",
 		62: "🌊",
 		63: "🫙",
-		64: "♻",
+		64: "♻️",
 		65: "🫗",
 		66: "🧋",
 		67: "🧃",
@@ -1651,7 +1720,7 @@ export const CrowniclesIcons: {
 		7: "🧪",
 		70: "🧅",
 		71: "🗻",
-		72: "⛈",
+		72: "⛈️",
 		73: "☕",
 		74: "🫗",
 		75: "🌵",
@@ -1661,7 +1730,7 @@ export const CrowniclesIcons: {
 		79: "🪷",
 		8: "🧪",
 		80: "🥶",
-		81: "✒",
+		81: "✒️",
 		82: "🛏",
 		83: "🌂",
 		84: "🪶",
@@ -1669,7 +1738,7 @@ export const CrowniclesIcons: {
 		86: "🍸",
 		87: "🏴‍☠️",
 		88: "🐌",
-		89: "♨",
+		89: "♨️",
 		9: "🧪",
 		90: "🥔",
 		91: "🌊",
@@ -1776,7 +1845,8 @@ export const CrowniclesIcons: {
 		95: "🗯️",
 		96: "⚛️",
 		97: "🐦‍🔥",
-		98: "❄️"
+		98: "❄️",
+		99: "🦅"
 	},
 	classes: {
 		0: "🌿",
@@ -1844,6 +1914,9 @@ export const CrowniclesIcons: {
 	cartSmallEvent: {
 		accept: "🚗",
 		refuse: "🚶"
+	},
+	infoFightSmallEvent: {
+		showHandednessInfo: "✋"
 	},
 	fightCommand: {
 		accept: "🔍",
@@ -2029,7 +2102,8 @@ export const CrowniclesIcons: {
 		breathRegen: "🫁",
 		petRarity: "⭐",
 		glory: "✨",
-		timeGain: "⌛"
+		timeGain: "⌛",
+		none: "❌"
 	},
 	shopItems: {
 		randomItem: "❓",
@@ -2090,7 +2164,9 @@ export const CrowniclesIcons: {
 			guildKick: "🚪",
 			playerFreedFromJail: "🔓",
 			fightChallenge: "⚔️",
-			guildStatusChange: "📜"
+			guildStatusChange: "📜",
+			energy: "⚡",
+			dailyBonus: "📅"
 		}
 	},
 	missions: {
@@ -2168,7 +2244,8 @@ export const CrowniclesIcons: {
 		6: "💎",
 		7: "💯",
 		8: "🌀",
-		9: "🏆"
+		9: "🏆",
+		10: "👑"
 	},
 	top: {
 		badges: {
@@ -2182,7 +2259,7 @@ export const CrowniclesIcons: {
 			default: "⚫"
 		},
 		afk: "👻",
-		allTime: "🗓️️",
+		allTime: "🗓️",
 		weekly: "🕤",
 		congrats: "🏆",
 		error: "❌",
@@ -2216,7 +2293,7 @@ export const CrowniclesIcons: {
 		telescope: "🔭",
 		car: "🚗",
 		walking: "🚶",
-		leagueUp: "↗️️",
+		leagueUp: "↗️",
 		leagueDown: "↘️"
 	},
 	guild: {
@@ -2262,7 +2339,6 @@ export const CrowniclesIcons: {
 		"💎"
 	],
 	loveLevels: [
-		"NOT_A_LEVEL",
 		"😼",
 		"😾",
 		"🙀",
@@ -2301,5 +2377,8 @@ export const CrowniclesIcons: {
 		won: "🟢",
 		lost: "🔴",
 		draw: "🟡"
+	},
+	items: {
+		drinkPotion: "🥤"
 	}
 };

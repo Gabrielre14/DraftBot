@@ -44,10 +44,8 @@ import {
 import { CrowniclesIcons } from "../../../../Lib/src/CrowniclesIcons";
 import { sendInteractionNotForYou } from "../../utils/ErrorUtils";
 import {
-	DiscordCollectorUtils,
-	disableRows
+	disableRows, DiscordCollectorUtils
 } from "../../utils/DiscordCollectorUtils";
-import { EmoteUtils } from "../../utils/EmoteUtils";
 import { MessagesUtils } from "../../utils/MessagesUtils";
 import { escapeUsername } from "../../utils/StringUtils";
 
@@ -181,7 +179,7 @@ function getShelterPetSelectMenu(
 			const shelterPet = data.shelterPets.find(pet => pet.petEntityId === reactionData.petEntityId)!;
 			return new StringSelectMenuOptionBuilder()
 				.setLabel(DisplayUtils.getPetNicknameOrTypeName(shelterPet.pet.nickname, shelterPet.pet.typeId, shelterPet.pet.sex, lng))
-				.setEmoji(parseEmoji(EmoteUtils.translateEmojiForSelectMenus(DisplayUtils.getPetIcon(shelterPet.pet.typeId, shelterPet.pet.sex)))!)
+				.setEmoji(parseEmoji(DisplayUtils.getPetIcon(shelterPet.pet.typeId, shelterPet.pet.sex))!)
 				.setValue(reaction.index.toString())
 				.setDescription(i18n.t("commands:petTransfer.selectMenuPetDetails", {
 					lng,
@@ -256,9 +254,9 @@ async function handlePetTransferCollect(
 	},
 	currentComponents: ActionRowBuilder<MessageActionRowComponentBuilder>[]
 ): Promise<{
-		inMainMenu: boolean;
-		currentComponents: ActionRowBuilder<MessageActionRowComponentBuilder>[];
-	}> {
+	inMainMenu: boolean;
+	currentComponents: ActionRowBuilder<MessageActionRowComponentBuilder>[];
+}> {
 	let updatedComponents: ActionRowBuilder<MessageActionRowComponentBuilder>[] = currentComponents;
 
 	if (inMainMenu) {

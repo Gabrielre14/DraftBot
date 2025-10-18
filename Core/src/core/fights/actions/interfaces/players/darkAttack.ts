@@ -15,8 +15,8 @@ const use: FightActionFunc = (sender, receiver, fightAction) => {
 			receiver
 		},
 		{
-			critical: 35,
-			failure: 8
+			critical: 20,
+			failure: 9
 		},
 		{
 			attackInfo: getAttackInfo(),
@@ -24,13 +24,13 @@ const use: FightActionFunc = (sender, receiver, fightAction) => {
 		}
 	);
 
-	// If the opponent has an alteration, give back 2 of breath to the sender
+	// If the opponent has an alteration, give back breath to the sender
 	if (receiver.hasFightAlteration() && receiver.alteration.id !== FightAlterations.BLIND) {
 		FightActionController.applyBuff(result, {
 			selfTarget: true,
 			stat: FightStatBuffed.BREATH,
 			operator: FightStatModifierOperation.ADDITION,
-			value: 2
+			value: 3
 		}, sender, fightAction);
 	}
 
@@ -46,9 +46,9 @@ export default use;
 
 function getAttackInfo(): attackInfo {
 	return {
-		minDamage: 30,
-		averageDamage: 50,
-		maxDamage: 110
+		minDamage: 40,
+		averageDamage: 70,
+		maxDamage: 140
 	};
 }
 
@@ -59,8 +59,8 @@ function getStatsInfo(sender: Fighter, receiver: Fighter): statsInfo {
 			receiver.getAttack()
 		],
 		defenderStats: [
-			0,
-			0
+			receiver.getDefense() * 0.15,
+			receiver.getDefense() * 0.05
 		],
 		statsEffect: [
 			0.5,

@@ -407,12 +407,23 @@ export abstract class Fighter {
 	 */
 	getRandomAvailableFightAction(): FightAction {
 		const attacks = Array.from(this.availableFightActions.values());
-		let availableAttacks = attacks.filter(action => action.breath < this.getBreath()
+		let availableAttacks = attacks.filter(action => action.breath <= this.getBreath()
 			|| RandomUtils.crowniclesRandom.realZeroToOneInclusive() < PVEConstants.OUT_OF_BREATH_CHOOSE_PROBABILITY);
 
 		availableAttacks = availableAttacks.length === 0 ? attacks : availableAttacks;
+
+		// Calculate total weight
+		const totalWeight = availableAttacks.reduce((sum, attack) => sum + attack.getWeightForRandomSelection(), 0);
+
+		// If no weights are set (total weight is 0, NaN, or undefined), use uniform random selection
+		if (totalWeight === 0 || isNaN(totalWeight)) {
+			const randomIndex = RandomUtils.crowniclesRandom.integer(0, availableAttacks.length - 1);
+			return availableAttacks[randomIndex];
+		}
+
+		// Use weighted random selection when weights are properly set
 		let selectedAttack = availableAttacks[0]; // Default value
-		let random = RandomUtils.crowniclesRandom.realZeroToOneInclusive() * availableAttacks.reduce((sum, attack) => sum + attack.getWeightForRandomSelection(), 0);
+		let random = RandomUtils.crowniclesRandom.realZeroToOneInclusive() * totalWeight;
 
 		for (const attack of availableAttacks) {
 			random -= attack.getWeightForRandomSelection();

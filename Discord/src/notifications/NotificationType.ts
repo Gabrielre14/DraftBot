@@ -34,6 +34,42 @@ export abstract class NotificationsTypes {
 		}
 	};
 
+	static DAILY_BONUS: NotificationType = {
+		emote: CrowniclesIcons.notifications.types.dailyBonus,
+		customId: "dailyBonus",
+		i18nKey: "commands:notifications.types.dailyBonus",
+		value: notificationsConfiguration => ({
+			enabled: notificationsConfiguration.dailyBonusEnabled,
+			sendType: notificationsConfiguration.dailyBonusSendType,
+			channelId: notificationsConfiguration.dailyBonusChannelId
+		}),
+		toggleCallback: (notificationsConfiguration): void => {
+			notificationsConfiguration.dailyBonusEnabled = !notificationsConfiguration.dailyBonusEnabled;
+		},
+		changeSendTypeCallback: (notificationsConfiguration, sendType, channelId): void => {
+			notificationsConfiguration.dailyBonusSendType = sendType;
+			notificationsConfiguration.dailyBonusChannelId = channelId;
+		}
+	};
+
+	static ENERGY: NotificationType = {
+		emote: CrowniclesIcons.notifications.types.energy,
+		customId: "energy",
+		i18nKey: "commands:notifications.types.energy",
+		value: notificationsConfiguration => ({
+			enabled: notificationsConfiguration.energyEnabled,
+			sendType: notificationsConfiguration.energySendType,
+			channelId: notificationsConfiguration.energyChannelId
+		}),
+		toggleCallback: (notificationsConfiguration): void => {
+			notificationsConfiguration.energyEnabled = !notificationsConfiguration.energyEnabled;
+		},
+		changeSendTypeCallback: (notificationsConfiguration, sendType, channelId): void => {
+			notificationsConfiguration.energySendType = sendType;
+			notificationsConfiguration.energyChannelId = channelId;
+		}
+	};
+
 	static GUILD_DAILY: NotificationType = {
 		emote: CrowniclesIcons.notifications.types.guildDaily,
 		customId: "guildDaily",
@@ -130,6 +166,8 @@ export abstract class NotificationsTypes {
 		NotificationsTypes.PLAYER_FREED_FROM_JAIL,
 		NotificationsTypes.FIGHT_CHALLENGE,
 		NotificationsTypes.GUILD_KICK,
-		NotificationsTypes.GUILD_STATUS_CHANGE
+		NotificationsTypes.GUILD_STATUS_CHANGE,
+		NotificationsTypes.ENERGY,
+		NotificationsTypes.DAILY_BONUS
 	];
 }

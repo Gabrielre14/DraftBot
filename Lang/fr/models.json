@@ -3,7 +3,19 @@
     "0": "Pas de bouclier ni d'armure",
     "1": "Bouclier déflecteur Engi",
     "10": "Bouclier lourd",
+    "100": "Plot armor",
+    "101": "Bouclier thermique",
+    "102": "armure en mythril",
+    "103": "Plastron",
+    "104": "Plastron protection 4",
+    "105": "Cuirasse",
+    "106": "Bouclier 3 en 1",
+    "107": "Armure Mk IX",
+    "108": "Bouhclier",
+    "109": "Armûre",
     "11": "Bouclier de débutant",
+    "110": "Armure en chlorophyte",
+    "111": "Roque fort",
     "12": "Bouclier de maître",
     "13": "Bouclier ultime",
     "14": "Bouclier puissant",
@@ -62,9 +74,44 @@
     "62": "Bouclier de givre",
     "63": "Bouclier du vent",
     "64": "Bouclier gigantesque",
+    "65": "Armure banane",
+    "66": "Bouclier du gardien",
+    "67": "Protège-dents",
+    "68": "Protego",
+    "69": "Rhinoshield",
     "7": "Kimono renforcé",
+    "70": "Pare-feu",
+    "71": "Chapeau",
+    "72": "Masque à gaz",
+    "73": "Roque",
+    "74": "Grand Roque",
+    "75": "Vaccin",
+    "76": "Bouclier maudit",
+    "77": "Bouclier épineux",
+    "78": "Casquette",
+    "79": "Armure légère",
     "8": "Bouclier simple",
-    "9": "Bouclier résistant"
+    "80": "Bouclier magique",
+    "81": "Armée de robots défensifs",
+    "82": "Bouclier rond",
+    "83": "Bouclier banal",
+    "84": "Targe",
+    "85": "Pavise",
+    "86": "Écu normand",
+    "87": "Bouclier hoplite",
+    "88": "Bouclier zoulou",
+    "89": "Bouclier bosselé",
+    "9": "Bouclier résistant",
+    "90": "Parma",
+    "91": "Adarga",
+    "92": "Château de Himeji",
+    "93": "Caravane",
+    "94": "Armure électrifiée",
+    "95": "Exosquelette",
+    "96": "Tenue de l’Archimage",
+    "97": "Armure en diamant",
+    "98": "Bouclier en Beskar",
+    "99": "Armure en Beskar"
   },
   "classes": {
     "0": "Recrue",
@@ -93,7 +140,35 @@
     "8": "Lanceur de pierre",
     "9": "Frondeur"
   },
+  "classes_plural": {
+    "0": "Recrues",
+    "1": "Combattants",
+    "10": "Archers",
+    "11": "Canonniers",
+    "12": "Écuyers",
+    "13": "Cavaliers",
+    "14": "Piquiers",
+    "15": "Chevaliers",
+    "16": "Paladins",
+    "17": "Vétérans",
+    "18": "Fantassins puissants",
+    "19": "Tanks impénétrables",
+    "2": "Soldats",
+    "20": "Canonniers redoutables",
+    "21": "Chevaliers valeureux",
+    "22": "Paladins lumineux",
+    "23": "Vétérans chevronnés",
+    "24": "Mages mystiques",
+    "3": "Fantassins",
+    "4": "Gantés",
+    "5": "Casqués",
+    "6": "Maillés",
+    "7": "Tanks",
+    "8": "Lanceurs de pierre",
+    "9": "Frondeurs"
+  },
   "classFormat": "{emote:classes.{{id}}} $t(models:classes.{{id}})",
+  "classPluralFormat": "{emote:classes.{{id}}} $t(models:classes_plural.{{id}})",
   "classWithStatsFormat": "{emote:classes.{{id}}} $t(models:classes.{{id}}) :\n{emote:unitValues.energy} {{energy}} | {emote:unitValues.attack} {{attack}} | {emote:unitValues.defense} {{defense}} | {emote:unitValues.speed} {{speed}} | {emote:unitValues.breath} {{initialBreath}} / {{maxBreath}} | {emote:unitValues.health} {{health}}",
   "class_descriptions": {
     "0": "Une classe simple. Plutôt équilibrée.",
@@ -153,6 +228,10 @@
     },
     "boostSpeed": {
       "success": "monte sur le dos de **{{petNickname}}** pour se déplacer plus rapidement."
+    },
+    "breakArmor": {
+      "failure": "fait appel à **{{petNickname}}** qui charge l'adversaire. Malheureusement, il rate complètement sa cible.",
+      "success": "demande l'aide de son familier qui charge l'adversaire lourdement. Ce dernier se protège de l'attaque mais son équipement est emporté au loin par **{{petNickname}}** !"
     },
     "boulderTossAttack": {
       "name_one": "Attaque rocheuse",
@@ -229,7 +308,7 @@
     },
     "createBomb": {
       "generalEffect": "est soutenu dans son combat par **{{petNickname}}** qui fait mine de harceler férocement l'adversaire de coups de bec précis et douloureux.",
-      "failure": "a manqué de recevoir l'aide de **{{petNickname}}** qui, par prudence, s'est abstenu d'agir, conscient que son intervention risquait davantage de blesser son maître que l'adversaire. Il aurait fallu être plus rapide !",
+      "failure": "a manqué de recevoir l'aide de **{{petNickname}}** qui, par prudence, s'est abstenu d'agir, conscient que son intervention risquait davantage de blesser son maître que l'adversaire ! Peut-être aurait-il eu moins de scrupule s'il vous avait senti en danger...",
       "success": "profite du talent de **{{petNickname}}** qui a discrètement préparé une bombe puissante. Après avoir activé le détonateur, vous vous mettez à l'écart en courant de toutes vos forces !"
     },
     "crush": {
@@ -344,7 +423,7 @@
       "name_other": "Attaques boue brûlante"
     },
     "heavyAttack": {
-      "description": "Échoue si le défenseur dispose de moins de défense que l'attaquant. La défense de l'ennemi est réduite de 25%.",
+      "description": "Fonctionne mieux si le lanceur est reposé. La défense de l'ennemi est réduite lors des premières utilisations.",
       "name_one": "Attaque lourde",
       "name_other": "Attaques lourdes"
     },
@@ -595,7 +674,6 @@
       "name_one": "Attaque armure cristalline",
       "name_other": "Attaques armures cristallines"
     },
-
     "icySeductionAttack": {
       "name_one": "Attaque séduction glaciale",
       "name_other": "Attaque séductions glaciales"
@@ -766,7 +844,8 @@
     "6": "Ligue diamant",
     "7": "Ligue d'élite",
     "8": "Ligue infinie",
-    "9": "Ligue légende"
+    "9": "Ligue légende",
+    "10": "Ligue royale"
   },
   "map_locations": {
     "1": {
@@ -1338,7 +1417,10 @@
     "89": "Poisson mort",
     "9": "Clé rouillée",
     "90": "Talisman de Grenouille",
-    "91": "Spoutnik"
+    "91": "Spoutnik",
+    "92": "Appeau à corbeau",
+    "93": "Carte Kiwi",
+    "94": "911"
   },
   "pets": {
     "0_female": "Aucun familier",
@@ -1531,6 +1613,12 @@
     "94_male": "Merle",
     "95_female": "Corbeau",
     "95_male": "Corbeau",
+    "96_female": "Ânesse",
+    "96_male": "Âne",
+    "97_female": "Oie",
+    "97_male": "Oie",
+    "98_female": "Élan",
+    "98_male": "Élan",
     "9_female": "Truie",
     "9_male": "Porc"
   },
@@ -1730,7 +1818,8 @@
     "95": "Lame de l'aura argentée",
     "96": "Electektron",
     "97": "Lame du Phénix",
-    "98": "Épée de givre"
+    "98": "Épée de givre",
+    "99": "Serre d'Aigle"
   },
   "foods": {
     "herbivorousFood_one": "salade",
@@ -1833,4 +1922,3 @@
     }
   }
 }
-

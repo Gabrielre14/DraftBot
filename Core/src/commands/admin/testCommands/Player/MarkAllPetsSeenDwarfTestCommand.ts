@@ -7,7 +7,7 @@ import { PetDataController } from "../../../../data/Pet";
 export const commandInfo: ITestCommand = {
 	name: "markallpetsseendwarf",
 	aliases: ["mapsd"],
-	description: "Mettre au complet les pets montrés au nain."
+	description: "Marque tous les familiers comme ayant été montrés au nain Talvar (le nain du mini event qui donne 1 gemme / animal)."
 };
 
 const markAllPetsSeenDwarfCommand: ExecuteTestCommandLike = async player => {

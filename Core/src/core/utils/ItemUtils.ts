@@ -26,15 +26,23 @@ import { ItemAcceptPacket } from "../../../../Lib/src/packets/events/ItemAcceptP
 import { ItemFoundPacket } from "../../../../Lib/src/packets/events/ItemFoundPacket";
 import {
 	ReactionCollectorItemChoice,
+	ReactionCollectorItemChoiceDrinkPotionReaction,
 	ReactionCollectorItemChoiceItemReaction
 } from "../../../../Lib/src/packets/interaction/ReactionCollectorItemChoice";
 import { ReactionCollectorInstance } from "./ReactionsCollector";
-import { ReactionCollectorItemAccept } from "../../../../Lib/src/packets/interaction/ReactionCollectorItemAccept";
+import {
+	ReactionCollectorItemAccept,
+	ReactionCollectorItemAcceptDrinkPotionReaction
+} from "../../../../Lib/src/packets/interaction/ReactionCollectorItemAccept";
 import { ReactionCollectorAcceptReaction } from "../../../../Lib/src/packets/interaction/ReactionCollectorPacket";
 import { ItemWithDetails } from "../../../../Lib/src/types/ItemWithDetails";
 import { MainItem } from "../../data/MainItem";
 import { SupportItem } from "../../data/SupportItem";
 import { StatValues } from "../../../../Lib/src/types/StatValues";
+import {
+	CommandDrinkPacketRes
+} from "../../../../Lib/src/packets/commands/CommandDrinkPacket";
+import { TravelTime } from "../maps/TravelTime";
 
 
 /**
@@ -261,6 +269,11 @@ async function sellOrKeepItem(
 	let money = 0;
 	if (item.getCategory() !== ItemCategory.POTION) {
 		money = Math.round(getItemValue(item) * resaleMultiplier);
+
+		// For auto-sell scenarios, ensure we reload again before adding money to prevent race conditions
+		if (autoSell) {
+			await player.reload();
+		}
 		await manageMoneyPayment(response, player, item, money);
 	}
 	await manageItemRefusal(response, whoIsConcerned, item, money, autoSell);
@@ -291,8 +304,17 @@ function getMoreThan2ItemsSwitchingEndCallback(whoIsConcerned: WhoIsConcerned, t
 		else {
 			sellKeepOptions.keepOriginal = true;
 		}
+
 		BlockingUtils.unblockPlayer(whoIsConcerned.player.keycloakId, BlockingConstants.REASONS.ACCEPT_ITEM);
-		await sellOrKeepItem(response, whoIsConcerned, concernedItems, sellKeepOptions);
+
+		if (reaction.reaction.type === ReactionCollectorItemChoiceDrinkPotionReaction.name) {
+			await consumePotion(response, toTradeItem as Potion, whoIsConcerned.player);
+			await whoIsConcerned.player.save();
+			await checkDrinkPotionMissions(response, whoIsConcerned.player, toTradeItem as Potion, await InventorySlots.getOfPlayer(whoIsConcerned.player.id));
+		}
+		else {
+			await sellOrKeepItem(response, whoIsConcerned, concernedItems, sellKeepOptions);
+		}
 	};
 }
 
@@ -333,7 +355,8 @@ function manageMoreThan2ItemsSwitching(
 	tradableItems.map(i => ({
 		slot: i.slot,
 		itemWithDetails: toItemWithDetails(i.getItem())
-	})));
+	})),
+	toTradeItem instanceof Potion && !(toTradeItem as Potion).isFightPotion());
 
 	response.push(new ReactionCollectorInstance(
 		collector,
@@ -370,11 +393,20 @@ function getGiveItemToPlayerEndCallback(whoIsConcerned: WhoIsConcerned, concerne
 		const reaction = collector.getFirstReaction();
 		const isValidated = reaction && reaction.reaction.type === ReactionCollectorAcceptReaction.name;
 		await whoIsConcerned.player.reload();
+
 		BlockingUtils.unblockPlayer(whoIsConcerned.player.keycloakId, BlockingConstants.REASONS.ACCEPT_ITEM);
-		await sellOrKeepItem(response, whoIsConcerned, concernedItems, {
-			keepOriginal: !isValidated,
-			resaleMultiplier
-		});
+
+		if (reaction?.reaction.type === ReactionCollectorItemAcceptDrinkPotionReaction.name) {
+			await consumePotion(response, concernedItems.item as Potion, whoIsConcerned.player);
+			await whoIsConcerned.player.save();
+			await checkDrinkPotionMissions(response, whoIsConcerned.player, concernedItems.item as Potion, await InventorySlots.getOfPlayer(whoIsConcerned.player.id));
+		}
+		else {
+			await sellOrKeepItem(response, whoIsConcerned, concernedItems, {
+				keepOriginal: !isValidated,
+				resaleMultiplier
+			});
+		}
 	};
 }
 
@@ -410,11 +442,11 @@ export async function giveItemToPlayer(
 
 	const category = item.getCategory();
 	const maxSlots = (await InventoryInfos.getOfPlayer(player.id)).slotLimitForCategory(category);
-	const items = inventorySlots.filter((slot: InventorySlot) => slot.itemCategory === category && !slot.isEquipped());
+	const items = inventorySlots.filter((slot: InventorySlot) => slot.itemCategory === category);
 	const itemToReplace = inventorySlots.filter((slot: InventorySlot) => (maxSlots === 1 ? slot.isEquipped() : slot.slot === 1) && slot.itemCategory === category)[0];
-	const autoSell = maxSlots >= 3
+	const autoSell = item.getCategory() !== ItemCategory.POTION || (item as Potion).isFightPotion() // Because we can't drink immediately these potions
 		? items.length === items.filter((slot: InventorySlot) => slot.itemId === item.id).length
-		: itemToReplace.itemId === item.id;
+		: false;
 
 	if (autoSell) {
 		await sellOrKeepItem(response, whoIsConcerned, {
@@ -427,7 +459,7 @@ export async function giveItemToPlayer(
 		return;
 	}
 
-	if (maxSlots >= 3) {
+	if (maxSlots >= 2) {
 		manageMoreThan2ItemsSwitching(response, context, whoIsConcerned, {
 			toTradeItem: item,
 			tradableItems: items
@@ -439,7 +471,8 @@ export async function giveItemToPlayer(
 
 	response.push(new ReactionCollectorInstance(
 		new ReactionCollectorItemAccept(
-			toItemWithDetails(itemToReplaceInstance)
+			toItemWithDetails(itemToReplaceInstance),
+			item instanceof Potion && !(item as Potion).isFightPotion()
 		),
 		context,
 		{
@@ -604,4 +637,31 @@ export function getItemByIdAndCategory(itemId: number, category: ItemCategory): 
 		return null;
 	}
 	return itemId <= categoryDataController.getMaxId() && itemId > 0 ? categoryDataController.getById(itemId) : null;
+}
+
+/**
+ * Consumes the given potion
+ * @param response
+ * @param potion
+ * @param player
+ */
+export async function consumePotion(response: CrowniclesPacket[], potion: Potion, player: Player): Promise<void> {
+	const packet = makePacket(CommandDrinkPacketRes, {
+		value: potion.power,
+		itemNature: potion.nature
+	});
+	response.push(packet);
+	switch (potion.nature) {
+		case ItemNature.HEALTH:
+			await player.addHealth(potion.power, response, NumberChangeReason.DRINK);
+			break;
+		case ItemNature.ENERGY:
+			player.addEnergy(potion.power, NumberChangeReason.DRINK);
+			break;
+		case ItemNature.TIME_SPEEDUP:
+			await TravelTime.timeTravel(player, potion.power, NumberChangeReason.DRINK);
+			break;
+		default:
+			break;
+	}
 }

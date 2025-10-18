@@ -34,7 +34,6 @@ import { PacketUtils } from "../../utils/PacketUtils";
 import { ChangeBlockingReasonPacket } from "../../../../Lib/src/packets/utils/ChangeBlockingReasonPacket";
 import { BlockingConstants } from "../../../../Lib/src/constants/BlockingConstants";
 import { CrowniclesIcons } from "../../../../Lib/src/CrowniclesIcons";
-import { EmoteUtils } from "../../utils/EmoteUtils";
 import { Language } from "../../../../Lib/src/Language";
 import {
 	disableRows, DiscordCollectorUtils
@@ -69,6 +68,23 @@ export async function handleCommandShopNoEnergyToHeal(context: PacketContext): P
 
 	if (interaction) {
 		await sendErrorMessage(interaction.user, context, interaction, i18n.t("commands:shop.noEnergyToHeal", { lng: interaction.userLanguage }), { sendManner: SendManner.FOLLOWUP });
+	}
+}
+
+export async function handleCommandShopEnergyHeal(context: PacketContext): Promise<void> {
+	const interaction = DiscordCache.getInteraction(context.discord!.interaction!);
+
+	if (interaction) {
+		await interaction.followUp({
+			embeds: [
+				new CrowniclesEmbed()
+					.formatAuthor(i18n.t("commands:shop.success", {
+						lng: interaction.userLanguage,
+						pseudo: escapeUsername(interaction.user.displayName)
+					}), interaction.user)
+					.setDescription(i18n.t("commands:shop.shopItems.energyHeal.give", { lng: interaction.userLanguage }))
+			]
+		});
 	}
 }
 
@@ -342,7 +358,7 @@ async function manageBuyoutConfirmation(packet: ReactionCollectorCreationPacket,
 				}), interaction.user)
 				.setDescription(`${
 					getShopItemDisplay(data, reaction, lng, shopItemNames, amounts)
-				}\n${EmoteUtils.translateEmojiToDiscord(CrowniclesIcons.collectors.warning)} ${
+				}\n${CrowniclesIcons.collectors.warning} ${
 					i18n.t(`commands:shop.shopItems.${shopItemTypeToId(shopItemId)}.info`, {
 						lng,
 						kingsMoneyAmount: data.additionalShopData?.gemToMoneyRatio,

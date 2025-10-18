@@ -19,6 +19,8 @@ import { ReactionCollectorPetFreeData } from "../../../../Lib/src/packets/intera
 import { createPetFreeCollector } from "../../commands/pet/PetFreeCommand";
 import { ReactionCollectorInteractOtherPlayersPoorData } from "../../../../Lib/src/packets/interaction/ReactionCollectorInteractOtherPlayers";
 import { interactOtherPlayersCollector } from "../../smallEvents/interactOtherPlayers";
+import { ReactionCollectorLimogesData } from "../../../../Lib/src/packets/interaction/ReactionCollectorLimoges";
+import { limogesCollector } from "../../smallEvents/limoges";
 import { ReactionCollectorWitchData } from "../../../../Lib/src/packets/interaction/ReactionCollectorWitch";
 import { witchCollector } from "../../smallEvents/witch";
 import { ReactionCollectorItemChoiceData } from "../../../../Lib/src/packets/interaction/ReactionCollectorItemChoice";
@@ -90,6 +92,8 @@ import { ReactionCollectorJoinBoatData } from "../../../../Lib/src/packets/inter
 import { ReactionCollectorPveFightData } from "../../../../Lib/src/packets/interaction/ReactionCollectorPveFight";
 import { handleClassicError } from "../../utils/ErrorUtils";
 import { CrowniclesLogger } from "../../../../Lib/src/logs/CrowniclesLogger";
+import { ReactionCollectorDailyBonusData } from "../../../../Lib/src/packets/interaction/ReactionCollectorDailyBonus";
+import { handleDailyBonusCollector } from "../../commands/player/DailyBonusCommand";
 
 // Needed because we need to accept any parameter
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -141,6 +145,8 @@ export default class ReactionCollectorHandler {
 		ReactionCollectorHandler.collectorMap.set(ReactionCollectorPetFeedWithGuildData.name, handleCommandPetFeedWithGuildCollector);
 		ReactionCollectorHandler.collectorMap.set(ReactionCollectorPetFeedWithoutGuildData.name, handleCommandPetFeedWithoutGuildCollector);
 		ReactionCollectorHandler.collectorMap.set(ReactionCollectorPveFightData.name, handleStartPveFight);
+		ReactionCollectorHandler.collectorMap.set(ReactionCollectorDailyBonusData.name, handleDailyBonusCollector);
+		ReactionCollectorHandler.collectorMap.set(ReactionCollectorLimogesData.name, limogesCollector);
 	}
 
 	@packetHandler(ReactionCollectorCreationPacket)

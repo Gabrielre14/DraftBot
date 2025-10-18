@@ -8,16 +8,16 @@
     "petField": "**Typ:** {{emote}} {{typeName}}\n**Spitzname:** {{nickname}}\n**Rarität:** {{rarity}}\n**Geschlecht:** {{sex}}\n**Mentalität:** {{loveLevel}}",
     "noNickname": "Keine Spitznamen",
     "loveLevels": {
-      "1_male": "{emote:loveLevels.1} Boshaft",
-      "1_female": "{emote:loveLevels.1} Boshaft",
-      "2_male": "{emote:loveLevels.2} Wild",
-      "2_female": "{emote:loveLevels.2} Wild",
-      "3_male": "{emote:loveLevels.3} Ängstlich",
-      "3_female": "{emote:loveLevels.3} Ängstlich",
-      "4_male": "{emote:loveLevels.4} Gezähmt",
-      "4_female": "{emote:loveLevels.4} Gezähmt",
-      "5_male": "{emote:loveLevels.5} Aufgerichtet",
-      "5_female": "{emote:loveLevels.5} Aufgerichtet"
+      "1_male": "{emote:loveLevels.0} Boshaft",
+      "1_female": "{emote:loveLevels.0} Boshaft",
+      "2_male": "{emote:loveLevels.1} Wild",
+      "2_female": "{emote:loveLevels.1} Wild",
+      "3_male": "{emote:loveLevels.2} Ängstlich",
+      "3_female": "{emote:loveLevels.2} Ängstlich",
+      "4_male": "{emote:loveLevels.3} Gezähmt",
+      "4_female": "{emote:loveLevels.3} Gezähmt",
+      "5_male": "{emote:loveLevels.4} Aufgerichtet",
+      "5_female": "{emote:loveLevels.4} Aufgerichtet"
     },
     "hungry": "{emote:effects.starving} Hungrig",
     "diet": {
@@ -169,7 +169,7 @@
       },
       "FIGHT": {
         "description": "Verwenden Sie diesen Befehl, um andere Spieler, die sich auf demselben Server wie Sie befinden, zu detrieren.\nDie Kämpfe werden um die Reihe umgeleitet. In jeder Runde können Sie eine Aktion auswählen, die ausgeführt werden soll.\n\nFür weitere Informationen können Sie die Seite \"Guide\" auf der Seite \"https://guide.draftbot.com/notions-principale/combats\" anzeigen.",
-        "image": "https://draftbot.com/public/ressources/fighthelp/en/5.0.2.png"
+        "image": "https://draftbot.com/public/ressources/fighthelp/en/5.1.7.png"
       },
       "GLORY_TOP": {
         "description": "Zeigt die ruhmige Rangfolge des Spiels pro Schicht von 15 Spielern an. Die Liga der Spieler wird ebenfalls angezeigt. Spieler auf dem gleichen Server, die Sie mit einem blauen Pellet markiert haben."
@@ -241,7 +241,7 @@
         "description": "Zeigt den Lagerort für die Missionen an."
       },
       "NOTIFICATIONS": {
-        "description": "Ermöglicht Ihnen, den Empfang von Bot-Benachrichtigungen einzustellen. Sie können festlegen, ob Sie Benachrichtigungen (und wo sie angezeigt werden) für Berichte und/oder Gildenbelohnungen erhalten möchten."
+        "description": "Hiermit können Sie einstellen, wie Sie Benachrichtigungen vom Bot erhalten. Du kannst einstellen, ob du Benachrichtigungen erhalten möchtest (und bestimmen, wo sie angezeigt werden), wenn du an einem bestimmten Ort ankommst, Gildenbelohnungen, Gefängnisbefreiung, Angriffe anderer Spieler, Gildenausschlüsse, Statusänderungen innerhalb der Gilde, vollständige Energieregeneration und die Verfügbarkeit deines täglichen Bonus."
       },
       "PET": {
         "description": "Zeigt Informationen zu Ihrem Begleiter an."
@@ -335,8 +335,10 @@
     "weapons_one": "Waffe ({{count}}/{{max}}):",
     "weapons_other": "Waffen ({{count}}/{{max}}):",
     "randomItemTitle": "{{pseudo}}Sie haben etwas gefunden!",
-    "randomItemFooter": "Sie haben bereits eine Ausrüstung, möchten Sie diese verkaufen?",
-    "randomItemFooterPotion": "Möchten Sie Ihren aktuellen Trank vernichten?",
+    "randomItemAcceptTitle": "Sie haben bereits eine Ausrüstung, möchten Sie diese verkaufen?",
+    "randomItemAcceptTitlePotion": "Sie haben bereits einen Trank, was möchten Sie tun?",
+    "randomItemFooterPotion": "Verwende {emote:collectors.accept} , um den gefundenen Trank zu behalten und deinen aktuellen Trank zu ersetzen, {emote:items.drinkPotion} , um den gefundenen Trank zu konsumieren, {emote:collectors.refuse} , um den gefundenen Trank wegzuwerfen.",
+    "randomItemFooterPotionChoice": "Benutze eine Zahl, um einen Trank durch den gefundenen Trank zu ersetzen, {emote:items.drinkPotion} , um den gefundenen Trank zu konsumieren, {emote:collectors.refuse} , um den gefundenen Trank wegzuwerfen.",
     "acceptedTitle": "{{pseudo}}Sie haben eine Ausrüstung erhalten!",
     "chooseItemToReplaceTitle": "Wählen Sie ein zu ersetzendes Objekt"
   },
@@ -383,7 +385,7 @@
       "contest": "Abzeichen, das von Zeit zu Zeit in Wettbewerben auf dem Bot-Server gewonnen werden kann.",
       "christmas": "Abzeichen, das jedes Weihnachten bei einem Wettbewerb gewonnen werden kann",
       "top_week": "Person, die eine Rangliste der Woche dominiert hat.",
-      "random": "Badge auf völlig wandern",
+      "random": "Ein geheimnisvolles Abzeichen, niemand weiß, wie man es bekommt",
       "top_10_v1": "Spieler in den Top 10 beim Reset-up 1.0",
       "top_v1_player": "Bester Spieler zum Zeitpunkt des Reset von 1.0",
       "major_bug_reporter": ":lady_beetle: Personen, die große Bugs gemeldet haben.",
@@ -460,8 +462,8 @@
   "report": {
     "adviceTitle": "Tipp:",
     "chooseDestinationIndications": "Wählen Sie ein Ziel für Ihre Reise:",
-    "choseMapMinutes_one": "Sie haben entschieden, in Richtung {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}** zu gehen. Diese Strecke dauert **{{time}} Minuten**.",
-    "choseMapMinutes_other": "Sie haben entschieden, in Richtung {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}** zu gehen. Diese Strecke dauert **{{time}} Minuten**.",
+    "choseMapMinutes_one": "Sie haben sich entschieden, eine Reise nach {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}** anzutreten. Diese Fahrt wird ungefähr **{{timeDisplay}}** dauern.",
+    "choseMapMinutes_other": "Sie haben sich entschieden, eine Reise nach {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}** anzutreten. Diese Fahrt wird ungefähr **{{timeDisplay}}** dauern.",
     "choseMap_one": "Sie haben entschieden, in Richtung {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}** zu gehen. Diese Strecke dauert **{{time}} Stunden**.",
     "choseMap_other": "Sie haben entschieden, in Richtung {{mapPrefix}} {{mapType}} {{mapEmote}} **{{mapName}}** zu gehen. Diese Strecke dauert **{{time}} Stunden**.",
     "collectedPointsTitle": "geerntete Punkte:",
@@ -678,6 +680,11 @@
             "Seine Morphologie ist auf Geschwindigkeit ausgelegt! Im Kampf kann er dich auf seinem Rücken tragen, was deine Beweglichkeit auf dem Schlachtfeld um ein Vielfaches steigert.",
             "Seine Reflexe sind außergewöhnlich. Er wird seine unglaubliche Schnelligkeit im Kampf mit dir teilen und dich so viel schneller machen.",
             "Dieses Haustier besitzt spezielle Drüsen, die ein Beschleunigungshormon absondern. An Ihrer Seite werden Sie sich wie der Blitz bewegen!"
+          ],
+          "breakArmor": [
+            "Sobald der Kampf beginnt, stürmt er auf den Gegner zu und versucht, ihm die Rüstung oder den Schild abzureißen. Dies gelingt sehr oft, sodass der Gegner hilflos zurückbleibt.",
+            "Dieses mächtige Tier greift von Anfang an frontal an; wenn es sein Ziel trifft, werden Helm, Brustpanzer oder Schild verdrängt und vom Schlachtfeld weggetragen.",
+            "Ihr Begleiter führt einen beeindruckenden Angriff aus, um den Feind zu berauben: Meistens landet die Rüstung oder der Schild zwischen seinen Hörnern und wird zu seiner Beute."
           ],
           "claws": [
             "Die Krallen Ihres Tieres sind schärfer als jede Klinge! Es wird sie einsetzen, um Ihre Feinde mit erschreckender Effizienz zu zerfetzen.",
@@ -978,7 +985,9 @@
       "playerFreedFromJail": "Entlassung aus dem Gefängnis",
       "fightChallenge": "Von einem anderen Spieler angegriffen",
       "guildKick": "Ausschluss aus der Gilde",
-      "guildStatusChange": "Änderung des Status innerhalb der Gilde"
+      "guildStatusChange": "Änderung des Status innerhalb der Gilde",
+      "energy": "Regenerierte Energie",
+      "dailyBonus": "Täglicher Bonus"
     },
     "enableDisable": "Aktivieren/Deaktivieren",
     "sendLocationField": "Ort der Versendung :",
@@ -1039,10 +1048,9 @@
   },
   "daily": {
     "errors": {
-      "objectDoNothingError": "Du versuchst, die Kraft des Gegenstandes, den du mit dir herumträgst, zu nutzen... Aber es hat keine Wirkung!",
-      "objectIsActiveDuringFights": "Die Kraft des Gegenstandes, den Sie mit sich führen, ist während der Kämpfe automatisch aktiv!",
-      "noActiveObject": "Sie haben leider keine aktiven Gegenstände in Ihrem Inventar!",
-      "cooldown": "Sie können Ihren Alltagsgegenstand nur alle {{cooldownTime}} Stunden verwenden. Besuchen Sie wieder {{time}}."
+      "noAvailableObject": "Sie haben leider keine täglich verwendbaren Gegenstände in Ihrem Inventar! Kampfgegenstände können über diesen Befehl nicht verwendet werden.",
+      "cooldown": "Sie können Ihren Alltagsgegenstand nur alle {{cooldownTime}} Stunden verwenden. Besuchen Sie wieder {{time}}.",
+      "cancel": "Sie haben die Nutzung Ihres Alltagsgegenstands abgebrochen."
     },
     "title": "{{pseudo}}Sie haben Ihre tägliche Belohnung erhalten!",
     "description": "{emote:unitValues.{{nature}}} $t(commands:daily.natureText.{{nature}}) **{{value}}**!",
@@ -1051,7 +1059,13 @@
       "energy": "Gewonnene Energie :",
       "money": "Verdientes Geld :",
       "time": "Sie haben sich um"
-    }
+    },
+    "collectorTitleOneObject": "{{pseudo}}Wenn Sie Ihre tägliche Belohnung bestätigt haben",
+    "collectorDescOneObject": "Möchten Sie Ihren Alltagsgegenstand verwenden?\n\n{{object}}",
+    "collectorTitle": "{{pseudo}}Wählen Sie Ihre tägliche Belohnung aus!",
+    "collectorDesc": "Wählen Sie aus der folgenden Liste einen Gegenstand aus, den Sie verwenden möchten:",
+    "collectorRefuseOption": "Abbrechen",
+    "menuPlaceholder": "Wählen Sie ein Objekt aus"
   },
   "unlock": {
     "himself": "Wenn Sie sich nicht selbst befreien können, bitten Sie einen Freund, dies zu tun.",
@@ -1289,18 +1303,24 @@
     "switchSelectionDescription": "Wählen Sie aus der folgenden Liste einen Gegenstand zum Ausrüsten aus:"
   },
   "drink": {
-    "cancelledTitle": "{{pseudo}} Sie haben die Aktion abgebrochen",
-    "cancelled": "Sie haben Ihren Trank nicht getrunken!",
-    "noActiveObject": "Sie haben leider nichts zu trinken in Ihrem Inventar!",
-    "objectIsActiveDuringFights": "Dieses Getränk kann jetzt nicht getrunken werden. Es wird automatisch bei Ihrem nächsten Kampf verwendet!",
-    "healthBonus": "{emote:unitValues.health} Gewonnenes Leben: {{value}} !",
-    "energyBonus": "{emote:unitValues.energy} Gewonnene Energie: {{value}} !",
-    "timeBonus": "{emote:unitValues.time} Sie sind weitergekommen von {{value}} !",
-    "noBonus": "{emote:messages.refuse} Sie konsumieren das Getränk, das Sie transportiert haben... Das scheint nicht sehr effektiv zu sein!",
-    "drinkSuccessTitle": "{{pseudo}}Wenn Sie das Getränk trinken, das Sie transportiert haben, dann trinken Sie es!",
-    "confirmationTitle": "{{pseudo}}Bestätigung :",
-    "confirmation": "Sind Sie sicher, dass Sie Ihre {{potion}} trinken möchten?",
-    "confirmationFooter": "Diesen Schritt kann man umgehen, indem man den Parameter erzwingen!"
+    "errors": {
+      "noAvailablePotions": "Sie haben leider keine verbrauchbaren Tränke in Ihrem Inventar! Kampftränke können über diesen Befehl nicht konsumiert werden.",
+      "cancel": "Sie trinken keinen Zaubertrank."
+    },
+    "title": "{{pseudo}}Sie haben einen Trank getrunken!",
+    "descriptionNoBonus": "{emote:unitValues.{{nature}}} Sie konsumieren einen Trank... Er scheint nicht sehr wirksam zu sein",
+    "description": "{emote:unitValues.{{nature}}} $t(commands:drink.natureText.{{nature}}) **{{value}}**!",
+    "natureText": {
+      "health": "Gewonnenes Leben :",
+      "energy": "Gewonnene Energie :",
+      "time": "Sie haben sich um"
+    },
+    "collectorTitleOneObject": "{{pseudo}} Bestätigung :",
+    "collectorDescOneObject": "Möchten Sie Ihren Trank trinken?\n\n{{object}}",
+    "collectorTitle": "{{pseudo}}Wählen Sie Ihren Trank aus!",
+    "collectorDesc": "Wählen Sie aus der folgenden Liste einen Trank zum Trinken aus:",
+    "collectorRefuseOption": "Abbrechen",
+    "menuPlaceholder": "Wählen Sie einen Trank aus"
   },
   "petSell": {
     "noPet": "Sie haben keine Vertrauten zu verkaufen!",

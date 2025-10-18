@@ -10,7 +10,7 @@ export const commandInfo: ITestCommand = {
 	typeWaited: {
 		time: TypeKey.INTEGER
 	},
-	description: "Avance le gd de votre joueur d'une durée en minutes donnée"
+	description: "Récule la date de la dernière récompense quotidienne de guilde de X minutes. Permet de récupérer la récompense suivante X minutes plus tôt."
 };
 
 /**

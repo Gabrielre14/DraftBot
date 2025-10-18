@@ -40,9 +40,9 @@ async function getTopScore(initiator: Player, page: number, timing: TopTiming): 
 	const minRank = (page - 1) * TopConstants.PLAYERS_PER_PAGE + 1;
 	const maxRank = Math.min(page * TopConstants.PLAYERS_PER_PAGE, totalElements);
 	const rank = timing === TopTiming.WEEK
-		? initiator.weeklyScore > 0
-			? await Players.getWeeklyRankById(initiator.id)
-			: -1
+		? initiator.weeklyScore <= Constants.MINIMAL_PLAYER_SCORE
+			? -1
+			: await Players.getWeeklyRankById(initiator.id)
 		: initiator.score <= Constants.MINIMAL_PLAYER_SCORE
 			? -1
 			: await Players.getRankById(initiator.id);
@@ -153,7 +153,7 @@ async function getTopGuild(initiator: Player, page: number): Promise<CrowniclesP
 			attributes: {
 				1: guild.score,
 				2: guild.level,
-				3: undefined
+				3: undefined as undefined
 			}
 		})),
 		elementsPerPage: TopConstants.PLAYERS_PER_PAGE

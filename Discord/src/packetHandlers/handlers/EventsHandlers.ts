@@ -9,7 +9,10 @@ import {
 	crowniclesClient, keycloakConfig
 } from "../../bot/CrowniclesShard";
 import { CrowniclesIcons } from "../../../../Lib/src/CrowniclesIcons";
-import { minutesToHours } from "../../../../Lib/src/utils/TimeUtils";
+import {
+	minutesDisplay,
+	minutesToHours
+} from "../../../../Lib/src/utils/TimeUtils";
 import { GuildLevelUpPacket } from "../../../../Lib/src/packets/events/GuildLevelUpPacket";
 import { MissionsCompletedPacket } from "../../../../Lib/src/packets/events/MissionsCompletedPacket";
 import { MissionsExpiredPacket } from "../../../../Lib/src/packets/events/MissionsExpiredPacket";
@@ -17,7 +20,6 @@ import { PlayerDeathPacket } from "../../../../Lib/src/packets/events/PlayerDeat
 import { PlayerLeavePveIslandPacket } from "../../../../Lib/src/packets/events/PlayerLeavePveIslandPacket";
 import { PlayerLevelUpPacket } from "../../../../Lib/src/packets/events/PlayerLevelUpPacket";
 import { PlayerReceivePetPacket } from "../../../../Lib/src/packets/events/PlayerReceivePetPacket";
-import { EmoteUtils } from "../../utils/EmoteUtils";
 import { GiveFoodToGuildPacket } from "../../../../Lib/src/packets/utils/GiveFoodToGuildPacket";
 import { NoFoodSpaceInGuildPacket } from "../../../../Lib/src/packets/utils/NoFoodSpaceInGuildPacket";
 import { MissionUtils } from "../../utils/MissionUtils";
@@ -43,6 +45,7 @@ export default class EventsHandlers {
 			pseudo: await DisplayUtils.getEscapedUsername(context.keycloakId!, lng)
 		}), interaction.user);
 		let time = packet.tripDuration;
+		const timeDisplay = minutesDisplay(packet.tripDuration, lng);
 		let i18nTr: string;
 		if (time < 60) {
 			i18nTr = "commands:report.choseMapMinutes";
@@ -56,9 +59,10 @@ export default class EventsHandlers {
 			lng,
 			mapPrefix: i18n.t(`models:map_types.${packet.mapTypeId}.prefix`, { lng }),
 			mapType: (i18n.t(`models:map_types.${packet.mapTypeId}.name`, { lng }) as string).toLowerCase(),
-			mapEmote: EmoteUtils.translateEmojiToDiscord(CrowniclesIcons.mapTypes[packet.mapTypeId]),
+			mapEmote: CrowniclesIcons.mapTypes[packet.mapTypeId],
 			mapName: i18n.t(`models:map_locations.${packet.mapId}.name`, { lng }),
-			time
+			time,
+			timeDisplay
 		}));
 		try {
 			if (context.discord!.buttonInteraction) {
@@ -128,9 +132,13 @@ export default class EventsHandlers {
 			[MissionType.NORMAL]: []
 		};
 		let totalGems = 0;
+		let totalPoints = 0;
+		let totalMoney = 0;
 		let totalXP = 0;
 		for (const mission of packet.missions) {
 			totalGems += mission.gemsToWin;
+			totalPoints += mission.pointsToWin;
+			totalMoney += mission.moneyToWin;
 			totalXP += mission.xpToWin;
 			missionLists[mission.missionType].push(MissionUtils.formatCompletedMission(mission, lng));
 		}
@@ -145,13 +153,37 @@ export default class EventsHandlers {
 			});
 		}
 		if (packet.missions.length > 1) {
+			const totalRewardsLines: string[] = [];
+			if (totalGems > 0) {
+				totalRewardsLines.push(i18n.t("notifications:missions.completed.totalDisplay.gems", {
+					count: totalGems,
+					lng
+				}));
+			}
+			if (totalPoints > 0) {
+				totalRewardsLines.push(i18n.t("notifications:missions.completed.totalDisplay.points", {
+					count: totalPoints,
+					lng
+				}));
+			}
+			if (totalMoney > 0) {
+				totalRewardsLines.push(i18n.t("notifications:missions.completed.totalDisplay.money", {
+					count: totalMoney,
+					lng
+				}));
+			}
+			if (totalXP > 0) {
+				totalRewardsLines.push(i18n.t("notifications:missions.completed.totalDisplay.xp", {
+					count: totalXP,
+					lng
+				}));
+			}
+			if (totalRewardsLines.length === 0) {
+				totalRewardsLines.push(i18n.t("notifications:missions.completed.noRewards", { lng }));
+			}
 			completedMissionsEmbed.addFields({
 				name: i18n.t("notifications:missions.completed.totalRewards", { lng }),
-				value: i18n.t("notifications:missions.completed.totalDisplay", {
-					lng,
-					gems: totalGems,
-					xp: totalXP
-				})
+				value: totalRewardsLines.join("\n")
 			});
 		}
 		await interaction.channel.send({ embeds: [completedMissionsEmbed] });
@@ -218,13 +250,14 @@ export default class EventsHandlers {
 			]
 		});
 
-		await interaction.user.send({
+		interaction.user.send({
 			embeds: [
 				new CrowniclesEmbed()
 					.formatAuthor(i18n.t("models:players.koDmTitle", { lng }), interaction.user)
 					.setDescription(i18n.t("models:players.koDmDesc", { lng }))
 			]
-		});
+		}).then()
+			.catch();
 	}
 
 	@packetHandler(PlayerLeavePveIslandPacket)
